@@ -65,7 +65,7 @@
 --border-toggle-width: var(--border-width-md);
 --border-toggle-style: var(--border-style-solid);
 --border-toggle-radius: var(--radius-md);
---border-toggle-color: var(--border-color-token -default);
+--border-toggle-color: var(--border-color-token-default);
 
 /* Round */
 --border-round-radius: var(--radius-circle);
