@@ -43,19 +43,19 @@
             <a id="goHomeButton" href="index.html">Ga terug naar Home</a>
         </section>
     </main>
-
-    <script>
-        const menuButton = document.querySelector('.menu-button');
-        const navLinks = document.querySelector('#main-nav-links');
-
-        if (menuButton && navLinks) {
-            menuButton.addEventListener('click', () => {
-                const isOpen = navLinks.classList.toggle('is-open');
-                menuButton.setAttribute('aria-expanded', String(isOpen));
-                menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-            });
-        }
-    </script>
 </body>
+
+<script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('#main-nav-links');
+
+    if (menuButton && navLinks) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+            menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+    }
+</script>
 
 </html>
