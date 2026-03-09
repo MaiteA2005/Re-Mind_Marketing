@@ -1,0 +1,211 @@
+/* CSS Variables */
+    :root {
+      --background-300: #fffcf5;
+      --background-section-300: #e9dec8;
+      --border-300: #d6d2ca;
+      --primary-300: #769382;
+      --highlight-300: #a8bfaf;
+      --radius-xs: 6px;
+    }
+
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* Loading Screen Styles */
+    .loading-screen {
+      background-color: var(--background-300);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .loading-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
+      height: 30px;
+    }
+
+    .loading-bar {
+      width: 14px;
+      height: 100%;
+      background-color: var(--background-section-300);
+      border-radius: var(--radius-xs);
+      transform-origin: bottom;
+      animation: wave 2.4s ease-in-out infinite;
+    }
+
+    /* Staggered animation delays for wave effect */
+    .loading-bar-1 {
+      animation-name: wave-bar-1;
+    }
+
+    .loading-bar-2 {
+      animation-name: wave-bar-2;
+    }
+
+    .loading-bar-3 {
+      animation-name: wave-bar-3;
+    }
+
+    .loading-bar-4 {
+      animation-name: wave-bar-4;
+    }
+
+    .loading-bar-5 {
+      animation-name: wave-bar-5;
+    }
+
+    .loading-bar-6 {
+      animation-name: wave-bar-6;
+    }
+
+    /* Bar 1 Animation */
+    @keyframes wave-bar-1 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      16.66% { background-color: var(--border-300); transform: scaleY(0.85); }
+      25% { background-color: var(--primary-300); transform: scaleY(1); }
+      33.33% { background-color: var(--border-300); transform: scaleY(0.85); }
+      41.66% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      50% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      58.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      66.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      75% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      83.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Bar 2 Animation */
+    @keyframes wave-bar-2 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      16.66% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      25% { background-color: var(--border-300); transform: scaleY(0.85); }
+      33.33% { background-color: var(--primary-300); transform: scaleY(1); }
+      41.66% { background-color: var(--border-300); transform: scaleY(0.85); }
+      50% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      58.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      66.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      75% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      83.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Bar 3 Animation */
+    @keyframes wave-bar-3 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      16.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      25% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      33.33% { background-color: var(--border-300); transform: scaleY(0.85); }
+      41.66% { background-color: var(--primary-300); transform: scaleY(1); }
+      50% { background-color: var(--border-300); transform: scaleY(0.85); }
+      58.33% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      66.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      75% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      83.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Bar 4 Animation */
+    @keyframes wave-bar-4 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      16.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      25% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      33.33% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      41.66% { background-color: var(--border-300); transform: scaleY(0.85); }
+      50% { background-color: var(--primary-300); transform: scaleY(1); }
+      58.33% { background-color: var(--border-300); transform: scaleY(0.85); }
+      66.66% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      75% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      83.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Bar 5 Animation */
+    @keyframes wave-bar-5 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      16.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      25% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      33.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      41.66% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      50% { background-color: var(--border-300); transform: scaleY(0.85); }
+      58.33% { background-color: var(--primary-300); transform: scaleY(1); }
+      66.66% { background-color: var(--border-300); transform: scaleY(0.85); }
+      75% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      83.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Bar 6 Animation */
+    @keyframes wave-bar-6 {
+      0% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      8.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      16.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      25% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      33.33% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      41.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      50% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      58.33% { background-color: var(--border-300); transform: scaleY(0.85); }
+      66.66% { background-color: var(--primary-300); transform: scaleY(1); }
+      75% { background-color: var(--border-300); transform: scaleY(0.85); }
+      83.33% { background-color: var(--highlight-300); transform: scaleY(0.75); }
+      91.66% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+      100% { background-color: var(--background-section-300); transform: scaleY(0.6); }
+    }
+
+    /* Tablet staand: width = 834px */
+    @media (min-width: 834px) {
+      .loading-container {
+        gap: 10px;
+        height: 36px;
+      }
+      
+      .loading-bar {
+        width: 16px;
+      }
+    }
+
+    /* Tablet liggend: width = 1194px */
+    @media (min-width: 1194px) {
+      .loading-container {
+        gap: 12px;
+        height: 40px;
+      }
+      
+      .loading-bar {
+        width: 18px;
+      }
+    }
+
+    /* Desktop: width = 1440px */
+    @media (min-width: 1440px) {
+      .loading-container {
+        gap: 14px;
+        height: 44px;
+      }
+      
+      .loading-bar {
+        width: 20px;
+      }
+    }
