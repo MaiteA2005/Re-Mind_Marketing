@@ -180,9 +180,9 @@
 --text-info: var(--info-300);
 
 /* Background */
---surface-page: var(--background-100);
---surface-card: var(--background-card-100);
---surface-section: var(--background-section-100);
+--surface-page: var(--background-300);
+--surface-card: var(--background-card-300);
+--surface-section: var(--background-section-300);
 
 /* Border */
 --border-color-default: var(--border-300);

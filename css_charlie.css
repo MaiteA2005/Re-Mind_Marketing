@@ -22,9 +22,9 @@ body {
 }
 
 .site-nav {
-    /* background-color: red; */
     background-color: var(--background-card-300);
     padding: var(--space-4);
+    box-shadow: var(--shadow-nav-dropdown);
 }
 
 .nav-inner {
@@ -73,6 +73,14 @@ body {
 .nav-links li a {
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-semibold);
+}
+
+.nav-links li a:hover {
+    background-color: var(--brand-highlight);
+}
+
+.nav-links li a:active{
+    font-weight: var(--font-weight-bold);
 }
 
 a {
