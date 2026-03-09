@@ -60,6 +60,7 @@ input {
   font-weight: var(--font-weight-bold);
   color: var(--text-brand);
   line-height: 1;
+  width: 200px;
 }
 
 .menu-button {
@@ -172,11 +173,11 @@ input {
 
 /* FEATURES */
 .features {
-  padding-top: 22px;
+  padding: 22px 0;
 }
 
 .features h2 {
-  margin: 0 0 12px;
+  margin: var(--space-4);
   font-family: var(--font-family-heading);
   font-size: 19px;
   line-height: 1.1;
@@ -219,11 +220,6 @@ input {
   cursor: pointer;
   position: relative;
   flex: 0 0 auto;
-}
-
-/* overlap */
-.feature-tab + .feature-tab {
-  margin-left: -17px;
 }
 
 .feature-tab.is-active {
@@ -545,12 +541,4 @@ input {
 .footer-columns a {
   display: block;
   margin-bottom: 4px;
-}
-
-/* MOBILE PREVIEW WIDTH */
-@media (min-width: 768px) {
-  body {
-    max-width: 360px;
-    margin: 0 auto;
-  }
 }
