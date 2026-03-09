@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+@import "./tokens/color.tokens.css";
+@import "./tokens/spacing.tokens.css";
+@import "./tokens/radius.tokens.css";
+@import "./tokens/typography.tokens.css";
+@import "./tokens/shadow.tokens.css";
+@import "./tokens/component.tokens.css";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-family-body);
+}
+
+#coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--space-9);
+}
+
+#coming-soon h2 {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-3);
+}
+
+#coming-soon p {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--space-8);
+    text-align: center;
+}
+
+#coming-soon a {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-decoration: underline;
+    color: var(--text-primary);
+}
+
+.section {
+    padding: 22px 8px 0;
+}
