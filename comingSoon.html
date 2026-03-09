@@ -10,12 +10,18 @@
 
 <body>
     <header>
-        <nav>
-            <div>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="nav-inner">
                 <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo">
+                <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <ul>
+            <ul id="main-nav-links" class="nav-links">
                 <!-- links nog werkende maken -->
+                <li><a href="#home">Home</a></li>
                 <li><a href="#over">Over</a></li>
                 <li><a href="#functionaliteiten">Functionaliteiten</a></li>
                 <li><a href="#prijzen">Prijzen</a></li>
@@ -29,13 +35,26 @@
         <section id="coming-soon">
             <h2>Coming soon!</h2>
             <p>
-                Aan deze pagina wordt nog hard gewerkt. 
+                Aan deze pagina wordt nog hard gewerkt.
                 <br>
                 Stay tuned!
             </p>
             <a id="goHomeButton" href="index.html">Ga terug naar Home</a>
         </section>
     </main>
+
+    <script>
+        const menuButton = document.querySelector('.menu-button');
+        const navLinks = document.querySelector('#main-nav-links');
+
+        if (menuButton && navLinks) {
+            menuButton.addEventListener('click', () => {
+                const isOpen = navLinks.classList.toggle('is-open');
+                menuButton.setAttribute('aria-expanded', String(isOpen));
+                menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            });
+        }
+    </script>
 </body>
 
 </html>
