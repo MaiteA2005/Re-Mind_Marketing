@@ -516,33 +516,7 @@ input {
   font-weight: var(--font-weight-semibold);
 }
 
-/* FOOTER */
-.site-footer {
-  margin-top: var(--space-2);
-  padding: var(--space-3) var(--space-2) var(--space-5);
-  background: var(--surface-card);
-}
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-2);
-  margin: var(--space-3);
-}
-
-.footer-columns h3 {
-  margin: 0 0 var(--space-1);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
-
-.footer-columns a {
-  display: block;
-  margin-bottom: var(--space-1);
-}
 /* ========================================
    DESKTOP BREAKPOINT - 1440px
    ======================================== */
@@ -872,33 +846,5 @@ input {
   .submit-button {
     height: 50px;
     font-size: 20px;
-  }
-
-  /* Desktop Footer */
-  .site-footer {
-    padding: 60px 40px;
-  }
-
-  .footer-brand {
-    width: 200px;
-    margin: 0 auto 40px;
-  }
-
-  .footer-columns {
-    grid-template-columns: repeat(2, auto);
-    justify-content: center;
-    gap: 120px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .footer-columns h3 {
-    font-size: 28px;
-    margin-bottom: 16px;
-  }
-
-  .footer-columns a {
-    font-size: 16px;
-    margin-bottom: 8px;
   }
 }
