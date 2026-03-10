@@ -537,6 +537,19 @@ input {
   font-weight: var(--font-weight-semibold);
 }
 
+.submit-button:hover {
+  background: var(--button-accent-hover-bg);
+  border-color: var(--button-accent-hover-border);
+  box-shadow: var(--shadow-button-hover);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:active {
+  background: var(--button-accent-active-bg);
+  border-color: var(--button-accent-active-border);
+  color: var(--text-on-dark);
+}
+
 
 @media (min-width: 834px) {
   /*tablet staand*/
