@@ -121,7 +121,7 @@
 --text-link-active-color: var(--primary-500);
 
 /* Button text */
---text-button-label-font-family: var(--font-family-body);
+--text-button-label-font-family: var(--font-family-heading);
 --text-button-label-font-weight: var(--font-weight-bold);
 --text-button-label-font-size: var(--font-size-sm);
 --text-button-label-line-height: var(--line-height-sm);
