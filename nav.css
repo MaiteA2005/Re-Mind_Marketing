@@ -107,6 +107,9 @@ body {
     gap: var(--space-3);
     margin-top: var(--space-2);
     margin: var(--space-3);
+    font-size: var(--font-size-xxs);
+    line-height: var(--line-height-xs);
+    color: var(--text-secondary);
 }
 
 .footer-columns h3 {
@@ -165,6 +168,7 @@ body {
     .nav-inner {
         gap: var(--space-6);
     }
+
     .footer-brand img {
         width: 150px;
     }

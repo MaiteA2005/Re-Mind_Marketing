@@ -90,60 +90,60 @@
 --button-accent-disabled-border: var(--border-200);
 
 /* Success */
---button-success-default-bg: var(--success-300);
---button-success-default-text: var(--text-on-dark);
---button-success-default-border: var(--success-300);
+--button-success-default-bg: var(--background-50);
+--button-success-default-text: var(--text-on-light);
+--button-success-default-border: var(--success-600);
 
---button-success-hover-bg: var(--success-400);
---button-success-hover-border: var(--success-400);
+--button-success-hover-bg: var(--success-100);
+--button-success-hover-border: var(--success-600);
 
---button-success-active-bg: var(--success-500);
---button-success-active-border: var(--success-500);
+--button-success-active-bg: var(--success-300);
+--button-success-active-border: var(--success-600);
 
 --button-success-disabled-bg: var(--background-200);
 --button-success-disabled-text: var(--text-disabled);
 --button-success-disabled-border: var(--border-200);
 
 /* Info */
---button-info-default-bg: var(--info-300);
---button-info-default-text: var(--text-on-dark);
---button-info-default-border: var(--info-300);
+--button-info-default-bg: var(--background-50);
+--button-info-default-text: var(--text-on-light);
+--button-info-default-border: var(--info-600);
 
---button-info-hover-bg: var(--info-400);
---button-info-hover-border: var(--info-400);
+--button-info-hover-bg: var(--info-100);
+--button-info-hover-border: var(--info-600);
 
---button-info-active-bg: var(--info-500);
---button-info-active-border: var(--info-500);
+--button-info-active-bg: var(--info-300);
+--button-info-active-border: var(--info-600);
 
 --button-info-disabled-bg: var(--background-200);
 --button-info-disabled-text: var(--text-disabled);
 --button-info-disabled-border: var(--border-200);
 
 /* Warning */
---button-warning-default-bg: var(--warning-300);
---button-warning-default-text: var(--text-on-dark);
---button-warning-default-border: var(--warning-300);
+--button-warning-default-bg: var(--background-50);
+--button-warning-default-text: var(--text-on-light);
+--button-warning-default-border: var(--warning-600);
 
---button-warning-hover-bg: var(--warning-400);
---button-warning-hover-border: var(--warning-400);
+--button-warning-hover-bg: var(--warning-100);
+--button-warning-hover-border: var(--warning-600);
 
---button-warning-active-bg: var(--warning-500);
---button-warning-active-border: var(--warning-500);
+--button-warning-active-bg: var(--warning-300);
+--button-warning-active-border: var(--warning-600);
 
 --button-warning-disabled-bg: var(--background-200);
 --button-warning-disabled-text: var(--text-disabled);
 --button-warning-disabled-border: var(--border-200);
 
 /* Error */
---button-error-default-bg: var(--error-300);
---button-error-default-text: var(--text-on-dark);
---button-error-default-border: var(--error-300);
+--button-error-default-bg: var(--background-50);
+--button-error-default-text: var(--text-on-light);
+--button-error-default-border: var(--error-600);
 
---button-error-hover-bg: var(--error-400);
---button-error-hover-border: var(--error-400);
+--button-error-hover-bg: var(--error-100);
+--button-error-hover-border: var(--error-600);
 
---button-error-active-bg: var(--error-500);
---button-error-active-border: var(--error-500);
+--button-error-active-bg: var(--error-300);
+--button-error-active-border: var(--error-600);
 
 --button-error-disabled-bg: var(--background-200);
 --button-error-disabled-text: var(--text-disabled);
@@ -186,135 +186,6 @@
 --button-dropdown-hover-bg: var(--background-card-200);
 --button-dropdown-active-bg: var(--background-card-300);
 --button-dropdown-disabled-text: var(--text-disabled);
-
-/* ================================================= */
-/* SEGMENTED / BTN DUO'S */
-/* ================================================= */
-
---segmented-radius: var(--radius-sm);
---segmented-border-width: var(--border-width-md);
---segmented-border-style: var(--border-style-solid);
---segmented-border-color: var(--border-200);
-
-/* Primary duo */
---segmented-primary-default-bg: var(--background-50);
---segmented-primary-default-text: var(--primary-300);
---segmented-primary-default-border: var(--border-200);
-
---segmented-primary-hover-bg: var(--primary-50);
---segmented-primary-hover-text: var(--primary-300);
---segmented-primary-hover-border: var(--primary-200);
-
---segmented-primary-selected-bg: var(--primary-300);
---segmented-primary-selected-text: var(--text-on-dark);
---segmented-primary-selected-border: var(--primary-300);
-
---segmented-primary-disabled-bg: var(--background-200);
---segmented-primary-disabled-text: var(--text-disabled);
---segmented-primary-disabled-border: var(--border-200);
-
-/* Neutral duo */
---segmented-neutral-default-bg: var(--background-50);
---segmented-neutral-default-text: var(--primary-300);
---segmented-neutral-default-border: var(--border-200);
-
---segmented-neutral-hover-bg: var(--highlight-50);
---segmented-neutral-hover-text: var(--primary-300);
---segmented-neutral-hover-border: var(--border-200);
-
---segmented-neutral-selected-bg: var(--highlight-200);
---segmented-neutral-selected-text: var(--primary-300);
---segmented-neutral-selected-border: var(--highlight-200);
-
---segmented-neutral-disabled-bg: var(--background-200);
---segmented-neutral-disabled-text: var(--text-disabled);
---segmented-neutral-disabled-border: var(--border-200);
-
-/* Accent duo */
---segmented-accent-default-bg: var(--background-50);
---segmented-accent-default-text: var(--primary-300);
---segmented-accent-default-border: var(--border-200);
-
---segmented-accent-hover-bg: var(--highlight-50);
---segmented-accent-hover-text: var(--primary-300);
---segmented-accent-hover-border: var(--border-200);
-
---segmented-accent-selected-bg: var(--border-green-300);
---segmented-accent-selected-text: var(--text-on-dark);
---segmented-accent-selected-border: var(--border-green-300);
-
---segmented-accent-disabled-bg: var(--background-200);
---segmented-accent-disabled-text: var(--text-disabled);
---segmented-accent-disabled-border: var(--border-200);
-
-/* Info duo */
---segmented-info-default-bg: var(--background-50);
---segmented-info-default-text: var(--info-300);
---segmented-info-default-border: var(--border-200);
-
---segmented-info-hover-bg: var(--info-50);
---segmented-info-hover-text: var(--info-300);
---segmented-info-hover-border: var(--info-200);
-
---segmented-info-selected-bg: var(--info-300);
---segmented-info-selected-text: var(--text-on-dark);
---segmented-info-selected-border: var(--info-300);
-
---segmented-info-disabled-bg: var(--background-200);
---segmented-info-disabled-text: var(--text-disabled);
---segmented-info-disabled-border: var(--border-200);
-
-/* Success duo */
---segmented-success-default-bg: var(--background-50);
---segmented-success-default-text: var(--success-300);
---segmented-success-default-border: var(--border-200);
-
---segmented-success-hover-bg: var(--success-50);
---segmented-success-hover-text: var(--success-300);
---segmented-success-hover-border: var(--success-200);
-
---segmented-success-selected-bg: var(--success-300);
---segmented-success-selected-text: var(--text-on-dark);
---segmented-success-selected-border: var(--success-300);
-
---segmented-success-disabled-bg: var(--background-200);
---segmented-success-disabled-text: var(--text-disabled);
---segmented-success-disabled-border: var(--border-200);
-
-/* Warning duo */
---segmented-warning-default-bg: var(--background-50);
---segmented-warning-default-text: var(--warning-300);
---segmented-warning-default-border: var(--border-200);
-
---segmented-warning-hover-bg: var(--warning-50);
---segmented-warning-hover-text: var(--warning-300);
---segmented-warning-hover-border: var(--warning-200);
-
---segmented-warning-selected-bg: var(--warning-300);
---segmented-warning-selected-text: var(--text-on-dark);
---segmented-warning-selected-border: var(--warning-300);
-
---segmented-warning-disabled-bg: var(--background-200);
---segmented-warning-disabled-text: var(--text-disabled);
---segmented-warning-disabled-border: var(--border-200);
-
-/* Error duo */
---segmented-error-default-bg: var(--background-50);
---segmented-error-default-text: var(--error-300);
---segmented-error-default-border: var(--border-200);
-
---segmented-error-hover-bg: var(--error-50);
---segmented-error-hover-text: var(--error-300);
---segmented-error-hover-border: var(--error-200);
-
---segmented-error-selected-bg: var(--error-300);
---segmented-error-selected-text: var(--text-on-dark);
---segmented-error-selected-border: var(--error-300);
-
---segmented-error-disabled-bg: var(--background-200);
---segmented-error-disabled-text: var(--text-disabled);
---segmented-error-disabled-border: var(--border-200);
-
 
 /* ================================================= */
 /* SELECTION CONTROLS */
