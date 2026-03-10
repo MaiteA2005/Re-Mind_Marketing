@@ -549,6 +549,7 @@ input {
     font-size: var(--text-heading-2-font-size);
     line-height: var(--text-heading-2-line-height);
     margin-bottom: var(--space-7);
+    margin-left: 0;
   }
 
   .about {
@@ -620,7 +621,7 @@ input {
   .feature-panel h3 {
     grid-column: 2;
     text-align: left;
-    margin: 0 0 var(--space-5);
+    margin: 0;
     font-size: var(--font-size-xl);
     line-height: var(--line-height-lg);
   }
@@ -726,17 +727,27 @@ input {
   /* Desktop Contact */
   .contact {
     padding: var(--layout-section) var(--layout-container-padding) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-10);
+    align-items: start;
   }
 
   .contact h2 {
+    grid-column: 1 / -1;
     margin-bottom: var(--space-9);
   }
 
   .contact-people {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-9);
-    margin-bottom: var(--space-10);
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    margin-bottom: 0;
+    grid-column: 1;
+  }
+
+  .contact-person {
+    margin-bottom: 0;
   }
 
   .contact-person h3 {
@@ -752,8 +763,9 @@ input {
   }
 
   .contact-form-wrap {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0;
+    grid-column: 2;
   }
 
   .contact-form-wrap h3 {
