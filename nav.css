@@ -25,12 +25,18 @@ body {
     background-color: var(--background-card-300);
     padding: var(--space-4);
     box-shadow: var(--shadow-nav-dropdown);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 
 .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
 }
 
 .menu-button {
@@ -75,14 +81,44 @@ body {
     font-weight: var(--font-weight-semibold);
     color: inherit;
     text-decoration: none;
+    padding-inline: var(--space-2);
+    border-radius: var(--space-2);
 }
 
 .nav-links li a:hover {
     background-color: var(--brand-highlight);
 }
 
-.nav-links li a:active{
+.nav-links li a:active {
     font-weight: var(--font-weight-bold);
+}
+
+/* FOOTER */
+.site-footer {
+    margin-top: var(--space-2);
+    padding: var(--space-3) var(--space-2) var(--space-5);
+    background: var(--surface-card);
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    margin: var(--space-3);
+}
+
+.footer-columns h3 {
+    margin: 0 0 var(--space-1);
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.footer-columns a {
+    display: block;
+    margin-bottom: var(--space-1);
 }
 
 @media (min-width: 834px) {
@@ -108,10 +144,8 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        gap: var(--space-6);
+        gap: var(--space-4);
         padding-top: 0;
-        padding-right: var(--space-7);
-        padding-left: var(--space-7);
         width: 100%;
     }
 }
@@ -120,7 +154,7 @@ body {
 
     /*tablet liggend*/
     .nav-inner {
-        gap: var(--space-6);
+        gap: var(--space-2);
     }
 }
 
