@@ -314,13 +314,12 @@ input {
 .pricing-card li {
   position: relative;
   padding: var(--space-2);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
   font-size: var(--font-size-xxxs);
   color: var(--text-primary);
 }
 
-.card-button,
-.more-button {
+.card-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -340,21 +339,28 @@ input {
 }
 
 .billing-toggle {
-  display: inline-flex;
-  background: var(--brand-highlight);
-  border-radius: var(--radius-full);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: var(--space-14);
+  margin: 0 auto var(--space-4);
   padding: var(--space-1);
   gap: var(--space-1);
-  margin-bottom: var(--space-2);
+  background: var(--brand-highlight);
+  border-radius: var(--radius-full);
 }
 
 .billing-pill {
-  min-width: 64px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  min-height: var(--space-7);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
   color: var(--text-primary);
+  cursor: pointer;
 }
 
 .billing-pill.active {
@@ -510,30 +516,335 @@ input {
   font-weight: var(--font-weight-semibold);
 }
 
-/* FOOTER */
-.site-footer {
-  margin-top: var(--space-2);
-  padding: var(--space-3) var(--space-2) var(--space-5);
-  background: var(--surface-card);
-}
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-2);
-  margin: var(--space-3);
-}
+/* ========================================
+   DESKTOP BREAKPOINT - 1440px
+   ======================================== */
 
-.footer-columns h3 {
-  margin: 0 0 var(--space-1);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
+@media (min-width: 1440px) {
+  /* Desktop body max-width */
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-.footer-columns a {
-  display: block;
-  margin-bottom: var(--space-1);
+  /* Desktop Navigation */
+  .nav-inner {
+    min-height: 80px;
+    padding: 0 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 164px;
+    margin: 0;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 4px 8px;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-300);
+  }
+
+  .site-nav::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    display: flex;
+    gap: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    color: #1a1a1a;
+  }
+
+  /* Desktop Hero Section */
+  .hero {
+    padding: 60px 40px;
+    min-height: 400px;
+  }
+
+  .hero-grid {
+    max-width: 1360px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-kicker {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    min-width: 140px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 32px;
+  }
+
+  .hero-note {
+    justify-content: flex-end;
+  }
+
+  .note-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Desktop Sections */
+  .section {
+    padding: 60px 40px;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  .section h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+
+  .about {
+    padding-top: 80px;
+  }
+
+  .about p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+    max-width: 900px;
+  }
+
+  /* Desktop Features */
+  .features {
+    padding: var(--space-10) var(--space-7);
+  }
+
+  .features h2 {
+    margin: 0 0 var(--space-8);
+  }
+
+  .feature-tabs-component {
+    gap: 0;
+  }
+
+  .feature-tabs {
+    margin-bottom: -1px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .feature-tab {
+    border: 1px solid var(--border-200);
+    border-bottom: none;
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .feature-tab.is-active {
+    border-color: var(--border-200);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .feature-panels {
+    border-radius: 0;
+  }
+
+  .feature-panel {
+    padding: var(--space-8) var(--space-8) var(--space-7);
+  }
+
+  .feature-panel-image {
+    width: 72%;
+    margin: var(--space-0) auto var(--space-6);
+  }
+
+  .feature-panel h3 {
+    margin: 0 0 var(--space-5);
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-lg);
+  }
+
+  .feature-panel p {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-sm);
+    max-width: 90ch;
+    margin: 0 auto;
+  }
+
+  /* Desktop Pricing */
+  .pricing-stack {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 48px 0;
+  }
+
+  .pricing-card {
+    padding: 40px 32px;
+  }
+
+  .pricing-card h3 {
+    font-size: 32px;
+    margin: 24px 0;
+  }
+
+  .pricing-card li {
+    font-size: 20px;
+    padding: 8px 0;
+  }
+
+  .pricing-label {
+    min-height: 40px;
+    min-width: 140px;
+    font-size: 28px;
+    padding: 8px 16px;
+  }
+
+  .card-button {
+    min-width: 120px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .billing-toggle {
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+
+  .billing-pill {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  /* Desktop Team */
+  .team {
+    padding: 80px 40px;
+  }
+
+  .team-intro {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 32px;
+    text-align: center;
+  }
+
+  .team-meta {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  .team-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  .team-member {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .team-member img {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .team-content h3 {
+    font-size: 24px;
+  }
+
+  .team-content p {
+    font-size: 16px;
+  }
+
+  /* Desktop Contact */
+  .contact {
+    padding: 80px 40px;
+  }
+
+  .contact h2 {
+    margin-bottom: 48px;
+  }
+
+  .contact-people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+
+  .contact-person h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-link {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .contact-form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-form-wrap h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-form {
+    padding: 40px;
+  }
+
+  .contact-form input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .contact-form span {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .submit-button {
+    height: 50px;
+    font-size: 20px;
+  }
 }
