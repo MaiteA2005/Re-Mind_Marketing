@@ -314,13 +314,12 @@ input {
 .pricing-card li {
   position: relative;
   padding: var(--space-2);
-  margin-bottom: 8px;
+  margin-bottom: var(--space-2);
   font-size: var(--font-size-xxxs);
   color: var(--text-primary);
 }
 
-.card-button,
-.more-button {
+.card-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -340,21 +339,28 @@ input {
 }
 
 .billing-toggle {
-  display: inline-flex;
-  background: var(--brand-highlight);
-  border-radius: var(--radius-full);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: var(--space-14);
+  margin: 0 auto var(--space-4);
   padding: var(--space-1);
   gap: var(--space-1);
-  margin-bottom: var(--space-2);
+  background: var(--brand-highlight);
+  border-radius: var(--radius-full);
 }
 
 .billing-pill {
-  min-width: 64px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  min-height: var(--space-7);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
   color: var(--text-primary);
+  cursor: pointer;
 }
 
 .billing-pill.active {
@@ -536,4 +542,364 @@ input {
 .footer-columns a {
   display: block;
   margin-bottom: var(--space-1);
+}
+/* ========================================
+   DESKTOP BREAKPOINT - 1440px
+   ======================================== */
+
+@media (min-width: 1440px) {
+  /* Desktop body max-width */
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* Desktop Navigation */
+  .nav-inner {
+    min-height: 80px;
+    padding: 0 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 164px;
+    margin: 0;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 4px 8px;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-300);
+  }
+
+  .site-nav::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    display: flex;
+    gap: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    color: #1a1a1a;
+  }
+
+  /* Desktop Hero Section */
+  .hero {
+    padding: 60px 40px;
+    min-height: 400px;
+  }
+
+  .hero-grid {
+    max-width: 1360px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .hero-kicker {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .cta-button {
+    min-width: 140px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 32px;
+  }
+
+  .hero-note {
+    justify-content: flex-end;
+  }
+
+  .note-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Desktop Sections */
+  .section {
+    padding: 60px 40px;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  .section h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 32px;
+  }
+
+  .about {
+    padding-top: 80px;
+  }
+
+  .about p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0 0 24px;
+    max-width: 900px;
+  }
+
+  /* Desktop Features */
+  .features {
+    padding: 80px 40px;
+  }
+
+  .features h2 {
+    margin-bottom: 48px;
+  }
+
+  .feature-tabs-component {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .feature-tabs {
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 8px;
+  }
+
+  .feature-tab {
+    border: 1px solid var(--border-200);
+    border-radius: var(--radius-sm);
+    padding: 16px 24px;
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .feature-tab.is-active {
+    border-color: var(--primary-300);
+  }
+
+  .feature-panels {
+    border: 1px solid var(--border-200);
+    border-radius: var(--radius-sm);
+  }
+
+  .feature-panel {
+    padding: 48px;
+    min-height: 500px;
+  }
+
+  .feature-panel-image {
+    width: 60%;
+    margin: 0 auto 32px;
+  }
+
+  .feature-panel h3 {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  .feature-panel p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Desktop Pricing */
+  .pricing-stack {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 48px 0;
+  }
+
+  .pricing-card {
+    padding: 40px 32px;
+  }
+
+  .pricing-card h3 {
+    font-size: 32px;
+    margin: 24px 0;
+  }
+
+  .pricing-card li {
+    font-size: 20px;
+    padding: 8px 0;
+  }
+
+  .pricing-label {
+    min-height: 40px;
+    min-width: 140px;
+    font-size: 28px;
+    padding: 8px 16px;
+  }
+
+  .card-button {
+    min-width: 120px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .billing-toggle {
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+
+  .billing-pill {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  /* Desktop Team */
+  .team {
+    padding: 80px 40px;
+  }
+
+  .team-intro {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto 32px;
+    text-align: center;
+  }
+
+  .team-meta {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  .team-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-top: 48px;
+  }
+
+  .team-member {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .team-member img {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .team-content h3 {
+    font-size: 24px;
+  }
+
+  .team-content p {
+    font-size: 16px;
+  }
+
+  /* Desktop Contact */
+  .contact {
+    padding: 80px 40px;
+  }
+
+  .contact h2 {
+    margin-bottom: 48px;
+  }
+
+  .contact-people {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+
+  .contact-person h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-link {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .contact-form-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-form-wrap h3 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .contact-form {
+    padding: 40px;
+  }
+
+  .contact-form input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .contact-form span {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .submit-button {
+    height: 50px;
+    font-size: 20px;
+  }
+
+  /* Desktop Footer */
+  .site-footer {
+    padding: 60px 40px;
+  }
+
+  .footer-brand {
+    width: 200px;
+    margin: 0 auto 40px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 120px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer-columns h3 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .footer-columns a {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
 }
