@@ -79,11 +79,11 @@
 --button-accent-default-text: var(--text-on-light);
 --button-accent-default-border: var(--highlight-300);
 
---button-accent-hover-bg: var(--highlight-100);
---button-accent-hover-border: var(--highlight-400);
+--button-accent-hover-bg: var(--highlight-300);
+--button-accent-hover-border: var(--highlight-600);
 
---button-accent-active-bg: var(--highlight-300);
---button-accent-active-border: var(--highlight-400);
+--button-accent-active-bg: var(--highlight-500);
+--button-accent-active-border: var(--highlight-800);
 
 --button-accent-disabled-bg: var(--background-200);
 --button-accent-disabled-text: var(--text-disabled);
