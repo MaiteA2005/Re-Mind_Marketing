@@ -411,7 +411,7 @@ input {
   text-underline-offset: 2px;
 }
 
-.contact-link :hover{
+.contact-link :hover {
   text-decoration: underline;
   color: var(--brand-primary);
   font-weight: var(--font-weight-bold);
@@ -482,30 +482,18 @@ input {
   font-weight: var(--font-weight-semibold);
 }
 
-/* FOOTER */
-.site-footer {
-  margin-top: var(--space-2);
-  padding: var(--space-3) var(--space-2) var(--space-5);
-  background: var(--surface-card);
+
+@media (min-width: 834px) {
+  /*tablet staand*/
+
 }
 
-.footer-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
-  margin-top: var(--space-2);
-  margin: var(--space-3);
+@media (min-width: 1194px) {
+  /*tablet liggend*/
+
 }
 
-.footer-columns h3 {
-  margin: 0 0 var(--space-1);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: var(--brand-primary);
-}
+@media (min-width: 1440px) {
+  /*desktop*/
 
-.footer-columns a {
-  display: block;
-  margin-bottom: var(--space-1);
 }
