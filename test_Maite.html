@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Re:Mind</title>
     <link rel="stylesheet" href="test_Maite.css" />
+    <link rel="stylesheet" href="nav.css" />
   </head>
   <body>
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a href="#" class="logo"><img src="./images/logo_primaryColor.png" alt="logo"></a>
-        
-        <button class="menu-button" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+          <img
+            class="navLogo"
+            src="./images/logo_primaryColor.png"
+            alt="logo"
+          />
+          <button
+            class="menu-button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="main-nav-links"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <ul id="main-nav-links" class="nav-links">
+          <!-- links nog werkende maken -->
+          <li><a href="#">Home</a></li>
+          <li><a href="#over">Over</a></li>
+          <li><a href="#functionaliteiten">Functionaliteiten</a></li>
+          <li><a href="#prijzen">Prijzen</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
     <main>
       <section class="hero">
@@ -29,12 +47,12 @@
           </div>
 
           <aside class="hero-note">
-            <img src="./images/Post it.png" alt="Post it" class="note-image" />
+            <img src="./images/Post it.svg" alt="Post it" class="note-image" />
           </aside>
         </div>
       </section>
 
-      <section class="section about" id='overReMind'>
+      <section class="section about" id='over'>
         <h2>Over Re:Mind</h2>
 
         <p>
@@ -295,7 +313,7 @@
 
         <div class="team-list">
           <article class="team-member">
-            <img src="images/maite.png" alt="Maite Aldenkamp" />
+            <img src="images/maite.svg" alt="Maite Aldenkamp" />
             <div class="team-content">
               <h3>Maite Aldenkamp</h3>
               <p>korte uitleg</p>
@@ -304,7 +322,7 @@
           </article>
 
           <article class="team-member">
-            <img src="images/charlie.png" alt="Charlie Van Belle" />
+            <img src="images/charlie.svg" alt="Charlie Van Belle" />
             <div class="team-content">
               <h3>Charlie Van Belle</h3>
               <p>korte uitleg</p>
@@ -313,7 +331,7 @@
           </article>
 
           <article class="team-member">
-            <img src="images/sam.png" alt="Sam Pitties" />
+            <img src="images/sam.svg" alt="Sam Pitties" />
             <div class="team-content">
               <h3>Sam Pittois</h3>
               <p>korte uitleg</p>
@@ -413,6 +431,32 @@
     </footer>
 
     <script>
+      window.addEventListener("load", () => {
+      const loadingScreen = document.getElementById("loading-screen");
+
+      setTimeout(() => {
+        loadingScreen.style.opacity = "0";
+        loadingScreen.style.transition = "opacity 0.5s ease";
+
+        setTimeout(() => {
+          loadingScreen.style.display = "none";
+        }, 500);
+      }, 3000);
+    });
+
+      const menuButton = document.querySelector(".menu-button");
+      const navLinks = document.querySelector("#main-nav-links");
+
+      if (menuButton && navLinks) {
+        menuButton.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", String(isOpen));
+          menuButton.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu",
+          );
+        });
+      }
       const tabs = document.querySelectorAll(".feature-tab");
       const panels = document.querySelectorAll(".feature-panel");
 

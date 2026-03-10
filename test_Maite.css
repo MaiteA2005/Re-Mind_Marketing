@@ -84,6 +84,7 @@ input {
 .hero {
   padding: var(--space-6) var(--space-4);
   background: var(--brand-highlight);
+  margin-top: var(--space-12);
 }
 
 .hero-grid {
@@ -315,7 +316,7 @@ input {
   position: relative;
   padding: var(--space-2);
   margin-bottom: var(--space-2);
-  font-size: var(--font-size-xxxs);
+  font-size: var(--font-size-xxs);
   color: var(--text-primary);
 }
 
