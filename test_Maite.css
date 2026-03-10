@@ -271,7 +271,7 @@ input {
 
 .pricing-card ul {
   list-style: none;
-  padding: 0 auto;
+  padding: 0 var(--space-12);
   margin: 0 0 var(--space-4);
   text-align: left;
 }
@@ -282,6 +282,7 @@ input {
   margin-bottom: var(--space-2);
   font-size: var(--font-size-xxs);
   color: var(--text-primary);
+  max-width: 250px;
 }
 
 .card-button {
