@@ -272,7 +272,7 @@ input {
 }
 
 .pricing-card {
-  background: var(--background-section-300);
+  background: var(--surface-card);
   border-radius: var(--radius-sm);
   padding: var(--space-3) var(--space-3) var(--space-4);
   box-shadow: var(--shadow-stats-default);
@@ -315,7 +315,7 @@ input {
   position: relative;
   padding: var(--space-2);
   margin-bottom: 8px;
-  font-size: 12px;
+  font-size: var(--font-size-xxxs);
   color: var(--text-primary);
 }
 

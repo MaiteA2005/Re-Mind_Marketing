@@ -211,56 +211,75 @@
       </section>
 
       <section class="section pricing" id="prijzen">
-        <h2>Prijzen</h2>
+      <h2>Prijzen</h2>
 
-        <div class="pricing-stack">
-          <article class="pricing-card">
-            <div class="pricing-label">Gratis</div>
-            <h3>Basis plan</h3>
+      <div class="pricing-stack">
+        <article class="pricing-card">
+          <div class="pricing-label">Gratis</div>
+          <h3>Basis plan</h3>
 
-            <ul>
-              <li>✓ Pauzesuggesties</li>
-              <li>✓ Check-ins</li>
-              <li>✓ Dagelijks/Wekelijks rapport</li>
-              <li>✓ Afsluitroutine</li>
-            </ul>
+          <ul>
+            <li>✓ Pauzesuggesties</li>
+            <li>✓ Check-ins</li>
+            <li>✓ Dagelijks/Wekelijks rapport</li>
+            <li>✓ Afsluitroutine</li>
+          </ul>
 
-            <a href="#" class="card-button">Kies dit plan</a>
-          </article>
+          <a href="#" class="card-button">Kies dit plan</a>
+        </article>
 
-          <article class="pricing-card">
-            <div class="billing-toggle">
-              <span class="billing-pill active">Maandelijks</span>
-              <span class="billing-pill">Jaarlijks</span>
-            </div>
+        <article class="pricing-card pricing-card-premium">
+          <div
+            class="billing-toggle"
+            role="tablist"
+            aria-label="Kies facturatieperiode"
+          >
+            <button
+              type="button"
+              class="billing-pill active"
+              data-billing="monthly"
+              aria-pressed="true"
+            >
+              Maandelijks
+            </button>
 
-            <div class="pricing-label">€2,99/maand</div>
-            <h3>Premium plan</h3>
+            <button
+              type="button"
+              class="billing-pill"
+              data-billing="yearly"
+              aria-pressed="false"
+            >
+              Jaarlijks
+            </button>
+          </div>
 
-            <ul>
-              <li>✓ Alle basis functies</li>
-              <li>✓ Personalisatie opties</li>
-              <li>✓ Diepere inzichten</li>
-              <li>✓ Vergelijk uw rapporten</li>
-            </ul>
+          <div class="pricing-label premium-price">€2,99/maand</div>
+          <h3>Premium plan</h3>
 
-            <a href="#" class="card-button">Kies dit plan</a>
-          </article>
+          <ul>
+            <li>✓ Alle basis functies</li>
+            <li>✓ Personalisatie opties</li>
+            <li>✓ Diepere inzichten</li>
+            <li>✓ Vergelijk uw rapporten</li>
+          </ul>
 
-          <article class="pricing-card">
-            <div class="pricing-label">€20/jaar<br/>per werknemer</div>
-            <h3>Bedrijfslicentie</h3>
+          <a href="#" class="card-button">Kies dit plan</a>
+        </article>
 
-            <ul>
-              <li>✓ Alle basis functies</li>
-              <li>✓ Premium functies</li>
-              <li>✓ Bedrijfspersonalisatie</li>
-            </ul>
+        <article class="pricing-card">
+          <div class="pricing-label">€20/jaar<br />per werknemer</div>
+          <h3>Bedrijfslicentie</h3>
 
-            <a href="#" class="card-button">Kies dit plan</a>
-          </article>
-        </div>
-      </section>
+          <ul>
+            <li>✓ Alle basis functies</li>
+            <li>✓ Premium functies</li>
+            <li>✓ Bedrijfspersonalisatie</li>
+          </ul>
+
+          <a href="#" class="card-button">Kies dit plan</a>
+        </article>
+      </div>
+    </section>
 
       <section class="section team" id="team">
         <h2>Team</h2>
@@ -417,6 +436,27 @@
           const activePanel = document.getElementById(`panel-${target}`);
           activePanel.classList.add("is-active");
           activePanel.hidden = false;
+        });
+      });
+
+      const billingButtons = document.querySelectorAll(".billing-pill");
+      const premiumPrice = document.querySelector(".premium-price");
+
+      billingButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          billingButtons.forEach((item) => {
+            item.classList.remove("active");
+            item.setAttribute("aria-pressed", "false");
+          });
+
+          button.classList.add("active");
+          button.setAttribute("aria-pressed", "true");
+
+          if (button.dataset.billing === "monthly") {
+            premiumPrice.innerHTML = "€2,99/maand";
+          } else {
+            premiumPrice.innerHTML = "€33/jaar";
+          }
         });
       });
     </script>
