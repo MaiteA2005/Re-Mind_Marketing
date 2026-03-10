@@ -165,4 +165,7 @@ body {
     .nav-inner {
         gap: var(--space-6);
     }
+    .footer-brand img {
+        width: 150px;
+    }
 }

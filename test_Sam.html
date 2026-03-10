@@ -1,24 +1,46 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Re:Mind</title>
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="nav.css" />
     <link rel="stylesheet" href="test_Sam.css" />
-    <link rel="stylesheet" href="nav.css">
+    <title>Re:Mind</title>
+    <link rel="icon" type="image/svg+xml" href="./images/faviconLogo.svg" />
   </head>
+
   <body>
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a href="#" class="logo"><img src="./images/logo_primaryColor.png" alt="logo"></a>
-        
-        <button class="menu-button" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="loading-bar loading-bar-1"></div>
+        <div class="loading-bar loading-bar-2"></div>
+        <div class="loading-bar loading-bar-3"></div>
+        <div class="loading-bar loading-bar-4"></div>
+        <div class="loading-bar loading-bar-5"></div>
+        <div class="loading-bar loading-bar-6"></div>
       </div>
-    </nav>
+    </div>
+    <header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="nav-inner">
+                <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo">
+                <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul id="main-nav-links" class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#over">Over</a></li>
+                <li><a href="#functionaliteiten">Functionaliteiten</a></li>
+                <li><a href="#prijzen">Prijzen</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
       <section class="hero">
@@ -35,7 +57,7 @@
         </div>
       </section>
 
-      <section class="section about" id='overReMind'>
+      <section class="section about" id='over'>
         <h2>Over Re:Mind</h2>
 
         <p>
@@ -52,8 +74,9 @@
           Op die manier ontstaat er meer concentratie en focus op lange termijn.
         </p>
 
+        <h2>Onze visie</h2>
         <p>
-          Onze visie Re:Mind vertrekt vanuit de overtuiging dat duurzaam werken begint bij luisteren naar je lichaam en geest. 
+          Re:Mind vertrekt vanuit de overtuiging dat duurzaam werken begint bij luisteren naar je lichaam en geest. 
           Onze visie is een wereld waarin jonge werknemers geen schrik hebben om pauze te nemen wanneer dat nodig is. 
           Re:Mind helpt jonge starters om duurzame werkgewoonten op te bouwen, 
           met kleine signalen die een grote impact kunnen maken.
@@ -412,54 +435,7 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const tabs = document.querySelectorAll(".feature-tab");
-      const panels = document.querySelectorAll(".feature-panel");
-
-      tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-          const target = tab.dataset.tab;
-
-          tabs.forEach((item) => {
-            item.classList.remove("is-active");
-            item.setAttribute("aria-selected", "false");
-          });
-
-          panels.forEach((panel) => {
-            panel.classList.remove("is-active");
-            panel.hidden = true;
-          });
-
-          tab.classList.add("is-active");
-          tab.setAttribute("aria-selected", "true");
-
-          const activePanel = document.getElementById(`panel-${target}`);
-          activePanel.classList.add("is-active");
-          activePanel.hidden = false;
-        });
-      });
-
-      const billingButtons = document.querySelectorAll(".billing-pill");
-      const premiumPrice = document.querySelector(".premium-price");
-
-      billingButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          billingButtons.forEach((item) => {
-            item.classList.remove("active");
-            item.setAttribute("aria-pressed", "false");
-          });
-
-          button.classList.add("active");
-          button.setAttribute("aria-pressed", "true");
-
-          if (button.dataset.billing === "monthly") {
-            premiumPrice.innerHTML = "€2,99/maand";
-          } else {
-            premiumPrice.innerHTML = "€33/jaar";
-          }
-        });
-      });
-    </script>
   </body>
+
+  <script src="script.js"></script>
 </html>

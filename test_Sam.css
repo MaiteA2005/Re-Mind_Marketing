@@ -36,49 +36,6 @@ input {
   font: inherit;
 }
 
-/* Nav */
-.site-nav {
-  background: var(--surface-card);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: var(--shadow-nav-dropdown);
-}
-
-.nav-inner {
-  min-height: 78px;
-  padding: 0 var(--space-4) 0 var(--space-3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo,
-.footer-brand {
-  margin: var(--space-3);
-  width: 200px;
-}
-
-.menu-button {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-  justify-content: center;
-  align-content: center;
-  cursor: pointer;
-}
-
-.menu-button span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: var(--radius-full);
-}
 
 /* HERO */
 .hero {
@@ -143,7 +100,11 @@ input {
 
 /* GENERAL SECTIONS */
 .section {
-  padding: 22px var(--space-2) 0;
+  padding: var(--space-6) var(--space-2) 0;
+}
+
+.section + .section {
+  margin-top: var(--space-2);
 }
 
 .section h2 {
@@ -170,7 +131,7 @@ input {
 
 /* FEATURES */
 .features {
-  padding: 22px 0;
+  padding: var(--space-6) 0 0;
 }
 
 .features h2 {
@@ -290,9 +251,9 @@ input {
   background: var(--background-50);
   border: var(--border-width-sm) var(--border-style-solid) var(--border-color-token-brand);
   border-radius: var(--radius-sm);
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xs);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--text-body-bold-font-size);
+  line-height: var(--text-body-bold-line-height);
+  font-weight: var(--text-body-bold-font-weight);
   color: var(--text-primary);
 }
 
@@ -528,58 +489,6 @@ input {
     margin: 0 auto;
   }
 
-  /* Desktop Navigation */
-  .nav-inner {
-    min-height: 80px;
-    padding: 0 40px;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-
-  .logo {
-    width: 164px;
-    margin: 0;
-  }
-
-  .menu-button {
-    display: none;
-  }
-
-  .desktop-nav {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .nav-link {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 27px;
-    color: #1a1a1a;
-    text-decoration: none;
-    padding: 4px 8px;
-    transition: color 0.2s;
-  }
-
-  .nav-link:hover {
-    color: var(--primary-300);
-  }
-
-  .site-nav::after {
-    content: '';
-    position: absolute;
-    top: 24px;
-    right: 40px;
-    display: flex;
-    gap: 16px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 27px;
-    color: #1a1a1a;
-  }
-
   /* Desktop Hero Section */
   .hero {
     padding: 60px 40px;
@@ -623,9 +532,13 @@ input {
 
   /* Desktop Sections */
   .section {
-    padding: 60px 40px;
+    padding: var(--layout-section) var(--layout-container-padding) 0;
     max-width: 1360px;
     margin: 0 auto;
+  }
+
+  .section + .section {
+    margin-top: var(--space-6);
   }
 
   .section h2 {
@@ -635,7 +548,7 @@ input {
   }
 
   .about {
-    padding-top: 80px;
+    padding-top: var(--space-11);
   }
 
   .about p {
@@ -647,7 +560,7 @@ input {
 
   /* Desktop Features */
   .features {
-    padding: var(--space-10) var(--space-7);
+    padding: var(--layout-section) var(--layout-container-padding) 0;
   }
 
   .features h2 {
@@ -731,7 +644,6 @@ input {
   .pricing-label {
     min-height: 40px;
     min-width: 140px;
-    font-size: 28px;
     padding: 8px 16px;
   }
 
@@ -753,7 +665,7 @@ input {
 
   /* Desktop Team */
   .team {
-    padding: 80px 40px;
+    padding: var(--layout-section) var(--layout-container-padding) 0;
   }
 
   .team-intro {
@@ -795,7 +707,7 @@ input {
 
   /* Desktop Contact */
   .contact {
-    padding: 80px 40px;
+    padding: var(--layout-section) var(--layout-container-padding) 0;
   }
 
   .contact h2 {
