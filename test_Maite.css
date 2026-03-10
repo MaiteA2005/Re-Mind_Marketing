@@ -37,54 +37,18 @@ input {
 }
 
 /* Nav */
-.site-nav {
-  background: var(--surface-card);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  box-shadow: var(--shadow-nav-dropdown);
-}
-
-.nav-inner {
-  min-height: 78px;
-  padding: 0 var(--space-4) 0 var(--space-3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .logo,
 .footer-brand {
   margin: var(--space-3);
   width: 200px;
 }
 
-.menu-button {
-  width: 36px;
-  height: 36px;
-  border: none;
-  background: transparent;
-  padding: 0;
-  display: grid;
-  gap: 6px;
-  justify-content: center;
-  align-content: center;
-  cursor: pointer;
-}
-
-.menu-button span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: var(--radius-full);
-}
 
 /* HERO */
 .hero {
   padding: var(--space-6) var(--space-4);
   background: var(--brand-highlight);
-  margin-top: var(--space-12);
+  margin-top: var(--space-10);
 }
 
 .hero-grid {
