@@ -44,7 +44,7 @@
 /* ================================================= */
 
 /* Primary */
---button-primary-default-bg: var(--primary-50);
+--button-primary-default-bg: var(--background-50);
 --button-primary-default-text: var(--text-on-light);
 --button-primary-default-border: var(--primary-300);
 

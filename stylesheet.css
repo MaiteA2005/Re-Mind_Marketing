@@ -76,20 +76,32 @@ input {
 }
 
 .cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 98px;
-  height: 30px;
-  margin-top: var(--space-3);
-  padding: 0 var(--space-4);
-  border-radius: var(--button-radius);
-  border: var(--button-border-width) var(--button-border-style) var(--border-200);
-  background: var(--background-50);
-  color: var(--text-brand);
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    height: 40px;
+    margin-top: var(--space-3);
+    border-radius: var(--button-radius);
+    border: var(--button-border-width) var(--button-border-style) var(--border-color-brand);
+    background: var(--button-primary-default-bg);
+    color: var(--button-primary-default-text);
+    font-family: var(--text-button-label-font-family);
+    font-size: var(--text-button-label-font-size);
+    font-weight: var(--text-button-label-font-weight);
+}
+
+.cta-button:hover {
+    background: var(--button-primary-hover-bg);
+    border-color: var(--button-primary-hover-border);
+    box-shadow: var(--shadow-button-hover);
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:active {
+    background: var(--button-primary-active-bg);
+    border-color: var(--button-primary-active-border);
+    color: var(--button-primary-active-text);
 }
 
 .hero-note {
