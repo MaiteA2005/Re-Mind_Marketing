@@ -1,12 +1,11 @@
 /* CSS Variables */
-:root {
-  --background-300: #fffcf5;
-  --background-section-300: #e9dec8;
-  --border-300: #d6d2ca;
-  --primary-300: #769382;
-  --highlight-300: #a8bfaf;
-  --radius-xs: 6px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+@import "./tokens/color.tokens.css";
+@import "./tokens/spacing.tokens.css";
+@import "./tokens/radius.tokens.css";
+@import "./tokens/typography.tokens.css";
+@import "./tokens/shadow.tokens.css";
+@import "./tokens/component.tokens.css";
 
 /* Reset */
 * {
