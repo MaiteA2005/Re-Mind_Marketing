@@ -9,22 +9,16 @@
 
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
+  margin: var(--space-0);
+  padding: var(--space-0);
   box-sizing: border-box;
-}
-
-body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
 }
 
 /* Loading Screen Styles */
 .loading-screen {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: var(--space-0);
+  left: var(--space-0);
   z-index: 9999;
   background-color: var(--background-300);
   width: 100%;
@@ -39,12 +33,12 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 8px;
-  height: 30px;
+  gap: var(--space-2);
+  height: var(--space-7);
 }
 
 .loading-bar {
-  width: 14px;
+  width: var(--space-4);
   height: 100%;
   background-color: var(--background-section-300);
   border-radius: var(--radius-xs);
@@ -416,35 +410,35 @@ body {
 /* Tablet staand: width = 834px */
 @media (min-width: 834px) {
   .loading-container {
-    gap: 10px;
-    height: 36px;
+    gap: var(--space-3);
+    height: var(--space-7);
   }
 
   .loading-bar {
-    width: 16px;
+    width: var(--space-4);
   }
 }
 
 /* Tablet liggend: width = 1194px */
 @media (min-width: 1194px) {
   .loading-container {
-    gap: 12px;
-    height: 40px;
+    gap: var(--space-3);
+    height: var(--space-8);
   }
 
   .loading-bar {
-    width: 18px;
+    width: var(--space-4);
   }
 }
 
 /* Desktop: width = 1440px */
 @media (min-width: 1440px) {
   .loading-container {
-    gap: 14px;
-    height: 44px;
+    gap: var(--space-3);
+    height: var(--space-8);
   }
 
   .loading-bar {
-    width: 20px;
+    width: var(--space-5);
   }
 }
