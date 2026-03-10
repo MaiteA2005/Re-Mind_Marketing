@@ -44,15 +44,16 @@
 /* ================================================= */
 
 /* Primary */
---button-primary-default-bg: var(--primary-300);
---button-primary-default-text: var(--text-on-dark);
+--button-primary-default-bg: var(--primary-50);
+--button-primary-default-text: var(--text-on-light);
 --button-primary-default-border: var(--primary-300);
 
---button-primary-hover-bg: var(--primary-400);
+--button-primary-hover-bg: var(--primary-200);
 --button-primary-hover-border: var(--primary-400);
 
---button-primary-active-bg: var(--primary-500);
---button-primary-active-border: var(--primary-500);
+--button-primary-active-bg: var(--primary-300);
+--button-primary-active-border: var(--primary-700);
+--button-primary-active-text: var(--text-on-dark);
 
 --button-primary-disabled-bg: var(--background-200);
 --button-primary-disabled-text: var(--text-disabled);

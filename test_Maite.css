@@ -84,9 +84,9 @@ input {
   margin-top: var(--space-3);
   padding: 0 var(--space-4);
   border-radius: var(--button-radius);
-  border: var(--button-border-width) var(--button-border-style) var(--border-200);
-  background: var(--background-50);
-  color: var(--text-brand);
+  border: var(--button-border-width) var(--button-border-style) var(--button-primary-default-border);
+  background: var(--button-primary-default-bg);
+  color: var(--button-primary-default-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
@@ -295,6 +295,7 @@ input {
   border-radius: var(--button-radius);
   font-size: var(--font-size-xxs);
   font-family: var(--font-family-heading);
+  
 }
 
 .card-button {
@@ -378,10 +379,13 @@ input {
 }
 
 .more-button {
-  background: var(--background-50);
-  color: var(--text-secondary);
-  border: var(--border-width-sm) var(--border-style-solid) var(--border-200);
+  background: var(--button-primary-default-bg);
+  color: var(--button-primary-default-text);
+  border: var(--border-width-sm) var(--border-style-solid) var(--button-primary-default-border);
   font-weight: var(--font-weight-semibold);
+  border-radius: var(--button-shape-default-radius);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-xxs);
 }
 
 /* CONTACT */
@@ -476,7 +480,7 @@ input {
   border-radius: var(--radius-xs);
   border: var(--border-width-sm) var(--border-style-solid) var(--button-accent-default-border);
   background: var(--button-accent-default-bg);
-  color: var(--text-primary);
+  color: var(--button-accent-default-text);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-xxs);
   font-weight: var(--font-weight-semibold);
