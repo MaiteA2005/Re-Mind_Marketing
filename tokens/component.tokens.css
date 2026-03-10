@@ -60,30 +60,30 @@
 --button-primary-disabled-border: var(--border-200);
 
 /* Neutral */
---button-neutral-default-bg: var(--background-card-300);
---button-neutral-default-text: var(--text-primary);
---button-neutral-default-border: var(--border-200);
+--button-neutral-default-bg: var(--background-card-50);
+--button-neutral-default-text: var(--text-on-light);
+--button-neutral-default-border: var(--background-400);
 
---button-neutral-hover-bg: var(--background-card-400);
---button-neutral-hover-border: var(--border-300);
+--button-neutral-hover-bg: var(--background-200);
+--button-neutral-hover-border: var(--background-500);
 
---button-neutral-active-bg: var(--background-card-500);
---button-neutral-active-border: var(--border-400);
+--button-neutral-active-bg: var(--background-400);
+--button-neutral-active-border: var(--background-400);
 
 --button-neutral-disabled-bg: var(--background-200);
 --button-neutral-disabled-text: var(--text-disabled);
 --button-neutral-disabled-border: var(--border-200);
 
-/* Accent */
---button-accent-default-bg: var(--highlight-300);
---button-accent-default-text: var(--text-on-dark);
+/* Accent / Highlight */
+--button-accent-default-bg: var(--highlight-50);
+--button-accent-default-text: var(--text-on-light);
 --button-accent-default-border: var(--highlight-300);
 
---button-accent-hover-bg: var(--highlight-400);
+--button-accent-hover-bg: var(--highlight-100);
 --button-accent-hover-border: var(--highlight-400);
 
---button-accent-active-bg: var(--highlight-500);
---button-accent-active-border: var(--highlight-500);
+--button-accent-active-bg: var(--highlight-300);
+--button-accent-active-border: var(--highlight-400);
 
 --button-accent-disabled-bg: var(--background-200);
 --button-accent-disabled-text: var(--text-disabled);
