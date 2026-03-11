@@ -126,6 +126,10 @@ input {
     color: var(--text-primary);
 }
 
+.about h3{
+    margin-top: var(--space-6);
+}
+
 .about p {
     margin: var(--space-3);
 }
@@ -546,6 +550,19 @@ input {
         line-height: var(--line-height-md);
     }
 
+    /*about*/
+    .about {
+        padding: var(--space-9) var(--space-8) 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .about p {
+        margin: var(--space-3);
+        font-size: var(--font-size-xs);
+        line-height: var(--text-body-regular-line-height);
+    }
 }
 
 @media (min-width: 1194px) {
@@ -576,6 +593,55 @@ input {
         margin-top: var(--space-7);
     }
 
+    /* Tablet sections */
+    /* .section {
+        padding: var(--layout-section) var(--layout-container-padding) 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    } */
+
+    .section+.section {
+        margin-top: var(--space-6);
+    }
+
+    .section h2 {
+        font-size: var(--text-heading-2-font-size);
+        line-height: var(--text-heading-2-line-height);
+        margin-bottom: var(--space-3);
+        margin-left: 0;
+    }
+
+    .section h3 {
+        margin-left: 0;
+    }
+
+    /*about*/
+    .about {
+        padding: var(--layout-section) var(--layout-container-padding) 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        columns: 2;
+        column-gap: var(--space-8);
+    }
+
+    .about h2 {
+        column-span: all;
+        margin: 0 0 var(--space-4);
+    }
+
+    .about h3 {
+        break-before: column;
+        margin: 0 0 var(--space-3);
+    }
+
+    .about p {
+        font-size: 18px;
+        margin: 0 0 var(--space-6);
+        max-width: none;
+    }
+
 }
 
 @media (min-width: 1440px) {
@@ -597,53 +663,14 @@ input {
         line-height: 1.2;
     }
 
-
-    /* Desktop Sections */
-    .section {
-        padding: var(--layout-section) var(--layout-container-padding) 0;
-        width: 100%;
-        max-width: none;
-        margin: 0;
-    }
-
-    .section+.section {
-        margin-top: var(--space-6);
-    }
-
-    .section h2 {
-        font-size: var(--text-heading-2-font-size);
-        line-height: var(--text-heading-2-line-height);
-        margin-bottom: var(--space-3);
-        margin-left: 0;
-    }
-
-    .section h3 {
-        margin-left: 0;
-    }
-
+    /* About */
     .about {
-        padding-top: var(--space-11);
-        columns: 2;
         column-gap: var(--space-10);
-    }
-
-    .about h2 {
-        column-span: all;
-        margin: 0 0 var(--space-4);
-    }
-
-    .about h3 {
-        break-before: column;
-        margin: 0 0 var(--space-3);
     }
 
     .about p {
         font-size: var(--text-body-regular-font-size);
-        line-height: var(--text-body-regular-line-height);
-        margin: 0 0 var(--space-6);
-        max-width: none;
     }
-
 
     /* Desktop Features */
     .features {
