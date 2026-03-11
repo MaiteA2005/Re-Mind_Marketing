@@ -1,0 +1,102 @@
+.success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background: var(--surface-page);
+}
+
+.success-card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--highlight-200);
+  border: 1px solid var(--border-200);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-stats-default);
+  text-align: left;
+}
+
+.success-kicker {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-secondary);
+}
+
+.success-card h1 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+  color: var(--text-primary);
+}
+
+.success-text {
+  margin: 0 0 var(--space-5);
+  font-size: var(--font-size-xxs);
+  line-height: var(--line-height-xs);
+  color: var(--text-primary);
+  max-width: 55ch;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.success-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 180px;
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--button-radius);
+  border: var(--button-border-width) var(--button-border-style) var(--primary-700);
+  background: var(--primary-300);
+  color: var(--text-on-dark);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.success-link {
+  font-size: var(--font-size-xxs);
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+@media (min-width: 1440px) {
+  .success-card {
+    max-width: 800px;
+    padding: var(--space-9);
+  }
+
+  .success-card h1 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-lg);
+  }
+
+  .success-text {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-sm);
+  }
+
+  .success-actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .success-button {
+    height: 48px;
+    font-size: var(--font-size-xs);
+  }
+
+  .success-link {
+    font-size: var(--font-size-xs);
+  }
+}
