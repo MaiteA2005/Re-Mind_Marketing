@@ -1,3 +1,10 @@
+@import "../tokens/color.tokens.css";
+@import "../tokens/spacing.tokens.css";
+@import "../tokens/radius.tokens.css";
+@import "../tokens/typography.tokens.css";
+@import "../tokens/shadow.tokens.css";
+@import "../tokens/component.tokens.css";
+
 .success-page {
   min-height: 100vh;
   display: flex;
