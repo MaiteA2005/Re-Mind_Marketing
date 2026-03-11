@@ -72,7 +72,6 @@ body {
 
 .nav-links.is-open {
     display: flex;
-    padding-top: var(--space-7);
     gap: var(--space-6);
 }
 
@@ -101,6 +100,14 @@ body {
     background: var(--surface-card);
 }
 
+.footer-brand img {
+    margin: var(--space-3);
+    width: 150px;
+    display: block;
+    max-width: 100%;
+    padding-bottom: var(--space-5);
+}
+
 .footer-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,7 +122,7 @@ body {
 .footer-columns h3 {
     margin: 0 0 var(--space-1);
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
     color: var(--brand-primary);
 }
@@ -124,7 +131,7 @@ body {
     display: block;
     margin-bottom: var(--space-1);
     font-family: var(--text-navigation-default-font-family);
-    font-size: var(--text-navigation-default-font-size);
+    font-size: var(--font-size-xs);
     line-height: var(--text-navigation-default-line-height);
 }
 
@@ -161,28 +168,12 @@ body {
         padding-top: 0;
         width: 100%;
     }
-}
-
-@media (min-width: 1194px) {
-
-    /*tablet liggend*/
-    .nav-inner {
-        gap: var(--space-2);
-    }
-}
-
-@media (min-width: 1440px) {
-
-    /*desktop*/
-    .nav-inner {
-        gap: var(--space-6);
-    }
 
     .site-footer {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: var(--space-10);
+        gap: var(--space-12);
         padding: var(--space-7) var(--space-8);
     }
 
@@ -196,15 +187,38 @@ body {
         max-width: 920px;
     }
 
-    .footer-columns h3 {
-        margin-bottom: var(--space-3);
-    }
-
-    .footer-columns a {
-        margin-bottom: var(--space-2);
+    .footer-columns div{
+        margin: var(--space-3);
     }
 
     .footer-brand img {
-        width: 150px;
+        padding-bottom: 0px;
+        width: 200px;
+    }
+}
+
+@media (min-width: 1194px) {
+
+    /*tablet liggend*/
+    .nav-inner {
+        gap: var(--space-2);
+    }
+
+    .footer-columns h3{
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-4);
+    }
+
+    .footer-columns a {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--space-2);
+    }
+}
+
+@media (min-width: 1440px) {
+
+    /*desktop*/
+    .nav-inner {
+        gap: var(--space-6);
     }
 }
