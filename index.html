@@ -360,7 +360,7 @@
         <div class="contact-people">
           <div class="contact-person">
             <h3>Maite Aldenkamp</h3>
-            <a href="https://www.maitealdenkamp.be/" target="_blank" class="contact-link">
+            <a href="https://www.maitealdenkamp.be/"  target="_blank" class="contact-link">
                 <img src="./images/faviconMaite.png" alt="Portfolio icoon Maite" />
                 <span>Portfolio</span>
             </a>
@@ -373,7 +373,7 @@
           <div class="contact-person">
             <h3>Charlie Van Belle</h3>
             <a href="https://portfoliocvbe.tech/" target="_blank" class="contact-link">
-                <img src="./images/faviconCharlie.png" alt="Portfolio icoon Charlie" />
+                <img src="./images/faviconCharlie.png"² alt="Portfolio icoon Charlie" />
                 <span>Portfolio</span>
             </a>
             <a href="https://www.linkedin.com/in/charlie-van-belle/" target="_blank" class="contact-link">
@@ -398,22 +398,25 @@
         <div class="contact-form-wrap">
           <h3>Contact form</h3>
 
-          <form class="contact-form">
+          <form 
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/mqeyqprb"
+            method="POST"
+          >
             <label>
-              <span>NAAM</span>
-              <input type="text" placeholder="Naam" />
+              Naam:
+              <input placeholder='Naam' type="input" name="naam">
             </label>
-
             <label>
-              <span>EMAIL</span>
-              <input type="email" placeholder="Email" />
+              Email:
+              <input placeholder='Email' type="email" name="email">
             </label>
-
             <label>
-              <span>VRAAG</span>
-              <input type="text" placeholder="Vraag" />
+              Vraag:
+              <input placeholder='Typ hier je vraag' name="vraag"></input>
             </label>
-
+            <!-- your other form fields go here -->
             <button type="submit" class="submit-button">Versturen</button>
           </form>
         </div>
