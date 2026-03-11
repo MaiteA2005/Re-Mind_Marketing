@@ -1,58 +1,45 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="test_Charlie.css" />
     <title>Re:Mind</title>
+    <link rel="stylesheet" href="test_Charlie.css" />
+    <link rel="stylesheet" href="nav.css" />
 </head>
 
 <body>
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-container">
-            <div class="loading-bar loading-bar-1"></div>
-            <div class="loading-bar loading-bar-2"></div>
-            <div class="loading-bar loading-bar-3"></div>
-            <div class="loading-bar loading-bar-4"></div>
-            <div class="loading-bar loading-bar-5"></div>
-            <div class="loading-bar loading-bar-6"></div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo" />
+            <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </div>
-    <header>
-        <nav class="site-nav" aria-label="Main navigation">
-            <div class="nav-inner">
-                <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo">
-                <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <ul id="main-nav-links" class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#over">Over</a></li>
-                <li><a href="#functionaliteiten">Functionaliteiten</a></li>
-                <li><a href="#prijzen">Prijzen</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul id="main-nav-links" class="nav-links">
+            <!-- links nog werkende maken -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#over">Over</a></li>
+            <li><a href="#functionaliteiten">Functionaliteiten</a></li>
+            <li><a href="#prijzen">Prijzen</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section class="hero">
-            <div class="hero-grid">
+            <div class="hero-div">
                 <div class="hero-text">
-                    <p class="hero-kicker">Re:Mind</p>
-                    <h1>Slim pauzeren,<br />sterk presteren</h1>
+                    <img src="./images/logo_dark.svg" alt="Logo Re:Mind" class="hero-logo" />
+                    <h1>Slim pauzeren,<br />sterk presteren!</h1>
                     <a href="#prijzen" class="cta-button">Probeer nu</a>
                 </div>
 
-                <aside class="hero-note">
-                    <img src="./images/Post it.svg" alt="Post it" class="note-image" />
-                </aside>
+                <img src="./images/Post it.svg" alt="Post it" class="note-image" />
             </div>
         </section>
 
@@ -367,6 +354,6 @@
     </footer>
 </body>
 
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 </html>
