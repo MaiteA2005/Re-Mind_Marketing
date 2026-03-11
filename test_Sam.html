@@ -44,18 +44,16 @@
 
     <main>
       <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <p class="hero-kicker">Re:Mind</p>
-            <h1>Slim pauzeren,<br />sterk presteren</h1>
-            <a href="#prijzen" class="cta-button">Probeer nu</a>
-          </div>
+            <div class="hero-div">
+                <div class="hero-text">
+                    <img src="./images/logo_dark.svg" alt="Logo Re:Mind" class="hero-logo" />
+                    <h1>Slim pauzeren,<br />sterk presteren!</h1>
+                    <a href="#prijzen" class="cta-button">Probeer nu</a>
+                </div>
 
-          <aside class="hero-note">
-            <img src="./images/Post it.svg" alt="Post it" class="note-image" />
-          </aside>
-        </div>
-      </section>
+                <img src="./images/Post it.svg" alt="Post it" class="note-image" />
+            </div>
+        </section>
 
       <section class="section about" id='over'>
         <h2>Over Re:Mind</h2>
@@ -74,7 +72,7 @@
           Op die manier ontstaat er meer concentratie en focus op lange termijn.
         </p>
 
-        <h2>Onze visie</h2>
+        <h3>Onze visie</h3>
         <p>
           Re:Mind vertrekt vanuit de overtuiging dat duurzaam werken begint bij luisteren naar je lichaam en geest. 
           Onze visie is een wereld waarin jonge werknemers geen schrik hebben om pauze te nemen wanneer dat nodig is. 
@@ -90,148 +88,157 @@
       </section>
 
       <section class="section features" id="functionaliteiten">
-      <h2>Functionaliteiten</h2>
+        <h2>Functionaliteiten</h2>
 
-      <div class="feature-tabs-component">
-        <div
-          class="feature-tabs"
-          role="tablist"
-          aria-label="Functionaliteiten"
-        >
-          <button
-            class="feature-tab is-active"
-            id="tab-pauzesuggesties"
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-pauzesuggesties"
-            data-tab="pauzesuggesties"
+        <div class="feature-tabs-component">
+          <div
+            class="feature-tabs"
+            role="tablist"
+            aria-label="Functionaliteiten"
           >
-            Pauzesuggesties
-          </button>
+            <button
+              class="feature-tab is-active"
+              id="tab-pauzesuggesties"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-pauzesuggesties"
+              data-tab="pauzesuggesties"
+            >
+              Pauzesuggesties
+            </button>
 
-          <button
-            class="feature-tab"
-            id="tab-checkins"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-checkins"
-            data-tab="checkins"
-          >
-            Check-ins
-          </button>
+            <button
+              class="feature-tab"
+              id="tab-checkins"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-checkins"
+              data-tab="checkins"
+            >
+              Check-ins
+            </button>
 
-          <button
-            class="feature-tab"
-            id="tab-rapporten"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-rapporten"
-            data-tab="rapporten"
-          >
-            Rapporten
-          </button>
+            <button
+              class="feature-tab"
+              id="tab-rapporten"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-rapporten"
+              data-tab="rapporten"
+            >
+              Rapporten
+            </button>
 
-          <button
-            class="feature-tab"
-            id="tab-afsluitroutine"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-afsluitroutine"
-            data-tab="afsluitroutine"
-          >
-            Afsluitroutine
-          </button>
+            <button
+              class="feature-tab"
+              id="tab-afsluitroutine"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-afsluitroutine"
+              data-tab="afsluitroutine"
+            >
+              Afsluitroutine
+            </button>
+          </div>
+
+          <div class="feature-panels">
+            <article
+              class="feature-panel is-active"
+              id="panel-pauzesuggesties"
+              role="tabpanel"
+              aria-labelledby="tab-pauzesuggesties"
+            >
+              <img
+                src="./images/pauzesuggesties.png"
+                alt="Voorbeeld van pauzesuggesties"
+                class="feature-panel-image"
+              />
+              <div class="feature-panel-content">
+                <h3>Pauzesuggesties</h3>
+                <p>
+                  Een pauze moet herstellend werken, niet uitputtend. Re:Mind biedt een
+                  uitgebreide collectie van pauzesuggesties en korte hersteloefeningen
+                  die gebruikers helpen om tot rust te komen op een gezonde manier. Als
+                  je een gezond aantal herstellende pauzes neemt, zal je concentratie
+                  verbeteren.
+                </p>
+              </div>
+              
+            </article>
+
+            <article
+              class="feature-panel"
+              id="panel-checkins"
+              role="tabpanel"
+              aria-labelledby="tab-checkins"
+              hidden
+            >
+              <img
+                src="./images/stress check-ins.png"
+                alt="Voorbeeld van stress check-ins"
+                class="feature-panel-image"
+              />
+              <div class="feature-panel-content">
+                <h3>Stress check-ins</h3>
+                <p>
+                  Bij Re:Mind staat de gebruiker centraal. Daarom houden we graag bij
+                  hoe het met je gaat doorheen de werkdag. Dit doen we aan de hand van
+                  check-ins waar je je stress- en energieniveau kan ingeven. Op basis
+                van deze gegevens kunnen we dan gedetailleerdere inzichten genereren.
+              </p>
+              </div>
+            </article>
+
+            <article
+              class="feature-panel"
+              id="panel-rapporten"
+              role="tabpanel"
+              aria-labelledby="tab-rapporten"
+              hidden
+            >
+              <img
+                src="./images/weekrapport.png"
+                alt="Voorbeeld van dagelijkse en wekelijkse rapporten"
+                class="feature-panel-image"
+              />
+              <div class="feature-panel-content">
+                <h3>Dagelijks/Wekelijks rapport</h3>
+                <p>
+                  Om inzicht te krijgen in je stress- en energieniveaus doorheen je
+                  werkdag(en) wordt er op het einde van elke dag en week een rapport
+                  opgesteld met verschillende grafieken die handig inzichten weergeven.
+                Hier kan je ook advies vinden over hoe je je stress beter kan
+                aanpakken.
+              </p>
+              </div>
+            </article>
+
+            <article
+              class="feature-panel"
+              id="panel-afsluitroutine"
+              role="tabpanel"
+              aria-labelledby="tab-afsluitroutine"
+              hidden
+            >
+              <img
+                src="./images/afsluitroutine.png"
+                alt="Voorbeeld van de afsluitroutine"
+                class="feature-panel-image"
+              />
+              <div class="feature-panel-content">
+                <h3>Afsluitroutine</h3>
+                <p>
+                  Om ervoor te zorgen dat de gebruiker met een gerust gevoel naar huis
+                  gaat aan het einde van de werkdag, hebben we een afsluitroutine
+                  geïmplementeerd. Wanneer je aangeeft dat je werkdag op z’n einde is,
+                  heb je de mogelijkheid om in te vullen waar je de volgende dag nog aan
+                  wil werken. Wanneer de volgende dag aanbreekt, word je er nog eens aan
+                  herinnerd.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
-
-        <div class="feature-panels">
-          <article
-            class="feature-panel is-active"
-            id="panel-pauzesuggesties"
-            role="tabpanel"
-            aria-labelledby="tab-pauzesuggesties"
-          >
-            <img
-              src="./images/pauzesuggesties.png"
-              alt="Voorbeeld van pauzesuggesties"
-              class="feature-panel-image"
-            />
-            <h3>Pauzesuggesties</h3>
-            <p>
-              Een pauze moet herstellend werken, niet uitputtend. Re:Mind biedt een
-              uitgebreide collectie van pauzesuggesties en korte hersteloefeningen
-              die gebruikers helpen om tot rust te komen op een gezonde manier. Als
-              je een gezond aantal herstellende pauzes neemt, zal je concentratie
-              verbeteren.
-            </p>
-          </article>
-
-          <article
-            class="feature-panel"
-            id="panel-checkins"
-            role="tabpanel"
-            aria-labelledby="tab-checkins"
-            hidden
-          >
-            <img
-              src="./images/stress check-ins.png"
-              alt="Voorbeeld van stress check-ins"
-              class="feature-panel-image"
-            />
-            <h3>Stress check-ins</h3>
-            <p>
-              Bij Re:Mind staat de gebruiker centraal. Daarom houden we graag bij
-              hoe het met je gaat doorheen de werkdag. Dit doen we aan de hand van
-              check-ins waar je je stress- en energieniveau kan ingeven. Op basis
-              van deze gegevens kunnen we dan gedetailleerdere inzichten genereren.
-            </p>
-          </article>
-
-          <article
-            class="feature-panel"
-            id="panel-rapporten"
-            role="tabpanel"
-            aria-labelledby="tab-rapporten"
-            hidden
-          >
-            <img
-              src="./images/weekrapport.png"
-              alt="Voorbeeld van dagelijkse en wekelijkse rapporten"
-              class="feature-panel-image"
-            />
-            <h3>Dagelijks/Wekelijks rapport</h3>
-            <p>
-              Om inzicht te krijgen in je stress- en energieniveaus doorheen je
-              werkdag(en) wordt er op het einde van elke dag en week een rapport
-              opgesteld met verschillende grafieken die handig inzichten weergeven.
-              Hier kan je ook advies vinden over hoe je je stress beter kan
-              aanpakken.
-            </p>
-          </article>
-
-          <article
-            class="feature-panel"
-            id="panel-afsluitroutine"
-            role="tabpanel"
-            aria-labelledby="tab-afsluitroutine"
-            hidden
-          >
-            <img
-              src="./images/afsluitroutine.png"
-              alt="Voorbeeld van de afsluitroutine"
-              class="feature-panel-image"
-            />
-            <h3>Afsluitroutine</h3>
-            <p>
-              Om ervoor te zorgen dat de gebruiker met een gerust gevoel naar huis
-              gaat aan het einde van de werkdag, hebben we een afsluitroutine
-              geïmplementeerd. Wanneer je aangeeft dat je werkdag op z’n einde is,
-              heb je de mogelijkheid om in te vullen waar je de volgende dag nog aan
-              wil werken. Wanneer de volgende dag aanbreekt, word je er nog eens aan
-              herinnerd.
-            </p>
-          </article>
-        </div>
-      </div>
       </section>
 
       <section class="section pricing" id="prijzen">
@@ -303,7 +310,7 @@
           <a href="#" class="card-button">Kies dit plan</a>
         </article>
       </div>
-    </section>
+      </section>
 
       <section class="section team" id="team">
         <h2>Team</h2>
@@ -323,7 +330,7 @@
             <div class="team-content">
               <h3>Maite Aldenkamp</h3>
               <p>korte uitleg</p>
-              <a href="#" class="more-button">Meer info</a>
+              <a href="./comingSoon.html" class="more-button">Meer info</a>
             </div>
           </article>
 
@@ -332,7 +339,7 @@
             <div class="team-content">
               <h3>Charlie Van Belle</h3>
               <p>korte uitleg</p>
-              <a href="#" class="more-button">Meer info</a>
+              <a href="./comingSoon.html" class="more-button">Meer info</a>
             </div>
           </article>
 
@@ -341,7 +348,7 @@
             <div class="team-content">
               <h3>Sam Pittois</h3>
               <p>korte uitleg</p>
-              <a href="#" class="more-button">Meer info</a>
+              <a href="./comingSoon.html" class="more-button">Meer info</a>
             </div>
           </article>
         </div>
@@ -353,11 +360,11 @@
         <div class="contact-people">
           <div class="contact-person">
             <h3>Maite Aldenkamp</h3>
-            <a href="https://www.maitealdenkamp.be/" class="contact-link">
+            <a href="https://www.maitealdenkamp.be/" target="_blank" class="contact-link">
                 <img src="./images/faviconMaite.png" alt="Portfolio icoon Maite" />
                 <span>Portfolio</span>
             </a>
-            <a href="https://www.linkedin.com/in/maite-aldenkamp/" class="contact-link">
+            <a href="https://www.linkedin.com/in/maite-aldenkamp/" target="_blank" class="contact-link">
                 <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                 <span>LinkedIn</span>
             </a>
@@ -365,11 +372,11 @@
 
           <div class="contact-person">
             <h3>Charlie Van Belle</h3>
-            <a href="https://portfoliocvbe.tech/" class="contact-link">
+            <a href="https://portfoliocvbe.tech/" target="_blank" class="contact-link">
                 <img src="./images/faviconCharlie.png" alt="Portfolio icoon Charlie" />
                 <span>Portfolio</span>
             </a>
-            <a href="https://www.linkedin.com/in/charlie-van-belle/" class="contact-link">
+            <a href="https://www.linkedin.com/in/charlie-van-belle/" target="_blank" class="contact-link">
                 <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                 <span>LinkedIn</span>
             </a>
@@ -377,11 +384,11 @@
 
           <div class="contact-person">
             <h3>Sam Pittois</h3>
-            <a href="https://www.sampittois.be/" class="contact-link">
+            <a href="https://www.sampittois.be/" target="_blank" class="contact-link">
                 <img src="./images/faviconSam.png" alt="Portfolio icoon Sam" />
                 <span>Portfolio</span>
             </a>
-            <a href="https://www.linkedin.com/in/sam-pittois/" class="contact-link">
+            <a href="https://www.linkedin.com/in/sam-pittois/" target="_blank" class="contact-link">
                 <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                 <span>LinkedIn</span>
             </a>
