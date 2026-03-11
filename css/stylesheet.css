@@ -613,6 +613,15 @@ input {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-xs);
   }
+
+  .more-button {
+    font-size: var(--font-size-xs);
+  }
+
+  /* Contact */
+  .submit-button {
+  font-size: var(--font-size-xs);
+}
 }
 
 @media (min-width: 1194px) {
@@ -710,6 +719,9 @@ input {
     font-size: 18px;
   }
 
+  .more-button {
+    font-size: var(--font-size-sm);
+  }
 }
 
 @media (min-width: 1440px) {
