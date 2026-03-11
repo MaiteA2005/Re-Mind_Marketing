@@ -109,14 +109,14 @@ input {
     margin: var(--space-3);
 }
 
-.section h3 {
+/* .section h3 {
     font-family: var(--font-family-heading);
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     margin: var(--space-3);
-}
+} */
 
 .about p,
 .feature-card p,
@@ -126,8 +126,13 @@ input {
     color: var(--text-primary);
 }
 
-.about h3{
-    margin-top: var(--space-6);
+.about h3 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: var(--space-6) 0 0 var(--space-3);
 }
 
 .about p {
@@ -348,18 +353,22 @@ input {
 /* TEAM */
 .team-intro {
     margin: var(--space-3);
+    text-align: left;
 }
 
-.team-meta {
+.subtitle {
     text-align: center;
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-xs);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-bold);
     color: var(--text-primary);
+    margin: var(--space-4) 0;
 }
 
 .team-list {
     display: grid;
-    gap: var(--space-3);
+    gap: var(--space-5);
     margin: var(--space-3);
 }
 
@@ -371,7 +380,7 @@ input {
 }
 
 .team-member img {
-    width: 90%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: var(--radius-xs);
@@ -379,13 +388,14 @@ input {
 
 .team-content h3 {
     font-size: var(--font-size-xs);
+    font-family: var(--font-family-heading);
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
+    margin-bottom: var(--space-2);
 }
 
 .team-content p {
     font-size: var(--font-size-xxs);
-    color: var(--text-secondary);
 }
 
 .more-button {
@@ -400,6 +410,7 @@ input {
     background: var(--button-accent-default-bg);
     color: var(--button-accent-default-text);
     font-weight: var(--font-weight-semibold);
+    margin-top: var(--space-2);
 }
 
 .more-button:hover {
@@ -563,6 +574,44 @@ input {
         font-size: var(--font-size-xs);
         line-height: var(--text-body-regular-line-height);
     }
+
+    /* Team */
+    .team {
+        padding: var(--layout-section) var(--layout-container-padding) 0;
+    }
+
+    .team-intro {
+        font-size: var(--font-size-xs);
+        line-height: var(--text-body-regular-line-height);
+    }
+
+    .subtitle {
+        font-size: var(--font-size-md);
+        margin: var(--space-8) 0;
+    }
+
+    .team-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+    }
+
+    .team-member {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member img {
+        width: 75%;
+        aspect-ratio: 1;
+    }
+
+    .team-content h3 {
+        font-size: var(--font-size-sm);
+    }
+
+    .team-content p {
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-xs);
+    }
 }
 
 @media (min-width: 1194px) {
@@ -642,6 +691,23 @@ input {
         max-width: none;
     }
 
+    /* Team */
+    .team-intro {
+        font-size: 18px;
+        margin: var(--space-0)
+    }
+
+    .team-list {
+        margin: var(--space-8);
+    }
+
+    .team-member {
+        gap: var(--space-6);
+    }
+
+    .team-content p {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -796,47 +862,28 @@ input {
         padding: var(--space-2) var(--space-4);
     }
 
-    /* Desktop Team */
-    .team {
-        padding: var(--layout-section) var(--layout-container-padding) 0;
-    }
-
+    /* Team */
     .team-intro {
         font-size: var(--text-body-regular-font-size);
-        line-height: var(--text-body-regular-line-height);
-        max-width: 1000px;
-        text-align: left;
-        margin: var(--space-0);
+        width: 70%;
     }
 
-    .team-meta {
-        font-size: var(--font-size-md);
-        margin: var(--space-8) 0;
+    .subtitle{
+        font-size: var(--font-size-lg);
     }
 
     .team-list {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-9);
-        margin-top: var(--space-9);
-    }
-
-    .team-member {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-    }
-
-    .team-member img {
-        width: 75%;
-        aspect-ratio: 1;
+        gap: var(--space-7);
+        margin: 0 var(--space-11);
     }
 
     .team-content h3 {
         font-size: var(--font-size-md);
+        margin-bottom: var(--space-3);
     }
 
     .team-content p {
-        font-size: var(--font-size-xs);
-        line-height: var(--line-height-xs);
+        font-size: var(--text-body-regular-font-size);
     }
 
     /* Desktop Contact */
