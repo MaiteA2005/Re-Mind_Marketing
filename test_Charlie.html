@@ -1,34 +1,47 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Re:Mind</title>
-    <link rel="stylesheet" href="test_Charlie.css" />
+    <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="test_Charlie.css" />
+    <title>Re:Mind</title>
+    <link rel="icon" type="image/svg+xml" href="./images/faviconLogo.svg" />
 </head>
 
 <body>
-    <nav class="site-nav" aria-label="Main navigation">
-        <div class="nav-inner">
-            <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo" />
-            <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-bar loading-bar-1"></div>
+            <div class="loading-bar loading-bar-2"></div>
+            <div class="loading-bar loading-bar-3"></div>
+            <div class="loading-bar loading-bar-4"></div>
+            <div class="loading-bar loading-bar-5"></div>
+            <div class="loading-bar loading-bar-6"></div>
         </div>
-        <ul id="main-nav-links" class="nav-links">
-            <!-- links nog werkende maken -->
-            <li><a href="#">Home</a></li>
-            <li><a href="#over">Over</a></li>
-            <li><a href="#functionaliteiten">Functionaliteiten</a></li>
-            <li><a href="#prijzen">Prijzen</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    </div>
+    <header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="nav-inner">
+                <img class="navLogo" src="./images/logo_primaryColor.png" alt="logo">
+                <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul id="main-nav-links" class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#over">Over</a></li>
+                <li><a href="#functionaliteiten">Functionaliteiten</a></li>
+                <li><a href="#prijzen">Prijzen</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="hero">
@@ -110,56 +123,65 @@
                         aria-labelledby="tab-pauzesuggesties">
                         <img src="./images/pauzesuggesties.png" alt="Voorbeeld van pauzesuggesties"
                             class="feature-panel-image" />
-                        <h3>Pauzesuggesties</h3>
-                        <p>
-                            Een pauze moet herstellend werken, niet uitputtend. Re:Mind biedt een
-                            uitgebreide collectie van pauzesuggesties en korte hersteloefeningen
-                            die gebruikers helpen om tot rust te komen op een gezonde manier. Als
-                            je een gezond aantal herstellende pauzes neemt, zal je concentratie
-                            verbeteren.
-                        </p>
+                        <div class="feature-panel-content">
+                            <h3>Pauzesuggesties</h3>
+                            <p>
+                                Een pauze moet herstellend werken, niet uitputtend. Re:Mind biedt een
+                                uitgebreide collectie van pauzesuggesties en korte hersteloefeningen
+                                die gebruikers helpen om tot rust te komen op een gezonde manier. Als
+                                je een gezond aantal herstellende pauzes neemt, zal je concentratie
+                                verbeteren.
+                            </p>
+                        </div>
+
                     </article>
 
                     <article class="feature-panel" id="panel-checkins" role="tabpanel" aria-labelledby="tab-checkins"
                         hidden>
                         <img src="./images/stress check-ins.png" alt="Voorbeeld van stress check-ins"
                             class="feature-panel-image" />
-                        <h3>Stress check-ins</h3>
-                        <p>
-                            Bij Re:Mind staat de gebruiker centraal. Daarom houden we graag bij
-                            hoe het met je gaat doorheen de werkdag. Dit doen we aan de hand van
-                            check-ins waar je je stress- en energieniveau kan ingeven. Op basis
-                            van deze gegevens kunnen we dan gedetailleerdere inzichten genereren.
-                        </p>
+                        <div class="feature-panel-content">
+                            <h3>Stress check-ins</h3>
+                            <p>
+                                Bij Re:Mind staat de gebruiker centraal. Daarom houden we graag bij
+                                hoe het met je gaat doorheen de werkdag. Dit doen we aan de hand van
+                                check-ins waar je je stress- en energieniveau kan ingeven. Op basis
+                                van deze gegevens kunnen we dan gedetailleerdere inzichten genereren.
+                            </p>
+                        </div>
                     </article>
 
                     <article class="feature-panel" id="panel-rapporten" role="tabpanel" aria-labelledby="tab-rapporten"
                         hidden>
                         <img src="./images/weekrapport.png" alt="Voorbeeld van dagelijkse en wekelijkse rapporten"
                             class="feature-panel-image" />
-                        <h3>Dagelijks/Wekelijks rapport</h3>
-                        <p>
-                            Om inzicht te krijgen in je stress- en energieniveaus doorheen je
-                            werkdag(en) wordt er op het einde van elke dag en week een rapport
-                            opgesteld met verschillende grafieken die handig inzichten weergeven.
-                            Hier kan je ook advies vinden over hoe je je stress beter kan
-                            aanpakken.
-                        </p>
+                        <div class="feature-panel-content">
+                            <h3>Dagelijks/Wekelijks rapport</h3>
+                            <p>
+                                Om inzicht te krijgen in je stress- en energieniveaus doorheen je
+                                werkdag(en) wordt er op het einde van elke dag en week een rapport
+                                opgesteld met verschillende grafieken die handig inzichten weergeven.
+                                Hier kan je ook advies vinden over hoe je je stress beter kan
+                                aanpakken.
+                            </p>
+                        </div>
                     </article>
 
                     <article class="feature-panel" id="panel-afsluitroutine" role="tabpanel"
                         aria-labelledby="tab-afsluitroutine" hidden>
                         <img src="./images/afsluitroutine.png" alt="Voorbeeld van de afsluitroutine"
                             class="feature-panel-image" />
-                        <h3>Afsluitroutine</h3>
-                        <p>
-                            Om ervoor te zorgen dat de gebruiker met een gerust gevoel naar huis
-                            gaat aan het einde van de werkdag, hebben we een afsluitroutine
-                            geïmplementeerd. Wanneer je aangeeft dat je werkdag op z’n einde is,
-                            heb je de mogelijkheid om in te vullen waar je de volgende dag nog aan
-                            wil werken. Wanneer de volgende dag aanbreekt, word je er nog eens aan
-                            herinnerd.
-                        </p>
+                        <div class="feature-panel-content">
+                            <h3>Afsluitroutine</h3>
+                            <p>
+                                Om ervoor te zorgen dat de gebruiker met een gerust gevoel naar huis
+                                gaat aan het einde van de werkdag, hebben we een afsluitroutine
+                                geïmplementeerd. Wanneer je aangeeft dat je werkdag op z’n einde is,
+                                heb je de mogelijkheid om in te vullen waar je de volgende dag nog aan
+                                wil werken. Wanneer de volgende dag aanbreekt, word je er nog eens aan
+                                herinnerd.
+                            </p>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -240,7 +262,7 @@
                     <div class="team-content">
                         <h3>Maite Aldenkamp</h3>
                         <p>korte uitleg</p>
-                        <a href="#" class="more-button">Meer info</a>
+                        <a href="./comingSoon.html" class="more-button">Meer info</a>
                     </div>
                 </article>
 
@@ -249,7 +271,7 @@
                     <div class="team-content">
                         <h3>Charlie Van Belle</h3>
                         <p>korte uitleg</p>
-                        <a href="#" class="more-button">Meer info</a>
+                        <a href="./comingSoon.html" class="more-button">Meer info</a>
                     </div>
                 </article>
 
@@ -258,7 +280,7 @@
                     <div class="team-content">
                         <h3>Sam Pittois</h3>
                         <p>korte uitleg</p>
-                        <a href="#" class="more-button">Meer info</a>
+                        <a href="./comingSoon.html" class="more-button">Meer info</a>
                     </div>
                 </article>
             </div>
@@ -270,11 +292,11 @@
             <div class="contact-people">
                 <div class="contact-person">
                     <h3>Maite Aldenkamp</h3>
-                    <a href="https://www.maitealdenkamp.be/" class="contact-link">
+                    <a href="https://www.maitealdenkamp.be/" target="_blank" class="contact-link">
                         <img src="./images/faviconMaite.png" alt="Portfolio icoon Maite" />
                         <span>Portfolio</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/maite-aldenkamp/" class="contact-link">
+                    <a href="https://www.linkedin.com/in/maite-aldenkamp/" target="_blank" class="contact-link">
                         <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                         <span>LinkedIn</span>
                     </a>
@@ -282,11 +304,11 @@
 
                 <div class="contact-person">
                     <h3>Charlie Van Belle</h3>
-                    <a href="https://portfoliocvbe.tech/" class="contact-link">
-                        <img src="./images/faviconCharlie.png" alt="Portfolio icoon Charlie" />
+                    <a href="https://portfoliocvbe.tech/" target="_blank" class="contact-link">
+                        <img src="./images/faviconCharlie.png" ² alt="Portfolio icoon Charlie" />
                         <span>Portfolio</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/charlie-van-belle/" class="contact-link">
+                    <a href="https://www.linkedin.com/in/charlie-van-belle/" target="_blank" class="contact-link">
                         <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                         <span>LinkedIn</span>
                     </a>
@@ -294,11 +316,11 @@
 
                 <div class="contact-person">
                     <h3>Sam Pittois</h3>
-                    <a href="https://www.sampittois.be/" class="contact-link">
+                    <a href="https://www.sampittois.be/" target="_blank" class="contact-link">
                         <img src="./images/faviconSam.png" alt="Portfolio icoon Sam" />
                         <span>Portfolio</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/sam-pittois/" class="contact-link">
+                    <a href="https://www.linkedin.com/in/sam-pittois/" target="_blank" class="contact-link">
                         <img src="./images/linkedIn.png" alt="LinkedIn icoon" />
                         <span>LinkedIn</span>
                     </a>
@@ -308,22 +330,20 @@
             <div class="contact-form-wrap">
                 <h3>Contact form</h3>
 
-                <form class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mqeyqprb" method="POST">
                     <label>
-                        <span>NAAM</span>
-                        <input type="text" placeholder="Naam" />
+                        Naam:
+                        <input placeholder='Naam' type="input" name="naam">
                     </label>
-
                     <label>
-                        <span>EMAIL</span>
-                        <input type="email" placeholder="Email" />
+                        Email:
+                        <input placeholder='Email' type="email" name="email">
                     </label>
-
                     <label>
-                        <span>VRAAG</span>
-                        <input type="text" placeholder="Vraag" />
+                        Vraag:
+                        <input placeholder='Typ hier je vraag' name="vraag"></input>
                     </label>
-
+                    <!-- your other form fields go here -->
                     <button type="submit" class="submit-button">Versturen</button>
                 </form>
             </div>
@@ -354,6 +374,6 @@
     </footer>
 </body>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 
 </html>
