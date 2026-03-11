@@ -117,6 +117,15 @@ input {
     padding: 22px var(--space-2) 0;
 }
 
+.section h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin: var(--space-3);
+}
+
 .section h2 {
     font-family: var(--font-family-heading);
     font-size: var(--font-size-md);
