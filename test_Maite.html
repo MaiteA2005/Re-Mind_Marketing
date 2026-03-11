@@ -394,22 +394,25 @@
         <div class="contact-form-wrap">
           <h3>Contact form</h3>
 
-          <form class="contact-form">
+          <form 
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/mqeyqprb"
+            method="POST"
+          >
             <label>
-              <span>NAAM</span>
-              <input type="text" placeholder="Naam" />
+              Naam:
+              <input placeholder='Naam' type="input" name="naam">
             </label>
-
             <label>
-              <span>EMAIL</span>
-              <input type="email" placeholder="Email" />
+              Email:
+              <input placeholder='Email' type="email" name="email">
             </label>
-
             <label>
-              <span>VRAAG</span>
-              <input type="text" placeholder="Vraag" />
+              Vraag:
+              <input placeholder='Typ hier je vraag' name="vraag"></input>
             </label>
-
+            <!-- your other form fields go here -->
             <button type="submit" class="submit-button">Versturen</button>
           </form>
         </div>
@@ -440,5 +443,34 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const form = document.getElementById("contact-form");
+
+        if (form) {
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            try {
+              const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                  Accept: "application/json",
+                },
+              });
+
+              if (response.ok) {
+                window.location.href = "succes.html";
+              } else {
+                alert("Er liep iets mis bij het verzenden. Probeer het opnieuw.");
+              }
+            } catch (error) {
+              alert("Er kon geen verbinding worden gemaakt. Probeer later opnieuw.");
+            }
+          });
+        }
+    </script>
   </body>
 </html>
