@@ -36,14 +36,6 @@ input {
     font: inherit;
 }
 
-/* Nav */
-.logo,
-.footer-brand {
-    margin: var(--space-3);
-    width: 200px;
-}
-
-
 /* HERO */
 .hero {
     padding: var(--space-6) var(--space-4);
@@ -60,9 +52,9 @@ input {
     align-items: start;
 }
 
-.hero-text img {
+.hero-logo {
     width: 200px;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-5);
 }
 
 .hero h1 {
@@ -576,7 +568,7 @@ input {
         justify-content: center;
     }
 
-    .hero img{
+    .note-image{
         width: 300px;
         margin: 0;
         margin-bottom: var(--space-3);
@@ -591,16 +583,6 @@ input {
     .cta-button {
         font-size: 20px;
         margin-top: var(--space-7);
-    }
-
-    .hero-note {
-        justify-content: flex-end;
-    }
-
-    .note-image {
-        padding: var(--space-1);
-        max-width: 25%;
-        height: auto;
     }
 
     /* Desktop Sections */
