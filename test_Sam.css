@@ -36,12 +36,6 @@ input {
     font: inherit;
 }
 
-/* Nav */
-.logo,
-.footer-brand {
-    margin: var(--space-3);
-    width: 200px;
-}
 
 
 /* HERO */
@@ -134,8 +128,7 @@ input {
 
 .about p,
 .feature-card p,
-.team-intro,
-.footer-columns a {
+.team-intro {
     font-size: var(--font-size-xxs);
     line-height: var(--line-height-xs);
     color: var(--text-secondary);
@@ -626,13 +619,25 @@ input {
 
   .about {
     padding-top: var(--space-11);
+    columns: 2;
+    column-gap: var(--space-10);
+  }
+
+  .about h2 {
+    column-span: all;
+    margin: 0 0 var(--space-4);
+  }
+
+  .about h3 {
+    break-before: column;
+    margin: 0 0 var(--space-3);
   }
 
   .about p {
     font-size: var(--text-body-regular-font-size);
     line-height: var(--text-body-regular-line-height);
     margin: 0 0 var(--space-6);
-    max-width: 900px;
+    max-width: none;
   }
 
   /* Desktop Features */
