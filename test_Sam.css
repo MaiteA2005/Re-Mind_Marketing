@@ -120,11 +120,11 @@ input {
 .about p,
 .feature-card p,
 .team-intro,
-.footer-columns a {
+/* .footer-columns a {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xs);
   color: var(--text-secondary);
-}
+} */
 
 .about p {
   margin: var(--space-3);
