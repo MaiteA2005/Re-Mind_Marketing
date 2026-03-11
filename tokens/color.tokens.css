@@ -70,7 +70,7 @@
 --border-300: #d6d2ca;
 --border-400: #c1bdb6;
 --border-500: #aba8a2;
---border-600: #9a9e98;
+--border-600: #a19e98;
 --border-700: #807e79;
 --border-800: #605e5b;
 --border-900: #4b4a47;
@@ -169,7 +169,7 @@
 --text-brand: var(--primary-300);
 
 --text-disabled: var(--border-50);
---text-placeholder: var(--border-200);
+--text-placeholder: var(--border-600);
 
 --text-on-light: var(--text-primary-300);
 --text-on-dark: var(--background-300);
