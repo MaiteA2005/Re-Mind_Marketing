@@ -80,3 +80,32 @@ billingButtons.forEach((button) => {
         }
     });
 });
+
+//Contact form
+const form = document.getElementById("contact-form");
+
+if (form) {
+    form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            Accept: "application/json",
+        },
+        });
+
+        if (response.ok) {
+        window.location.href = "succes.html";
+        } else {
+        alert("Er liep iets mis bij het verzenden. Probeer het opnieuw.");
+        }
+    } catch (error) {
+        alert("Er kon geen verbinding worden gemaakt. Probeer later opnieuw.");
+    }
+    });
+}
