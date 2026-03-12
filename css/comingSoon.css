@@ -11,7 +11,7 @@
 }
 
 body {
-    margin: 0;
+    margin: var(--space-0);
     background: var(--surface-page);
     color: var(--text-primary);
     font-family: var(--font-family-body);
@@ -62,5 +62,5 @@ main{
 }   
 
 .section {
-    padding: 22px 8px 0;
+    padding: var(--space-6) var(--space-2) 0;
 }
