@@ -63,8 +63,8 @@
   var(--shadow-spread-glow)
   var(--shadow-color-dropdown-hover);
 
-/* Stats / image shadow */
---shadow-stats-default:
+/* Image shadow */
+--shadow-img-default:
   var(--shadow-offset-sm-x)
   var(--shadow-offset-sm-y)
   var(--shadow-blur-sm)

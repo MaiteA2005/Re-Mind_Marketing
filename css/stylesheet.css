@@ -250,7 +250,7 @@ input {
   background: var(--surface-card);
   border-radius: var(--radius-sm);
   padding: var(--space-3) var(--space-3) var(--space-4);
-  box-shadow: var(--shadow-stats-default);
+  box-shadow: var(--shadow-img-default);
   margin: var(--space-2) 0;
   text-align: center;
 }
