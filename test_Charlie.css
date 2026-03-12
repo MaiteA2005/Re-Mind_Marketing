@@ -335,12 +335,14 @@ input {
 .billing-toggle {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: var(--space-14);
+    max-width: 240px;
     margin: 0 auto var(--space-4);
     padding: var(--space-1);
-    gap: var(--space-1);
-    background: var(--brand-highlight);
-    border-radius: var(--radius-full);
+    background: var(--primary-200);
+    border: 1px solid var(--primary-600);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xxs);
+    font-weight: var(--font-weight-semibold);
 }
 
 .billing-pill {
@@ -348,11 +350,7 @@ input {
     border: none;
     background: transparent;
     min-height: var(--space-7);
-    padding: var(--space-1) var(--space-2);
-    border-radius: var(--radius-full);
-    font-size: var(--font-size-xxs);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-xs);
+    border-radius: var(--radius-xs);
     color: var(--text-primary);
     cursor: pointer;
 }
@@ -644,6 +642,57 @@ input {
         line-height: var(--line-height-sm);
     }
 
+    /* Pricing */
+    .pricing {
+        padding: var(--space-9) var(--space-8) 0;
+    }
+
+    .pricing-stack {
+        flex-direction: row;
+        gap: var(--space-3);
+        margin: 0;
+    }
+
+    .pricing-card {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .pricing-card h3 {
+        font-size: var(--font-size-sm);
+        line-height: var(--text-heading-2-line-height);
+        margin: var(--space-6) 0 var(--space-3) 0;
+    }
+
+    .pricing-card li {
+        font-size: var(--text-body-regular-font-size);
+        line-height: var(--text-body-regular-line-height);
+        padding: var(--space-2) 0;
+    }
+
+    .pricing-label {
+        min-height: var(--space-8);
+        min-width: 140px;
+        padding: var(--space-2) var(--space-4);
+    }
+
+    .card-button {
+        min-width: 120px;
+        height: 36px;
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-xs);
+    }
+
+    .billing-toggle {
+        max-width: 300px;
+        margin-bottom: var(--space-6);
+    }
+
+    .billing-pill {
+        font-size: var(--text-body-regular-font-size);
+        line-height: var(--text-body-regular-line-height);
+        padding: var(--space-2) var(--space-4);
+    }
+
     /* Team */
     .team {
         padding: var(--layout-section) var(--layout-container-padding) 0;
@@ -727,8 +776,6 @@ input {
         max-width: none;
         margin: 0;
     } */
-
-
 
     .section+.section {
         margin-top: var(--space-6);
