@@ -146,6 +146,7 @@ input {
 
 .features h2 {
     margin: var(--space-3);
+    padding-left: var(--space-2);
 }
 
 .feature-tabs-component {
@@ -240,18 +241,23 @@ input {
 }
 
 /* PRICING */
+.pricing {
+    padding: var(--space-6) var(--space-2);
+}
+
 .pricing-stack {
-    display: grid;
-    gap: var(--space-3);
-    margin: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin: 0 auto 0 auto;
+    width: 60%;
 }
 
 .pricing-card {
     background: var(--surface-card);
-    border-radius: var(--radius-sm);
-    padding: var(--space-3) var(--space-3) var(--space-4);
-    box-shadow: var(--shadow-stats-default);
-    margin: var(--space-2) 0;
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-9);
+    box-shadow: var(--shadow-img-default);
     text-align: center;
 }
 
@@ -259,20 +265,21 @@ input {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 30px;
-    min-width: 112px;
+    min-height: 40px;
+    min-width: 120px;
     padding: var(--space-1) var(--space-3);
     background: var(--background-50);
-    border: var(--border-width-sm) var(--border-style-solid) var(--border-color-token-brand);
+    border: 2px solid var(--brand-primary);
     border-radius: var(--radius-sm);
-    font-size: var(--font-size-xxs);
-    line-height: var(--line-height-xs);
+    font-size: var(--font-size-xs);
+    font-family: var(--text-button-label-font-family);
     font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-xs);
     color: var(--text-primary);
 }
 
 .pricing-card h3 {
-    margin: var(--space-3) 0 var(--space-3);
+    margin: var(--space-7) 0 var(--space-3);
     font-family: var(--font-family-heading);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
@@ -281,18 +288,18 @@ input {
 
 .pricing-card ul {
     list-style: none;
-    padding: 0 var(--space-12);
-    margin: 0 0 var(--space-4);
     text-align: left;
+    margin: 0 auto 0 auto;
+    padding-left: var(--space-0);
+    width: fit-content;
 }
 
 .pricing-card li {
     position: relative;
-    padding: var(--space-2);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
     font-size: var(--font-size-xxs);
     color: var(--text-primary);
-    max-width: 250px;
+    max-width: 260px;
 }
 
 .card-button {
@@ -301,6 +308,7 @@ input {
     justify-content: center;
     width: 150px;
     height: 40px;
+    margin-top: var(--space-7);
     padding: 0 var(--space-3);
     border-radius: var(--button-radius);
     font-size: var(--font-size-xxs);
@@ -720,6 +728,8 @@ input {
         margin: 0;
     } */
 
+
+
     .section+.section {
         margin-top: var(--space-6);
     }
@@ -735,7 +745,7 @@ input {
         margin-left: 0;
     }
 
-    /*about*/
+    /* ABOUT */
     .about {
         padding: var(--layout-section) var(--layout-container-padding) 0;
         width: 100%;
@@ -780,7 +790,7 @@ input {
     }
 
     .feature-panel-content p {
-        font-size:18px;
+        font-size: 18px;
         line-height: var(--line-height-md);
     }
 
@@ -859,7 +869,7 @@ input {
     }
 
     /* Pricing */
-    .pricing-stack {
+    /* .pricing-stack {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-7);
         margin: var(--space-3) 0;
@@ -903,7 +913,7 @@ input {
         font-size: var(--text-body-regular-font-size);
         line-height: var(--text-body-regular-line-height);
         padding: var(--space-2) var(--space-4);
-    }
+    } */
 
     /* Team */
     .team-intro {
@@ -1002,5 +1012,4 @@ input {
         font-size: var(--font-size-sm);
         line-height: var(--line-height-sm);
     }
-
 }
