@@ -1,10 +1,14 @@
 //Loader
+document.body.classList.add("loading");
+
 window.addEventListener("load", () => {
     const loadingScreen = document.getElementById("loading-screen");
 
     setTimeout(() => {
         loadingScreen.style.opacity = "0";
         loadingScreen.style.transition = "opacity 0.5s ease";
+
+        document.body.classList.remove("loading");
 
         setTimeout(() => {
             loadingScreen.style.display = "none";
