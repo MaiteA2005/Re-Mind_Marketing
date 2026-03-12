@@ -642,58 +642,55 @@ input {
         line-height: var(--line-height-sm);
     }
 
-    /* Pricing */
+    /* PRICING */
     .pricing {
         padding: var(--space-9) var(--space-8) 0;
     }
 
     .pricing-stack {
         flex-direction: row;
-        gap: var(--space-3);
+        gap: var(--space-5);
         margin: 0;
+        width: 100%;
     }
 
     .pricing-card {
-        padding: var(--space-5) var(--space-4);
-    }
-
-    .pricing-card h3 {
-        font-size: var(--font-size-sm);
-        line-height: var(--text-heading-2-line-height);
-        margin: var(--space-6) 0 var(--space-3) 0;
-    }
-
-    .pricing-card li {
-        font-size: var(--text-body-regular-font-size);
-        line-height: var(--text-body-regular-line-height);
-        padding: var(--space-2) 0;
+        padding: var(--space-5) var(--space-7);
+        width: 100%;
     }
 
     .pricing-label {
-        min-height: var(--space-8);
-        min-width: 140px;
         padding: var(--space-2) var(--space-4);
+    }
+
+    .pricing-card h3 {
+        margin: var(--space-6) 0 var(--space-3) 0;
+        font-size: var(--font-size-sm);
+        line-height: var(--text-heading-2-line-height);
+    }
+
+    .pricing-card li {
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-sm);
     }
 
     .card-button {
         min-width: 120px;
-        height: 36px;
+        height: 40px;
         font-size: var(--font-size-xs);
         line-height: var(--line-height-xs);
     }
 
     .billing-toggle {
-        max-width: 300px;
-        margin-bottom: var(--space-6);
+        margin-bottom: var(--space-4);
+        font-size: var(--font-size-xs);
     }
 
     .billing-pill {
-        font-size: var(--text-body-regular-font-size);
-        line-height: var(--text-body-regular-line-height);
-        padding: var(--space-2) var(--space-4);
+        padding: var(--space-2) var(--space-2);
     }
 
-    /* Team */
+    /* TEAM */
     .team {
         padding: var(--layout-section) var(--layout-container-padding) 0;
     }
@@ -818,7 +815,7 @@ input {
         max-width: none;
     }
 
-    /* Features */
+    /* FEATURES */
     .feature-tabs {
         margin-left: var(--space-0);
     }
@@ -841,7 +838,32 @@ input {
         line-height: var(--line-height-md);
     }
 
-    /* Team */
+    /* PRICING */
+    .pricing {
+        padding: var(--layout-section) var(--layout-container-padding) 0;
+    }
+
+    .pricing-label {
+        font-size: 18px;
+    }
+
+    .pricing-card h3 {
+        font-size: var(--font-size-md);
+    }
+
+    .pricing-card li {
+        font-size: 18px
+    }
+
+    .billing-toggle {
+        font-size: 18px;
+    }
+
+    .billing-pill {
+        padding: var(--space-3);
+    }
+
+    /* TEAM */
     .team-intro {
         font-size: 18px;
         margin: var(--space-0)
@@ -915,54 +937,41 @@ input {
         font-size: var(--font-size-sm);
     }
 
-    /* Pricing */
-    /* .pricing-stack {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-7);
-        margin: var(--space-3) 0;
+    /* PRICING */
+    .pricing-stack {
+        gap: var(--space-8);
     }
 
     .pricing-card {
-        padding: var(--space-8) var(--space-7);
+        padding: var(--space-8);
     }
 
     .pricing-card h3 {
-        font-size: var(--text-heading-2-font-size);
-        line-height: var(--text-heading-2-line-height);
-        margin: var(--space-6) 0;
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-lg);
     }
 
     .pricing-card li {
         font-size: var(--text-body-regular-font-size);
         line-height: var(--text-body-regular-line-height);
-        padding: var(--space-2) 0;
-    }
-
-    .pricing-label {
-        min-height: var(--space-8);
-        min-width: 140px;
-        padding: var(--space-2) var(--space-4);
-    }
-
-    .card-button {
-        min-width: 120px;
-        height: 36px;
-        font-size: var(--font-size-xs);
-        line-height: var(--line-height-xs);
-    }
-
-    .billing-toggle {
-        max-width: 300px;
         margin-bottom: var(--space-6);
     }
 
-    .billing-pill {
-        font-size: var(--text-body-regular-font-size);
-        line-height: var(--text-body-regular-line-height);
-        padding: var(--space-2) var(--space-4);
-    } */
+    .pricing-label {
+        font-size: var(--font-size-sm);
+        padding: var(--space-3) var(--space-4);
+    }
 
-    /* Team */
+    .card-button {
+        font-size: var(--font-size-sm);
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .billing-toggle {
+        font-size: var(--font-size-sm);
+    }
+
+    /* TEAM */
     .team-intro {
         font-size: var(--text-body-regular-font-size);
         width: 70%;

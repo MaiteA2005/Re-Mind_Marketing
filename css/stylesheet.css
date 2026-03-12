@@ -240,18 +240,23 @@ input {
 }
 
 /* PRICING */
+.pricing {
+  padding: var(--space-6) var(--space-2);
+}
+
 .pricing-stack {
-  display: grid;
-  gap: var(--space-3);
-  margin: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin: 0 auto 0 auto;
+  width: 60%;
 }
 
 .pricing-card {
   background: var(--surface-card);
-  border-radius: var(--radius-sm);
-  padding: var(--space-3) var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-9);
   box-shadow: var(--shadow-img-default);
-  margin: var(--space-2) 0;
   text-align: center;
 }
 
@@ -259,20 +264,21 @@ input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 30px;
-  min-width: 112px;
+  min-height: 40px;
+  min-width: 120px;
   padding: var(--space-1) var(--space-3);
   background: var(--background-50);
-  border: var(--border-width-sm) var(--border-style-solid) var(--border-color-token-brand);
+  border: 2px solid var(--brand-primary);
   border-radius: var(--radius-sm);
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xs);
+  font-size: var(--font-size-xs);
+  font-family: var(--text-button-label-font-family);
   font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-xs);
   color: var(--text-primary);
 }
 
 .pricing-card h3 {
-  margin: var(--space-3) 0 var(--space-3);
+  margin: var(--space-7) 0 var(--space-3);
   font-family: var(--font-family-heading);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
@@ -281,18 +287,18 @@ input {
 
 .pricing-card ul {
   list-style: none;
-  padding: 0 var(--space-12);
-  margin: 0 0 var(--space-4);
   text-align: left;
+  margin: 0 auto 0 auto;
+  padding-left: var(--space-0);
+  width: fit-content;
 }
 
 .pricing-card li {
   position: relative;
-  padding: var(--space-2);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-4);
   font-size: var(--font-size-xxs);
   color: var(--text-primary);
-  max-width: 250px;
+  max-width: 260px;
 }
 
 .card-button {
@@ -301,6 +307,7 @@ input {
   justify-content: center;
   width: 150px;
   height: 40px;
+  margin-top: var(--space-7);
   padding: 0 var(--space-3);
   border-radius: var(--button-radius);
   font-size: var(--font-size-xxs);
@@ -327,12 +334,14 @@ input {
 .billing-toggle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: var(--space-14);
+  max-width: 240px;
   margin: 0 auto var(--space-4);
   padding: var(--space-1);
-  gap: var(--space-1);
-  background: var(--brand-highlight);
-  border-radius: var(--radius-full);
+  background: var(--primary-200);
+  border: 1px solid var(--primary-600);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-semibold);
 }
 
 .billing-pill {
@@ -340,11 +349,7 @@ input {
   border: none;
   background: transparent;
   min-height: var(--space-7);
-  padding: var(--space-1) var(--space-2);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-xxs);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-xs);
+  border-radius: var(--radius-xs);
   color: var(--text-primary);
   cursor: pointer;
 }
@@ -636,7 +641,55 @@ input {
     line-height: var(--line-height-sm);
   }
 
-  /* Team */
+  /* PRICING */
+  .pricing {
+    padding: var(--space-9) var(--space-8) 0;
+  }
+
+  .pricing-stack {
+    flex-direction: row;
+    gap: var(--space-5);
+    margin: 0;
+    width: 100%;
+  }
+
+  .pricing-card {
+    padding: var(--space-5) var(--space-7);
+    width: 100%;
+  }
+
+  .pricing-label {
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .pricing-card h3 {
+    margin: var(--space-6) 0 var(--space-3) 0;
+    font-size: var(--font-size-sm);
+    line-height: var(--text-heading-2-line-height);
+  }
+
+  .pricing-card li {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-sm);
+  }
+
+  .card-button {
+    min-width: 120px;
+    height: 40px;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+  }
+
+  .billing-toggle {
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+
+  .billing-pill {
+    padding: var(--space-2) var(--space-2);
+  }
+
+  /* TEAM */
   .team {
     padding: var(--layout-section) var(--layout-container-padding) 0;
   }
@@ -678,7 +731,7 @@ input {
     font-size: var(--font-size-xs);
   }
 
-  /* Contact */
+  /* CONTACT */
   .submit-button {
     font-size: var(--font-size-xs);
   }
@@ -735,7 +788,7 @@ input {
     margin-left: 0;
   }
 
-  /*about*/
+  /* ABOUT */
   .about {
     padding: var(--layout-section) var(--layout-container-padding) 0;
     width: 100%;
@@ -761,7 +814,32 @@ input {
     max-width: none;
   }
 
-  /* Features */
+  /* PRICING */
+  .pricing {
+    padding: var(--layout-section) var(--layout-container-padding) 0;
+  }
+
+  .pricing-label {
+    font-size: 18px;
+  }
+
+  .pricing-card h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .pricing-card li {
+    font-size: 18px
+  }
+
+  .billing-toggle {
+    font-size: 18px;
+  }
+
+  .billing-pill {
+    padding: var(--space-3);
+  }
+
+  /* FEATURES */
   .feature-tabs {
     margin-left: var(--space-0);
   }
@@ -784,7 +862,7 @@ input {
     line-height: var(--line-height-md);
   }
 
-  /* Team */
+  /* TEAM */
   .team-intro {
     font-size: 18px;
     margin: var(--space-0)
@@ -826,7 +904,7 @@ input {
     line-height: 1.2;
   }
 
-  /* About */
+  /* ABOUT */
   .about {
     column-gap: var(--space-10);
   }
@@ -835,7 +913,7 @@ input {
     font-size: var(--text-body-regular-font-size);
   }
 
-  /* Features */
+  /* FEATURES */
   .features h2 {
     padding: var(--layout-section) 0 0 var(--layout-container-padding);
   }
@@ -858,78 +936,41 @@ input {
     font-size: var(--font-size-sm);
   }
 
-  /* Pricing */
+  /* PRICING */
   .pricing-stack {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-7);
-    margin: var(--space-3) 0;
+    gap: var(--space-8);
   }
 
   .pricing-card {
-    padding: var(--space-8) var(--space-7);
+    padding: var(--space-8);
   }
 
   .pricing-card h3 {
-    font-size: var(--text-heading-2-font-size);
-    line-height: var(--text-heading-2-line-height);
-    margin: var(--space-6) 0;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
   }
 
   .pricing-card li {
     font-size: var(--text-body-regular-font-size);
     line-height: var(--text-body-regular-line-height);
-    padding: var(--space-2) 0;
-  }
-
-  .pricing-label {
-    min-height: var(--space-8);
-    min-width: 140px;
-    padding: var(--space-2) var(--space-4);
-  }
-
-  .card-button {
-    min-width: 120px;
-    height: 36px;
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-  }
-
-  .billing-toggle {
-    max-width: 300px;
     margin-bottom: var(--space-6);
   }
 
-  .billing-pill {
-    font-size: var(--text-body-regular-font-size);
-    line-height: var(--text-body-regular-line-height);
-    padding: var(--space-2) var(--space-4);
+  .pricing-label {
+    font-size: var(--font-size-sm);
+    padding: var(--space-3) var(--space-4);
   }
 
-  /* Team */
-  .team-intro {
-    font-size: var(--text-body-regular-font-size);
-    width: 70%;
+  .card-button {
+    font-size: var(--font-size-sm);
+    padding: var(--space-2) var(--space-3);
   }
 
-  .subtitle {
-    font-size: var(--font-size-lg);
+  .billing-toggle {
+    font-size: var(--font-size-sm);
   }
 
-  .team-list {
-    gap: var(--space-7);
-    margin: 0 var(--space-11);
-  }
-
-  .team-content h3 {
-    font-size: var(--font-size-md);
-    margin-bottom: var(--space-3);
-  }
-
-  .team-content p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  /* Contact */
+  /* CONTACT */
   .contact {
     padding: var(--layout-section) var(--layout-container-padding) 0;
     display: grid;
