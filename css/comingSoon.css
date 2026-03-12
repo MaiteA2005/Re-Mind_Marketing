@@ -17,11 +17,18 @@ body {
     font-family: var(--font-family-body);
 }
 
+main{
+    min-height: calc(100vh - 80px); /* hoogte scherm min navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #coming-soon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: var(--space-9);
+    text-align: center;
 }
 
 #coming-soon h2 {
@@ -45,7 +52,14 @@ body {
     font-size: var(--font-size-sm);
     text-decoration: underline;
     color: var(--text-primary);
+    padding-inline: var(--space-2);
+    border-radius: var(--space-2);
 }
+
+#coming-soon a:hover {
+    background-color: var(--brand-highlight);
+    transition: background-color 0.3s ease;
+}   
 
 .section {
     padding: 22px 8px 0;
