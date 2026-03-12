@@ -146,6 +146,7 @@ input {
 
 .features h2 {
   margin: var(--space-3);
+  padding-left: var(--space-2);
 }
 
 .feature-tabs-component {
@@ -814,6 +815,29 @@ input {
     max-width: none;
   }
 
+  /* FEATURES */
+  .feature-tabs {
+    margin-left: var(--space-0);
+  }
+
+  .feature-tab {
+    padding: var(--space-4) var(--space-7);
+    font-size: 18px;
+  }
+
+  .feature-panel {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  .feature-panel h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .feature-panel-content p {
+    font-size: 18px;
+    line-height: var(--line-height-md);
+  }
+
   /* PRICING */
   .pricing {
     padding: var(--layout-section) var(--layout-container-padding) 0;
@@ -837,29 +861,6 @@ input {
 
   .billing-pill {
     padding: var(--space-3);
-  }
-
-  /* FEATURES */
-  .feature-tabs {
-    margin-left: var(--space-0);
-  }
-
-  .feature-tab {
-    padding: var(--space-4) var(--space-7);
-    font-size: 18px;
-  }
-
-  .feature-panel {
-    grid-template-columns: 1fr 1.3fr;
-  }
-
-  .feature-panel h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .feature-panel-content p {
-    font-size: 18px;
-    line-height: var(--line-height-md);
   }
 
   /* TEAM */
@@ -970,6 +971,30 @@ input {
     font-size: var(--font-size-sm);
   }
 
+  /* TEAM */
+  .team-intro {
+    font-size: var(--text-body-regular-font-size);
+    width: 70%;
+  }
+
+  .subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .team-list {
+    gap: var(--space-7);
+    margin: 0 var(--space-11);
+  }
+
+  .team-content h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-3);
+  }
+
+  .team-content p {
+    font-size: var(--text-body-regular-font-size);
+  }
+
   /* CONTACT */
   .contact {
     padding: var(--layout-section) var(--layout-container-padding) 0;
@@ -1043,5 +1068,4 @@ input {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
   }
-
 }
