@@ -22,7 +22,6 @@
                 </button>
             </div>
             <ul id="main-nav-links" class="nav-links">
-                <!-- links nog werkende maken -->
                 <li><a href="index.html#">Home</a></li>
                 <li><a href="index.html#over">Over</a></li>
                 <li><a href="index.html#functionaliteiten">Functionaliteiten</a></li>
@@ -47,6 +46,10 @@
 </body>
 
 <script>
+    if (window.location.pathname === '/comingSoon.html') {
+        window.history.replaceState(null, null, '/ComingSoon!');
+    }
+
     const menuButton = document.querySelector('.menu-button');
     const navLinks = document.querySelector('#main-nav-links');
 

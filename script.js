@@ -17,6 +17,10 @@ window.addEventListener("load", () => {
 });
 
 //Navigation
+if (window.location.pathname === '/index.html' || window.location.hash === '#') {
+    window.history.replaceState(null, null, '/');
+}
+
 const menuButton = document.querySelector('.menu-button');
 const navLogo = document.querySelector('.navLogo');
 const navLinks = document.querySelector('#main-nav-links');
