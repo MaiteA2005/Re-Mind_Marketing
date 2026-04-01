@@ -133,6 +133,172 @@ input {
   transform-origin: center;
 }
 
+/* HERKENBAAR SECTIE */
+.herkenbaar-sectie {
+  padding: var(--space-0) var(--space-0) var(--space-10);
+  background: linear-gradient(
+    180deg,
+    #fffcf5 0%,
+    #e5ece7 100%
+  );
+  overflow: hidden;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--space-6);
+}
+
+.slider-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+/* KAART */
+.kaart {
+  flex: 0 0 74%;
+  min-height: 220px;
+  background: var(--surface-page);
+  border: 2px solid var(--brand-highlight);
+  border-radius: 2rem;
+  padding: var(--space-5) var(--space-8);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.92);
+  opacity: 0.65;
+}
+
+.kaart--actief {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.slider-pijl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.slider-pijl img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slider-pijl--links {
+  left: 0.75rem;
+}
+
+.slider-pijl--rechts {
+  right: 0.75rem;
+}
+
+.kaart--clone {
+  pointer-events: none;
+}
+
+.kaart__icoon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+/* TEKST IN KAART */
+.kaart h3 {
+  margin: 0 0 var(--space-3);
+  font-family: var(--text-heading-1-font-family);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.kaart p {
+  margin: 0;
+  font-family: var(--text-body-regular-font-family);
+  font-size: var(--font-size-sm);
+  color: var(--brand-primary);
+}
+
+/* PIJLEN */
+.slider-pijl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  justify-content: center;
+  z-index: 2;
+}
+
+.slider-pijl--links {
+  left: 1rem;
+}
+
+.slider-pijl--rechts {
+  right: 1rem;
+}
+
+/* INDICATOREN */
+.slider-indicatoren {
+  display: flex;
+  justify-content: center;
+  gap: 0.875rem;
+  margin-bottom: var(--space-6);
+}
+
+.indicator {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1.5px solid #a8b6aa;
+}
+
+.indicator--actief {
+  background: #a8b6aa;
+}
+
+/* ONDERSTE TEKST */
+.herkenbaar-inhoud {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.herkenbaar-inhoud h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--text-heading-1-font-family);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.herkenbaar-inhoud p {
+  font-family: var(--text-body-regular-font-family);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
 /* GENERAL SECTIONS */
 .section {
   padding: 22px var(--space-2) 0;

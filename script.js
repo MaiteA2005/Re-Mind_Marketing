@@ -117,3 +117,121 @@ if (form) {
     }
     });
 }
+
+const viewport = document.querySelector(".slider-viewport");
+const track = document.querySelector(".slider-track");
+const vorige = document.querySelector(".slider-pijl--links");
+const volgende = document.querySelector(".slider-pijl--rechts");
+const indicatoren = document.querySelectorAll(".indicator");
+
+if (viewport && track && vorige && volgende && indicatoren.length) {
+  const origineleKaarten = Array.from(track.querySelectorAll(".kaart"));
+  const aantalOrigineel = origineleKaarten.length;
+
+  const eersteClone = origineleKaarten[0].cloneNode(true);
+  const laatsteClone = origineleKaarten[aantalOrigineel - 1].cloneNode(true);
+
+  eersteClone.classList.add("kaart--clone");
+  laatsteClone.classList.add("kaart--clone");
+
+  track.appendChild(eersteClone);
+  track.insertBefore(laatsteClone, origineleKaarten[0]);
+
+  let kaarten = Array.from(track.querySelectorAll(".kaart"));
+  let huidigeIndex = 1;
+  let isTransitioning = false;
+  let startX = 0;
+
+  function updateIndicatoren() {
+    const echteIndex =
+      ((huidigeIndex - 1) % aantalOrigineel + aantalOrigineel) % aantalOrigineel;
+
+    indicatoren.forEach((dot, i) => {
+      dot.classList.toggle("indicator--actief", i === echteIndex);
+    });
+  }
+
+  function updateActieveKaart() {
+    kaarten.forEach((kaart) => kaart.classList.remove("kaart--actief"));
+
+    if (kaarten[huidigeIndex]) {
+      kaarten[huidigeIndex].classList.add("kaart--actief");
+    }
+
+    updateIndicatoren();
+  }
+
+  function centreerActieveKaart(zonderAnimatie = false) {
+    const actieveKaart = kaarten[huidigeIndex];
+    if (!actieveKaart) return;
+
+    const viewportBreedte = viewport.offsetWidth;
+    const kaartLinks = actieveKaart.offsetLeft;
+    const kaartBreedte = actieveKaart.offsetWidth;
+
+    const verschuiving = kaartLinks - (viewportBreedte / 2) + (kaartBreedte / 2);
+
+    track.style.transition = zonderAnimatie ? "none" : "transform 0.45s ease";
+    track.style.transform = `translateX(-${verschuiving}px)`;
+
+    updateActieveKaart();
+  }
+
+  function gaNaarIndex(index) {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    huidigeIndex = index;
+    centreerActieveKaart(false);
+  }
+
+  volgende.addEventListener("click", () => {
+    gaNaarIndex(huidigeIndex + 1);
+  });
+
+  vorige.addEventListener("click", () => {
+    gaNaarIndex(huidigeIndex - 1);
+  });
+
+  indicatoren.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      gaNaarIndex(index + 1);
+    });
+  });
+
+  viewport.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  viewport.addEventListener("touchend", (e) => {
+    const eindX = e.changedTouches[0].clientX;
+    const verschil = startX - eindX;
+
+    if (verschil > 50) {
+      gaNaarIndex(huidigeIndex + 1);
+    } else if (verschil < -50) {
+      gaNaarIndex(huidigeIndex - 1);
+    }
+  });
+
+  track.addEventListener("transitionend", () => {
+    if (huidigeIndex === kaarten.length - 1) {
+      huidigeIndex = 1;
+      centreerActieveKaart(true);
+    }
+
+    if (huidigeIndex === 0) {
+      huidigeIndex = aantalOrigineel;
+      centreerActieveKaart(true);
+    }
+
+    isTransitioning = false;
+  });
+
+  window.addEventListener("load", () => {
+    centreerActieveKaart(true);
+  });
+
+  window.addEventListener("resize", () => {
+    centreerActieveKaart(true);
+  });
+}
