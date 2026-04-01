@@ -10,6 +10,12 @@
     box-sizing: border-box;
 }
 
+html,
+body{
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
     margin: var(--space-0);
     background: var(--surface-page);
@@ -63,4 +69,13 @@ main{
 
 .section {
     padding: var(--space-6) var(--space-2) 0;
+}
+
+.comingSoon-decoratie {
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    width: 65%;
+    pointer-events: none;
+    overflow: hidden;
 }
