@@ -70,6 +70,7 @@ tabs.forEach((tab) => {
 //Billing toggle
 const billingButtons = document.querySelectorAll(".billing-pill");
 const premiumPrice = document.querySelector(".premium-price");
+const companyPrice = document.querySelector(".company-price");
 
 billingButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -83,8 +84,10 @@ billingButtons.forEach((button) => {
 
         if (button.dataset.billing === "monthly") {
             premiumPrice.innerHTML = "€2,99/maand";
+            companyPrice.innerHTML = "€2,20/maand";
         } else {
             premiumPrice.innerHTML = "€33/jaar";
+            companyPrice.innerHTML = "€20/jaar<br />per werknemer";
         }
     });
 });

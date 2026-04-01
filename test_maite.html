@@ -372,6 +372,16 @@
     <section class="section pricing" id="prijzen">
       <h2>Prijzen</h2>
 
+      <div class="billing-toggle" role="tablist" aria-label="Kies facturatieperiode">
+        <button type="button" class="billing-pill active" data-billing="monthly" aria-pressed="true">
+            Maandelijks
+        </button>
+
+        <button type="button" class="billing-pill" data-billing="yearly" aria-pressed="false">
+            Jaarlijks
+        </button>
+      </div>
+
       <div class="pricing-stack">
         <article class="pricing-card">
           <div class="pricing-label">Gratis</div>
@@ -388,16 +398,6 @@
         </article>
 
         <article class="pricing-card pricing-card-premium">
-          <div class="billing-toggle" role="tablist" aria-label="Kies facturatieperiode">
-            <button type="button" class="billing-pill active" data-billing="monthly" aria-pressed="true">
-              Maandelijks
-            </button>
-
-            <button type="button" class="billing-pill" data-billing="yearly" aria-pressed="false">
-              Jaarlijks
-            </button>
-          </div>
-
           <div class="pricing-label premium-price">€2,99/maand</div>
           <h3>Premium plan</h3>
 
@@ -412,7 +412,7 @@
         </article>
 
         <article class="pricing-card">
-          <div class="pricing-label">€20/jaar<br />per werknemer</div>
+          <div class="pricing-label company-price">€2,20/maand<br />per werknemer</div>          
           <h3>Bedrijfslicentie</h3>
 
           <ul>
