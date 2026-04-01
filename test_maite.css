@@ -314,7 +314,6 @@ input {
   margin: var(--space-3);
 }
 
-.about p,
 .feature-card p,
 .team-intro {
   font-size: var(--font-size-xxs);
@@ -322,17 +321,82 @@ input {
   color: var(--text-primary);
 }
 
-.about h3 {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin: var(--space-6) 0 0 var(--space-3);
+
+/* Over Re:Mind */
+.over-remind {
+  padding: var(--space-8) var(--space-4) var(--space-10);
 }
 
-.about p {
-  margin: var(--space-3);
+.over-remind__intro {
+  margin-bottom: var(--space-8);
+}
+
+.over-remind h2 {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.over-remind p {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-sm);
+  color: var(--text-primary);
+}
+
+.over-remind__highlight {
+  margin-top: var(--space-6);
+}
+
+.missie-kaart {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: var(--space-8);
+  padding: var(--space-5);
+  background: var(--highlight-200);
+  border-radius: 24px;
+}
+
+.missie-kaart__decoratie {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.missie-kaart__decoratie img {
+  width: 84px;
+  height: 84px;
+  display: block;
+}
+
+.missie-kaart h3,
+.visie-blok h3 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+}
+
+.missie-kaart p:last-of-type,
+.visie-blok p:last-of-type,
+.over-remind__intro p:last-of-type {
+  margin-bottom: 0;
+}
+
+.visie-blok {
+  text-align: center;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.visie-blok p {
+  color: var(--text-primary);
 }
 
 /* FEATURES */
@@ -748,613 +812,3 @@ input {
   border-color: var(--button-accent-active-border);
   color: var(--text-on-dark);
 }
-
-@media (min-width: 834px) {
-
-  /*tablet staand*/
-  
-  .hero {
-    align-items: center;
-    padding: calc(var(--space-10) + var(--space-8)) var(--space-6) var(--space-10);
-  }
-
-  .hero-content {
-    max-width: 620px;
-  }
-
-  .hero p {
-    max-width: 28ch;
-  }
-
-  .hero-button {
-    min-height: 64px;
-    padding: var(--space-4) var(--space-7);
-  }
-
-  .hero-image img {
-    width: min(60vw, 420px);
-  }
-
-  /* ABOUT */
-  .about {
-    padding: var(--space-9) var(--space-8) 0;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-  }
-
-  .about p {
-    margin: var(--space-3);
-    font-size: var(--font-size-xs);
-    line-height: var(--text-body-regular-line-height);
-  }
-
-  /* FEATURES */
-  .features h2 {
-    padding: var(--space-8) 0 0 var(--space-8);
-  }
-
-  .feature-tabs {
-    scrollbar-width: none;
-    padding-left: var(--space-8);
-    margin-left: var(--space-3);
-  }
-
-  .feature-tab {
-    padding: var(--space-4) var(--space-6);
-    font-size: var(--font-size-xs);
-  }
-
-  .feature-tab.is-active {
-    font-weight: var(--font-weight-extrabold);
-  }
-
-  .feature-tab:not(.is-active) {
-    margin-top: var(--space-2);
-  }
-
-  .feature-panel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--space-8);
-    align-items: center;
-    padding: var(--space-9) var(--space-8);
-  }
-
-  .feature-panel-image {
-    grid-row: 1 / span 2;
-    width: 100%;
-    margin: 0;
-  }
-
-  .feature-panel-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    grid-row: 1 / span 2;
-  }
-
-  .feature-panel-content h3 {
-    margin-bottom: var(--space-4);
-    text-align: left;
-    font-size: var(--font-size-sm);
-  }
-
-  .feature-panel-content p {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-sm);
-  }
-
-  /* PRICING */
-  .pricing {
-    padding: var(--space-9) var(--space-8) 0;
-  }
-
-  .pricing-stack {
-    flex-direction: row;
-    gap: var(--space-5);
-    margin: 0;
-    width: 100%;
-  }
-
-  .pricing-card {
-    padding: var(--space-5) var(--space-7);
-    width: 100%;
-  }
-
-  .pricing-label {
-    padding: var(--space-2) var(--space-4);
-  }
-
-  .pricing-card h3 {
-    margin: var(--space-6) 0 var(--space-3) 0;
-    font-size: var(--font-size-sm);
-    line-height: var(--text-heading-2-line-height);
-  }
-
-  .pricing-card li {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-sm);
-  }
-
-  .card-button {
-    min-width: 120px;
-    height: 40px;
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-  }
-
-  .billing-toggle {
-    margin-bottom: var(--space-4);
-    font-size: var(--font-size-xs);
-  }
-
-  .billing-pill {
-    padding: var(--space-2) var(--space-2);
-  }
-
-  /* TEAM */
-  .team {
-    padding: var(--layout-section) var(--layout-container-padding) 0;
-  }
-
-  .team-intro {
-    font-size: var(--font-size-xs);
-    line-height: var(--text-body-regular-line-height);
-  }
-
-  .subtitle {
-    font-size: var(--font-size-md);
-    margin: var(--space-8) 0;
-  }
-
-  .team-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-  }
-
-  .team-member {
-    grid-template-columns: 1fr;
-  }
-
-  .team-member img {
-    width: 75%;
-    aspect-ratio: 1;
-  }
-
-  .team-content h3 {
-    font-size: var(--font-size-sm);
-  }
-
-  .team-content p {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-  }
-
-  .more-button {
-    font-size: var(--font-size-xs);
-  }
-
-  /* CONTACT */
-  .contact {
-    padding: var(--layout-section) var(--layout-container-padding) 0;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: var(--space-10);
-    align-items: start;
-    margin-bottom: var(--space-10);
-  }
-
-  .contact h2 {
-    grid-column: 1 / -1;
-  }
-
-  .contact-person {
-    margin-bottom: var(--space-8);
-  }
-
-  .contact-person h3 {
-    font-size: 18px;
-  }
-
-  .contact-link {
-    margin: var(--space-3);
-  }
-
-  .contact-link span {
-    font-size: var(--font-size-xs);
-  }
-
-  .contact-link img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .contact-form-wrap {
-    max-width: none;
-    margin: 0;
-    grid-column: 2;
-  }
-
-  .contact-form-wrap h3 {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact-form {
-    padding: var(--space-5);
-    margin: var(--space-3);
-  }
-
-  .contact-form span {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-    margin-bottom: var(--space-2);
-  }
-
-  .contact-form input {
-    height: 40px;
-    font-size: var(--font-size-xs);
-  }
-
-  .contact-form input::placeholder {
-    font-size: 14px;
-  }
-
-  .submit-button {
-    height: 40px;
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-sm);
-  }
-}
-
-@media (min-width: 1194px) {
-
-  /*tablet liggend*/
-  .hero {
-    padding: calc(var(--space-10) + var(--space-10)) var(--space-8) var(--space-10);
-  }
-
-  .hero-content {
-    max-width: 760px;
-  }
-
-  .hero h1 {
-    font-size: clamp(4rem, 6vw, 5.5rem);
-  }
-
-  .hero p {
-    font-size: clamp(1.5rem, 2vw, 2rem);
-    max-width: 24ch;
-  }
-
-  .hero-button {
-    min-height: 72px;
-    padding: var(--space-4) var(--space-8);
-    font-size: 2rem;
-  }
-
-  .hero-image {
-    margin-top: var(--space-10);
-  }
-
-  .hero-image img {
-    width: min(38vw, 520px);
-  }
-
-  .section+.section {
-    margin-top: var(--space-6);
-  }
-
-  .section h2 {
-    font-size: var(--text-heading-2-font-size);
-    line-height: var(--text-heading-2-line-height);
-    margin-bottom: var(--space-3);
-    margin-left: 0;
-  }
-
-  .section h3 {
-    margin-left: 0;
-  }
-
-  /* ABOUT */
-  .about {
-    padding: var(--layout-section) var(--layout-container-padding) 0;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    columns: 2;
-    column-gap: var(--space-8);
-  }
-
-  .about h2 {
-    column-span: all;
-    margin: 0 0 var(--space-4);
-  }
-
-  .about h3 {
-    break-before: column;
-    margin: 0 0 var(--space-3);
-  }
-
-  .about p {
-    font-size: 18px;
-    margin: 0 0 var(--space-6);
-    max-width: none;
-  }
-
-  /* FEATURES */
-  .feature-tabs {
-    margin-left: var(--space-0);
-  }
-
-  .feature-tab {
-    padding: var(--space-4) var(--space-7);
-    font-size: 18px;
-  }
-
-  .feature-panel {
-    grid-template-columns: 1fr 1.3fr;
-  }
-
-  .feature-panel h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .feature-panel-content p {
-    font-size: 18px;
-    line-height: var(--line-height-md);
-  }
-
-  /* PRICING */
-  .pricing {
-    padding: var(--layout-section) var(--layout-container-padding) 0;
-  }
-
-  .pricing-label {
-    font-size: 18px;
-  }
-
-  .pricing-card h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .pricing-card li {
-    font-size: 18px
-  }
-
-  .billing-toggle {
-    font-size: 18px;
-  }
-
-  .billing-pill {
-    padding: var(--space-3);
-  }
-
-  /* TEAM */
-  .team-intro {
-    font-size: 18px;
-    margin: var(--space-0)
-  }
-
-  .team-list {
-    margin: var(--space-8);
-  }
-
-  .team-member {
-    gap: var(--space-6);
-  }
-
-  .team-content p {
-    font-size: 18px;
-  }
-
-  .more-button {
-    font-size: var(--font-size-sm);
-  }
-
-  /* CONTACT */
-  .contact {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--space-8);
-    align-items: start;
-  }
-
-  .contact-people {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-  }
-
-  .contact-person {
-    margin-bottom: 0;
-  }
-
-  .contact-person h3 {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact-link {
-    margin: var(--space-4) 0;
-  }
-
-  .contact-link span {
-    font-size: 18px;
-  }
-
-  .contact-link img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .contact-form-wrap h3 {
-    font-size: var(--font-size-md);
-    margin: var(--space-3);
-  }
-
-  .contact-form label {
-    font-size: 18px;
-  }
-
-  .contact-form input {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact-form input::placeholder {
-    font-size: var(--font-size-xs);
-  }
-
-  .submit-button {
-    height: 100%;
-    padding: var(--space-2) 0;
-    font-size: var(--font-size-sm);
-  }
-}
-
-@media (min-width: 1440px) {
-
-  /*desktop*/
-  body {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-  }
-
-  .hero-logo {
-    width: 200px;
-    margin-bottom: var(--space-5);
-  }
-
-  .hero h1 {
-    font-size: 48px;
-    line-height: 1.2;
-  }
-
-  /* ABOUT */
-  .about {
-    column-gap: var(--space-10);
-  }
-
-  .about p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  /* FEATURES */
-  .features h2 {
-    padding: var(--layout-section) 0 0 var(--layout-container-padding);
-  }
-
-  .feature-tabs {
-    padding-left: var(--space-7);
-  }
-
-  .feature-panel {
-    column-gap: var(--space-10);
-    padding: var(--space-10) var(--space-9);
-  }
-
-  .feature-panel-content h3 {
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-lg);
-  }
-
-  .feature-panel-content p {
-    font-size: var(--font-size-sm);
-  }
-
-  /* PRICING */
-  .pricing-stack {
-    gap: var(--space-8);
-  }
-
-  .pricing-card {
-    padding: var(--space-8);
-  }
-
-  .pricing-card h3 {
-    font-size: var(--font-size-lg);
-    line-height: var(--line-height-lg);
-  }
-
-  .pricing-card li {
-    font-size: var(--text-body-regular-font-size);
-    line-height: var(--text-body-regular-line-height);
-    margin-bottom: var(--space-6);
-  }
-
-  .pricing-label {
-    font-size: var(--font-size-sm);
-    padding: var(--space-3) var(--space-4);
-  }
-
-  .card-button {
-    font-size: var(--font-size-sm);
-    padding: var(--space-2) var(--space-3);
-  }
-
-  .billing-toggle {
-    font-size: var(--font-size-sm);
-  }
-
-  /* TEAM */
-  .team-intro {
-    font-size: var(--text-body-regular-font-size);
-    width: 70%;
-  }
-
-  .subtitle {
-    font-size: var(--font-size-lg);
-  }
-
-  .team-list {
-    gap: var(--space-7);
-    margin: 0 var(--space-11);
-  }
-
-  .team-content h3 {
-    font-size: var(--font-size-md);
-    margin-bottom: var(--space-3);
-  }
-
-  .team-content p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  /* CONTACT */
-  .contact {
-    column-gap: var(--space-10);
-  }
-
-  .contact-person h3 {
-    font-size: var(--font-size-md);
-    margin-bottom: var(--space-3);
-  }
-
-  .contact-link span {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact-form-wrap h3 {
-    font-size: var(--font-size-lg);
-  }
-
-  .contact-form input {
-    font-size: 18px;
-  }
-
-  .contact-form span {
-    font-size: var(--font-size-sm);
-  }
-}
-
-@media (min-width: 1920px) {
-  main {
-    width: 70%;
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
