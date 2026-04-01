@@ -16,29 +16,69 @@ window.addEventListener("load", () => {
     }, 3000);
 });
 
-//Navigation
-if (window.location.pathname === '/index.html' || window.location.hash === '#') {
-    window.history.replaceState(null, null, '/');
+// Navigation
+if (window.location.pathname === "/index.html" || window.location.hash === "#") {
+  window.history.replaceState(null, null, "/");
 }
 
-const menuButton = document.querySelector('.menu-button');
-const navLogo = document.querySelector('.navLogo');
-const navLinks = document.querySelector('#main-nav-links');
+const menuButton = document.querySelector(".menu-button");
+const navLogo = document.querySelector(".navLogo");
+const navOverlay = document.querySelector(".nav-overlay");
+const navSluitknop = document.querySelector(".nav-sluitknop");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-navLogo.addEventListener('click', () => {
-    scrollTo({ top: 0, behavior: 'smooth' });
+function openMenu() {
+  if (!navOverlay || !menuButton) return;
+
+  navOverlay.classList.add("is-open");
+  document.body.classList.add("nav-open");
+  menuButton.setAttribute("aria-expanded", "true");
+  menuButton.setAttribute("aria-label", "Sluit menu");
+}
+
+function closeMenu() {
+  if (!navOverlay || !menuButton) return;
+
+  navOverlay.classList.remove("is-open");
+  document.body.classList.remove("nav-open");
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.setAttribute("aria-label", "Open menu");
+}
+
+if (navLogo) {
+  navLogo.addEventListener("click", () => {
+    scrollTo({ top: 0, behavior: "smooth" });
+    closeMenu();
+  });
+}
+
+if (menuButton && navOverlay) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = navOverlay.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+}
+
+if (navSluitknop) {
+  navSluitknop.addEventListener("click", closeMenu);
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
 });
 
-if (menuButton && navLinks) {
-    menuButton.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("is-open");
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.setAttribute(
-            "aria-label",
-            isOpen ? "Close menu" : "Open menu",
-        );
-    });
-}
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 834) {
+    closeMenu();
+  }
+});
 
 //Feature tabs
 const tabs = document.querySelectorAll(".feature-tab");
