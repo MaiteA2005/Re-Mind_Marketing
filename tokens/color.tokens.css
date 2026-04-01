@@ -198,4 +198,66 @@
 --brand-primary: var(--primary-300);
 --brand-highlight: var(--highlight-300);
 
+/* ================================================= */
+/* GRADIENT TOKENS */
+/* ================================================= */
+ 
+/* Hero gradient - warm beige naar highlight groen */
+--gradient-hero: linear-gradient(
+  160deg,
+  var(--background-section-300) 0%,
+  var(--highlight-200) 40%,
+  var(--primary-200) 100%
+);
+ 
+/* Section gradient - subtiel van pagina achtergrond naar card */
+--gradient-section: linear-gradient(
+  180deg,
+  var(--background-300) 0%,
+  var(--background-section-200) 100%
+);
+ 
+/* Card gradient - licht highlight voor premium feel */
+--gradient-card: linear-gradient(
+  145deg,
+  var(--background-card-200) 0%,
+  var(--highlight-100) 100%
+);
+ 
+/* Premium card gradient - groenere tint */
+--gradient-card-premium: linear-gradient(
+  145deg,
+  var(--primary-100) 0%,
+  var(--highlight-200) 60%,
+  var(--primary-200) 100%
+);
+ 
+/* Feature panel gradient */
+--gradient-feature: linear-gradient(
+  135deg,
+  var(--primary-200) 0%,
+  var(--highlight-200) 100%
+);
+ 
+/* CTA / button gradient */
+--gradient-cta: linear-gradient(
+  135deg,
+  var(--primary-300) 0%,
+  var(--highlight-400) 100%
+);
+ 
+/* Benefit blok gradient */
+--gradient-benefit: linear-gradient(
+  160deg,
+  var(--background-card-200) 0%,
+  var(--highlight-100) 100%
+);
+ 
+/* Footer gradient */
+--gradient-footer: linear-gradient(
+  180deg,
+  var(--surface-card) 0%,
+  var(--background-section-200) 100%
+);
+
 }
