@@ -166,6 +166,7 @@ input {
 
 /* KAART */
 .kaart {
+  margin-top: 10%;
   flex: 0 0 74%;
   min-height: 220px;
   background: var(--surface-page);
