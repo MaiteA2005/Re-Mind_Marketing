@@ -409,6 +409,14 @@ input {
   padding-left: var(--space-2);
 }
 
+.features p {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-sm);
+  color: var(--text-primary);
+  margin: var(--space-5);
+}
+
 .feature-tabs-component {
   display: grid;
   gap: 0;
