@@ -659,7 +659,7 @@ input {
 }
 
 .pricing-card {
-  background: var(--surface-card);
+  background: var(--gradient-pricing-card);
   border-radius: var(--radius-lg);
   padding: var(--space-6) var(--space-9);
   box-shadow: var(--shadow-img-default);

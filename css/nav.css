@@ -96,7 +96,7 @@ body {
 .site-footer {
     margin-top: var(--space-2);
     padding: var(--space-3) var(--space-2) var(--space-5);
-    background: var(--surface-card);
+    background: var(--gradient-footer-brand);
 }
 
 .footer-brand img {
@@ -115,7 +115,7 @@ body {
     margin: var(--space-3);
     font-size: var(--font-size-xxs);
     line-height: var(--line-height-xs);
-    color: var(--text-secondary);
+    color: var(--text-on-dark);
 }
 
 .footer-columns h3 {
@@ -123,7 +123,7 @@ body {
     font-family: var(--font-family-heading);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
-    color: var(--brand-primary);
+    color: var(--text-on-dark);
 }
 
 .footer-columns a {
@@ -135,7 +135,7 @@ body {
 }
 
 .footer-columns a:hover {
-    color: var(--brand-primary);
+    color: var(--text-on-dark);
     text-decoration: underline;
     transition: color 0.3s ease, underline 0.3s ease;
 }

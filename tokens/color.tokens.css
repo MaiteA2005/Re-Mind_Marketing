@@ -220,5 +220,19 @@
   var(--primary-50) 100%
 );
 
+/* Pricing card gradient - zacht groen → warm beige */
+--gradient-pricing-card: linear-gradient(
+  150deg,
+  var(--highlight-200) 0%,
+  var(--highlight-100) 30%,
+  var(--background-card-300) 80%
+);
+
+/* Footer gradient - diepe brand groen */
+--gradient-footer-brand: linear-gradient(
+  180deg,
+  var(--primary-300) 0%,
+  var(--primary-600) 100%
+);
 
 }
