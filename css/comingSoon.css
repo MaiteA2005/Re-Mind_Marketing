@@ -11,7 +11,7 @@
 }
 
 html,
-body{
+body {
     overflow: hidden;
     height: 100%;
 }
@@ -23,8 +23,9 @@ body {
     font-family: var(--font-family-body);
 }
 
-main{
-    min-height: calc(100vh - 80px); /* hoogte scherm min navbar */
+main {
+    min-height: calc(100vh - 80px);
+    /* hoogte scherm min navbar */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,7 +66,7 @@ main{
 #coming-soon a:hover {
     background-color: var(--brand-highlight);
     transition: background-color 0.3s ease;
-}   
+}
 
 .section {
     padding: var(--space-6) var(--space-2) 0;
@@ -73,9 +74,24 @@ main{
 
 .comingSoon-decoratie {
     position: absolute;
-    right: -30px;
-    bottom: -50px;
-    width: 65%;
+    right: -32px;
+    bottom: -48px;
+    width: 50%;
     pointer-events: none;
     overflow: hidden;
+}
+
+@media (min-width: 834px) {
+    .comingSoon-decoratie {
+        right: -24px;
+        bottom: -32px;
+        width: 30%;
+    }
+}
+
+@media (min-width: 1194px) {
+    .comingSoon-decoratie {
+        bottom: -16px;
+        width: 20%;
+    }
 }
