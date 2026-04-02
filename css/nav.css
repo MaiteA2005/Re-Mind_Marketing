@@ -355,7 +355,7 @@ body.nav-open {
   }
 
   .nav-links li a {
-    padding-inline: var(--space-2);
+    padding-inline: var(--space-1);
     border-radius: var(--space-2);
     font-size: var(--font-size-xs);
   }
