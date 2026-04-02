@@ -124,7 +124,7 @@ billingButtons.forEach((button) => {
 
         if (button.dataset.billing === "monthly") {
             premiumPrice.innerHTML = "€2,99/maand";
-            companyPrice.innerHTML = "€2,20/maand";
+            companyPrice.innerHTML = "€2,20/maand<br />per werknemer";
         } else {
             premiumPrice.innerHTML = "€33/jaar";
             companyPrice.innerHTML = "€20/jaar<br />per werknemer";
