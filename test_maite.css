@@ -145,11 +145,13 @@ input {
   position: relative;
   width: 100%;
   margin-bottom: var(--space-6);
+  padding-top: 2rem;
 }
 
 .slider-viewport {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .slider-track {
@@ -162,7 +164,7 @@ input {
 
 /* KAART */
 .kaart {
-  margin-top: 10%;
+  margin-top: 0px;
   flex: 0 0 74%;
   min-height: 220px;
   background: var(--surface-page);
@@ -180,32 +182,6 @@ input {
   opacity: 1;
 }
 
-.slider-pijl {
-  position: absolute;
-  transform: translateY(-50%);
-  width: 56px;
-  height: 56px;
-  background: none;
-  border: none;
-  padding: 0;
-  z-index: 3;
-  cursor: pointer;
-}
-
-.slider-pijl img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.slider-pijl--links {
-  left: 0.75rem;
-}
-
-.slider-pijl--rechts {
-  right: 0.75rem;
-}
-
 .kaart--clone {
   pointer-events: none;
 }
@@ -219,7 +195,6 @@ input {
   margin-bottom: var(--space-4);
 }
 
-/* TEKST IN KAART */
 .kaart h3 {
   margin: 0 0 var(--space-3);
   font-family: var(--text-heading-1-font-family);
@@ -238,14 +213,21 @@ input {
 /* PIJLEN */
 .slider-pijl {
   position: absolute;
-  top: 62%;
+  top: 60%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
   background: none;
   border: none;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.slider-pijl img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .slider-pijl--links {
