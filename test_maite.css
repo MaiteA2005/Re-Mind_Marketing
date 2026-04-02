@@ -233,7 +233,7 @@ input {
   margin: 0;
   font-family: var(--text-body-regular-font-family);
   font-size: var(--font-size-sm);
-  color: var(--brand-primary);
+  color: var(--text-secondary);
 }
 
 /* PIJLEN */
@@ -294,7 +294,7 @@ input {
 .herkenbaar-inhoud p {
   font-family: var(--text-body-regular-font-family);
   font-size: var(--font-size-sm);
-  color: var(--text-secondary);
+  color: var(--text-secondary-300);
 }
 
 /* GENERAL SECTIONS */
@@ -554,7 +554,7 @@ input {
   font-size: var(--font-size-sm);
   line-height: 1;
   font-weight: var(--font-weight-semibold);
-  color: var(--brand-highlight);
+  color: var(--brand-primary);
 }
 
 .stap-titel {
@@ -643,7 +643,6 @@ input {
   line-height: var(--line-height-sm);
   color: var(--text-secondary);
 }
-
 
 /* PRICING */
 .pricing {
