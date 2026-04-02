@@ -10,12 +10,15 @@
   0% {
     transform: scale(1);
   }
+
   40% {
     transform: scale(1.1);
   }
+
   60% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -48,12 +51,12 @@ input {
 
 /* HERO */
 .hero {
-  margin-top: 30px;
+  margin-top: var(--space-7);
   min-height: calc(100vh - 80px);
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: calc(var(--space-10) + var(--space-6)) var(--space-4) var(--space-8);
+  padding: var(--space-11) var(--space-4) var(--space-8);
 }
 
 .hero-content {
@@ -82,7 +85,7 @@ input {
   margin: 0 0 var(--space-6);
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
-  line-height: 1.4;
+  line-height: var(--line-height-sm);
   color: var(--brand-primary);
 }
 
@@ -101,7 +104,7 @@ input {
   color: var(--text-on-dark);
   font-family: var(--text-button-label-font-family);
   font-size: var(--text-button-label-font-size);
-  font-weight: var(--text-button-label-font-weight);
+  font-weight: var(--font-weight-semibold);
 }
 
 .hero-button:hover {
@@ -138,6 +141,7 @@ input {
   padding: var(--space-0) var(--space-0) var(--space-10);
   background: var(--gradient-section);
   overflow: hidden;
+  background-color: red;
 }
 
 /* SLIDER */
@@ -502,7 +506,7 @@ input {
 }
 
 .werkwijze-kop p {
-  margin: var(--space-3);  
+  margin: var(--space-3);
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
@@ -935,4 +939,73 @@ input {
   background: var(--button-accent-active-bg);
   border-color: var(--button-accent-active-border);
   color: var(--text-on-dark);
+}
+
+
+/* BREAKPOINTS */
+@media (min-width: 834px) {
+  .hero {
+    margin-top: var(--space-8);
+    padding: var(--space-10) var(--space-11);
+    min-height: calc(90vh - 80px);
+  }
+
+  .hero-content {
+    flex-direction: row;
+    text-align: left;
+    max-width: none;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-8);
+  }
+
+  .hero p {
+    margin: 0 0 var(--space-8);
+  }
+
+  .hero-image img {
+    width: min(40vw, 340px);
+  }
+
+  .hero-image {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1194px) {
+  .hero {
+    margin-top: var(--space-9);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-button {
+    padding: var(--space-6) var(--space-7);
+  }
+
+  .hero-image img {
+    width: min(40vw, 340px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    margin-top: var(--space-10);
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p{
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+  }
 }
