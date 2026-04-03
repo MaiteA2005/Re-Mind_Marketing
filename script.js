@@ -215,7 +215,7 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     const verschuiving = kaartLinks - (viewportBreedte / 2) + (kaartBreedte / 2);
 
     track.style.transition = zonderAnimatie ? "none" : "transform 0.45s ease";
-    track.style.transform = `translateX(-${verschuiving}px)`;
+    track.style.transform = `translateX(${-verschuiving}px)`;
 
     updateActieveKaart();
   }
