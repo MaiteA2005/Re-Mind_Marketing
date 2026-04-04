@@ -73,7 +73,8 @@
 /* Body */
 --text-body-regular-font-family: var(--font-family-body);
 --text-body-regular-font-weight: var(--font-weight-regular);
---text-body-regular-font-size: var(--font-size-sm);
+/* --text-body-regular-font-size: var(--font-size-sm); */
+--text-body-regular-font-size: 18px;
 --text-body-regular-line-height: var(--line-height-sm);
 
 --text-body-bold-font-family: var(--font-family-body);
