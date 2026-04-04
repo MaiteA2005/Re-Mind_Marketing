@@ -161,36 +161,32 @@ if (form) {
     });
 }
 
+//Carousel
+
 const viewport = document.querySelector(".slider-viewport");
 const track = document.querySelector(".slider-track");
 const vorige = document.querySelector(".slider-pijl--links");
 const volgende = document.querySelector(".slider-pijl--rechts");
 const indicatoren = document.querySelectorAll(".indicator");
+const sliderBreakpoint = window.matchMedia("(min-width: 1194px)");
 
 if (viewport && track && vorige && volgende && indicatoren.length) {
-  const origineleKaarten = Array.from(track.querySelectorAll(".kaart"));
-  const aantalOrigineel = origineleKaarten.length;
-
-  const eersteClone = origineleKaarten[0].cloneNode(true);
-  const laatsteClone = origineleKaarten[aantalOrigineel - 1].cloneNode(true);
-
-  eersteClone.classList.add("kaart--clone");
-  laatsteClone.classList.add("kaart--clone");
-
-  track.appendChild(eersteClone);
-  track.insertBefore(laatsteClone, origineleKaarten[0]);
-
-  let kaarten = Array.from(track.querySelectorAll(".kaart"));
+  let origineleKaarten = [];
+  let kaarten = [];
+  let aantalOrigineel = 0;
   let huidigeIndex = 1;
   let isTransitioning = false;
   let startX = 0;
+  let eersteClone = null;
+  let laatsteClone = null;
+  let sliderActief = false;
 
   function updateIndicatoren() {
     const echteIndex =
       ((huidigeIndex - 1) % aantalOrigineel + aantalOrigineel) % aantalOrigineel;
 
-    indicatoren.forEach((dot, i) => {
-      dot.classList.toggle("indicator--actief", i === echteIndex);
+    Array.from(indicatoren).forEach((dot, index) => {
+      dot.classList.toggle("indicator--actief", index === echteIndex);
     });
   }
 
@@ -205,6 +201,8 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
   }
 
   function centreerActieveKaart(zonderAnimatie = false) {
+    if (!sliderActief) return;
+
     const actieveKaart = kaarten[huidigeIndex];
     if (!actieveKaart) return;
 
@@ -221,32 +219,31 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
   }
 
   function gaNaarIndex(index) {
-    if (isTransitioning) return;
+    if (isTransitioning || !sliderActief) return;
     isTransitioning = true;
     huidigeIndex = index;
     centreerActieveKaart(false);
   }
 
-  volgende.addEventListener("click", () => {
+  function gaVolgende() {
     gaNaarIndex(huidigeIndex + 1);
-  });
+  }
 
-  vorige.addEventListener("click", () => {
+  function gaVorige() {
     gaNaarIndex(huidigeIndex - 1);
-  });
+  }
 
-  indicatoren.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      gaNaarIndex(index + 1);
-    });
-  });
+  function klikIndicator(event) {
+    const index = Array.from(indicatoren).indexOf(event.currentTarget);
+    gaNaarIndex(index + 1);
+  }
 
-  viewport.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-  });
+  function startSwipe(event) {
+    startX = event.touches[0].clientX;
+  }
 
-  viewport.addEventListener("touchend", (e) => {
-    const eindX = e.changedTouches[0].clientX;
+  function eindSwipe(event) {
+    const eindX = event.changedTouches[0].clientX;
     const verschil = startX - eindX;
 
     if (verschil > 50) {
@@ -254,9 +251,9 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     } else if (verschil < -50) {
       gaNaarIndex(huidigeIndex - 1);
     }
-  });
+  }
 
-  track.addEventListener("transitionend", () => {
+  function eindeTransitie() {
     if (huidigeIndex === kaarten.length - 1) {
       huidigeIndex = 1;
       centreerActieveKaart(true);
@@ -268,13 +265,118 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     }
 
     isTransitioning = false;
-  });
+  }
+
+  function verwijderSliderClones() {
+    if (eersteClone && eersteClone.parentNode) {
+      eersteClone.parentNode.removeChild(eersteClone);
+    }
+
+    if (laatsteClone && laatsteClone.parentNode) {
+      laatsteClone.parentNode.removeChild(laatsteClone);
+    }
+
+    eersteClone = null;
+    laatsteClone = null;
+  }
+
+  function resetSliderWeergave() {
+    track.style.transition = "";
+    track.style.transform = "";
+    kaarten.forEach((kaart) => kaart.classList.remove("kaart--actief", "kaart--clone"));
+    indicatoren.forEach((dot) => dot.classList.remove("indicator--actief"));
+
+    if (indicatoren[0]) {
+      indicatoren[0].classList.add("indicator--actief");
+    }
+  }
+
+  function initialiseSlider() {
+    if (sliderActief || sliderBreakpoint.matches) return;
+
+    origineleKaarten = Array.from(track.querySelectorAll(".kaart:not(.kaart--clone)"));
+    aantalOrigineel = origineleKaarten.length;
+
+    if (aantalOrigineel < 3) return;
+
+    eersteClone = origineleKaarten[0].cloneNode(true);
+    laatsteClone = origineleKaarten[aantalOrigineel - 1].cloneNode(true);
+
+    eersteClone.classList.add("kaart--clone");
+    laatsteClone.classList.add("kaart--clone");
+
+    track.appendChild(eersteClone);
+    track.insertBefore(laatsteClone, origineleKaarten[0]);
+
+    kaarten = Array.from(track.querySelectorAll(".kaart"));
+    huidigeIndex = 1;
+    isTransitioning = false;
+    startX = 0;
+
+    volgende.addEventListener("click", gaVolgende);
+    vorige.addEventListener("click", gaVorige);
+
+    Array.from(indicatoren).forEach((dot) => {
+      dot.addEventListener("click", klikIndicator);
+    });
+
+    viewport.addEventListener("touchstart", startSwipe);
+    viewport.addEventListener("touchend", eindSwipe);
+    track.addEventListener("transitionend", eindeTransitie);
+
+    sliderActief = true;
+    centreerActieveKaart(true);
+  }
+
+  function destroySlider() {
+    if (!sliderActief) {
+      resetSliderWeergave();
+      return;
+    }
+
+    volgende.removeEventListener("click", gaVolgende);
+    vorige.removeEventListener("click", gaVorige);
+
+    Array.from(indicatoren).forEach((dot) => {
+      dot.removeEventListener("click", klikIndicator);
+    });
+
+    viewport.removeEventListener("touchstart", startSwipe);
+    viewport.removeEventListener("touchend", eindSwipe);
+    track.removeEventListener("transitionend", eindeTransitie);
+
+    verwijderSliderClones();
+    kaarten = Array.from(track.querySelectorAll(".kaart"));
+    sliderActief = false;
+    isTransitioning = false;
+    resetSliderWeergave();
+  }
+
+  function updateSliderOpBreakpoint() {
+    if (sliderBreakpoint.matches) {
+      destroySlider();
+    } else {
+      initialiseSlider();
+    }
+  }
+
+  updateSliderOpBreakpoint();
+
+  if (typeof sliderBreakpoint.addEventListener === "function") {
+    sliderBreakpoint.addEventListener("change", updateSliderOpBreakpoint);
+  } else if (typeof sliderBreakpoint.addListener === "function") {
+    sliderBreakpoint.addListener(updateSliderOpBreakpoint);
+  }
 
   window.addEventListener("load", () => {
-    centreerActieveKaart(true);
+    if (!sliderBreakpoint.matches) {
+      centreerActieveKaart(true);
+    }
   });
 
   window.addEventListener("resize", () => {
-    centreerActieveKaart(true);
+    if (!sliderBreakpoint.matches) {
+      centreerActieveKaart(true);
+    }
   });
 }

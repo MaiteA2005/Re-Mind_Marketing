@@ -141,7 +141,6 @@ input {
   padding: var(--space-0) var(--space-0) var(--space-10);
   background: var(--gradient-section);
   overflow: hidden;
-  background-color: red;
 }
 
 /* SLIDER */
@@ -168,8 +167,14 @@ input {
 
 /* KAART */
 .kaart {
+  --kaart-breedte: clamp(280px, 70vw, 360px);
+  flex: 0 0 var(--kaart-breedte);
+  width: var(--kaart-breedte) !important;
+  max-width: 100%;
+  scroll-snap-align: center;
+  transform-origin: center center;
   margin-top: 0px;
-  flex: 0 0 74%;
+  min-width: 300px;
   min-height: 220px;
   background: var(--surface-page);
   border: 2px solid var(--brand-highlight);
@@ -184,6 +189,7 @@ input {
 .kaart--actief {
   transform: scale(1);
   opacity: 1;
+
 }
 
 .kaart--clone {
@@ -972,6 +978,11 @@ input {
   .hero-image {
     justify-content: flex-end;
   }
+
+  /* HERKENBAAR SECTIE */
+  .kaart {
+    --kaart-breedte: clamp(280px, 80vw, 420px);
+  }
 }
 
 @media (min-width: 1194px) {
@@ -993,6 +1004,25 @@ input {
   .hero-image img {
     width: min(40vw, 340px);
   }
+
+  /* HERKENBAAR SECTIE */
+  .kaart {
+    --kaart-breedte: clamp(280px, 30vw, 400px);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .slider-track {
+    justify-content: center;
+  }
+
+  .slider-pijl {
+    display: none;
+  }
+
+  .slider-indicatoren {
+    display: none;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -1004,8 +1034,17 @@ input {
     font-size: 48px;
   }
 
-  .hero p{
-    font-size: var(--font-size-md);
+  .hero p {
+    font-size: var(--font-size-sm);
     line-height: var(--line-height-md);
+  }
+
+  /* HERKENBAAR SECTIE */
+  .slider{
+    margin-bottom: var(--space-8);
+  }
+
+  .slider-track {
+    gap: 2rem;
   }
 }
