@@ -208,7 +208,7 @@ input {
 .kaart h3 {
   margin: 0 0 var(--space-3);
   font-family: var(--text-heading-1-font-family);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--text-primary);
 }
@@ -216,7 +216,7 @@ input {
 .kaart p {
   margin: 0;
   font-family: var(--text-body-regular-font-family);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--text-secondary);
 }
 
@@ -271,6 +271,7 @@ input {
 .herkenbaar-inhoud {
   text-align: center;
   margin: 0 auto;
+  padding: 22px var(--space-2) 0;
 }
 
 .herkenbaar-inhoud h2 {
@@ -284,7 +285,7 @@ input {
 
 .herkenbaar-inhoud p {
   font-family: var(--text-body-regular-font-family);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--text-secondary-300);
 }
 
@@ -342,7 +343,6 @@ input {
 .missie-kaart {
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--space-8);
   padding: var(--space-5);
   background: var(--highlight-200);
   border-radius: 24px;
@@ -957,9 +957,13 @@ input {
   }
 
   .hero-content {
-    flex-direction: row;
-    text-align: left;
     max-width: none;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--space-8);
+    text-align: left;
   }
 
   .hero h1 {
@@ -983,6 +987,19 @@ input {
   .kaart {
     --kaart-breedte: clamp(280px, 80vw, 420px);
   }
+
+  /* OVER RE:MIND */
+  .over-remind {
+    padding: var(--space-9) var(--space-8) var(--space-10);
+    /*48 - 40 - 64*/
+  }
+
+  .missie-visie {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-5);
+    align-items: center;
+  }
 }
 
 @media (min-width: 1194px) {
@@ -991,6 +1008,10 @@ input {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+  }
+
+  .hero-content {
+    column-gap: var(--space-11);
   }
 
   .hero h1 {
@@ -1012,6 +1033,18 @@ input {
     transform: scale(1);
   }
 
+  .kaart h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .kaart p {
+    font-size: var(--font-size-sm);
+  }
+
+  .herkenbaar-inhoud p {
+    font-size: var(--font-size-sm);
+  }
+
   .slider-track {
     justify-content: center;
   }
@@ -1023,6 +1056,30 @@ input {
   .slider-indicatoren {
     display: none;
   }
+
+  /* OVER RE:MIND */
+  .over-remind {
+    padding: var(--space-9) var(--space-9) var(--space-10);
+    /*48 - 48 - 64*/
+  }
+
+  .over-remind h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .over-remind h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .over-remind p {
+    margin: 0 0 var(--space-4);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+  }
+
+  .missie-visie {
+    gap: var(--space-8);
+  }
 }
 
 @media (min-width: 1440px) {
@@ -1031,7 +1088,7 @@ input {
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 64px;
   }
 
   .hero p {
@@ -1040,11 +1097,16 @@ input {
   }
 
   /* HERKENBAAR SECTIE */
-  .slider{
+  .slider {
     margin-bottom: var(--space-8);
   }
 
   .slider-track {
     gap: 2rem;
+  }
+
+  /* OVER RE:MIND */
+  .over-remind {
+    padding: clamp(64px, 4.44vw, 128px) clamp(80px, 5.56vw, 240px) clamp(80px, 5.56vw, 160px);
   }
 }
