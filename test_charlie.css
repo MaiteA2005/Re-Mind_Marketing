@@ -510,6 +510,7 @@ input {
   font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin: var(--space-3);
+  text-align: center;
 }
 
 .werkwijze-kop p {
@@ -637,7 +638,12 @@ input {
 
 /* PRICING */
 .pricing {
-  padding: var(--space-3) var(--space-2);
+  padding: var(--space-8) var(--space-4) var(--space-10);
+}
+
+.pricing h2 {
+  font-size: var(--font-size-lg);
+  text-align: center;
 }
 
 .pricing-stack {
@@ -651,7 +657,7 @@ input {
 .pricing-card {
   background: var(--gradient-pricing-card);
   border-radius: var(--radius-lg);
-  padding: var(--space-6) var(--space-9);
+  padding: var(--space-6) var(--space-5);
   box-shadow: var(--shadow-img-default);
   text-align: center;
 }
@@ -691,8 +697,8 @@ input {
 
 .pricing-card li {
   position: relative;
-  margin-bottom: var(--space-4);
-  font-size: var(--font-size-xxs);
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-xs);
   color: var(--text-primary);
   max-width: 260px;
 }
@@ -706,7 +712,7 @@ input {
   margin-top: var(--space-7);
   padding: 0 var(--space-3);
   border-radius: var(--button-radius);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
   font-family: var(--font-family-heading);
   border: var(--button-border-width) var(--button-border-style) var(--primary-700);
   background: var(--primary-300);
@@ -736,7 +742,7 @@ input {
   background: var(--primary-200);
   border: 1px solid var(--primary-600);
   border-radius: var(--radius-sm);
-  font-size: var(--font-size-xxs);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -1108,7 +1114,38 @@ input {
     margin-right: auto;
   }
 
-  /* --------------------- */
+  /* PRICING */
+  .pricing {
+    padding: var(--space-9) var(--space-8) var(--space-10);
+  }
+
+  .pricing h2{
+    font-size: var(--font-size-md);
+    margin: 0 0 var(--space-3);
+  }
+
+  .pricing-stack {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-5);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    flex: 1;
+  }
+
+  .billing-toggle {
+    width: fit-content;
+    max-width: 400px;
+  }
+
+  .billing-pill {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
 
   /* TEAM */
   .team {
@@ -1395,7 +1432,23 @@ input {
     height: 50px;
   }
 
-  /* --------------------- */
+  /* PRICING */
+  .pricing {
+    padding: var(--space-9) var(--space-9) var(--space-10);
+  }
+
+  .pricing h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-5);
+  }
+
+  .pricing-stack {
+    gap: var(--space-8);
+  }
+
+  .pricing h3{
+    font-size: var(--font-size-md);
+  }
 
   /* TEAM */
   .team {
@@ -1548,6 +1601,15 @@ input {
     padding-top: clamp(64px, 4.44vw, 128px);
     padding-left: clamp(80px, 5.56vw, 240px);
     padding-right: clamp(80px, 5.56vw, 240px);
+  }
+
+  /* PRICING */
+  .pricing {
+    padding: clamp(64px, 4.44vw, 128px) clamp(80px, 5.56vw, 240px);
+  }
+
+  .pricing-card {
+    max-width: 350px;
   }
 
   /* TEAM */
