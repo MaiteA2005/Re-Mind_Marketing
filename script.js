@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
         setTimeout(() => {
             loadingScreen.style.display = "none";
         }, 500);
-    }, 3000);
+    }, 400);
 });
 
 // Navigation
