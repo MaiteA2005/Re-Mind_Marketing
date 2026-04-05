@@ -515,9 +515,11 @@ input {
 .werkwijze-kop p {
   margin: var(--space-3);
   font-family: var(--font-family-body);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   line-height: var(--line-height-sm);
   color: var(--text-secondary);
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
 }
 
 .stappen-lijst {
@@ -531,6 +533,7 @@ input {
   border-radius: 24px;
   padding: var(--space-5);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  width: 100%
 }
 
 .stap-kaart h3 {
@@ -542,10 +545,10 @@ input {
 }
 
 .stap-nummer {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-sm);
   line-height: 1;
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-bold);
   color: var(--brand-primary);
 }
 
@@ -1077,6 +1080,24 @@ input {
     line-height: var(--line-height-sm);
   }
 
+  /* HOE WERKT HET */
+  .werkwijze-sectie {
+    padding: var(--space-9) var(--space-8) var(--space-10);
+  }
+
+  .stappen-lijst{
+    align-items: center;
+  }
+
+  .stap-kaart {
+    width: clamp(280px, 70vw, 80vw);
+    max-width: 100%;
+  }
+
+  .stap-nummer{
+    font-size: var(--font-size-md);
+  }
+
   /* --------------------- */
 
   /* TEAM */
@@ -1299,6 +1320,36 @@ input {
     line-height: var(--line-height-md);
   }
 
+  /* HOE HET WERKT */
+  .werkwijze-sectie {
+    padding: var(--space-9) var(--space-9) var(--space-10);
+  }
+
+  .werkwijze-kop h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .werkwijze-kop p {
+    font-size: var(--text-body-regular-font-size);
+    /* line-height: var(--line-height-md); */
+  }
+
+  .stap-kaart{
+    width: clamp(320px, 60vw, 80vw);
+  }
+
+  .stap-kaart h3{
+    font-size: var(--font-size-md);
+  }
+
+  .stap-kaart p{
+    font-size: var(--text-body-regular-font-size);
+  }
+
+  .stap-nummer{
+    font-size: var(--font-size-lg);
+  }
+
   /* --------------------- */
 
   /* TEAM */
@@ -1447,7 +1498,12 @@ input {
     font-size: var(--text-body-regular-font-size);
   }
 
-  /* --------------------- */
+  /* HOE WERKT HET */
+  .werkwijze-sectie {
+    padding-top: clamp(64px, 4.44vw, 128px);
+    padding-left: clamp(80px, 5.56vw, 240px);
+    padding-right: clamp(80px, 5.56vw, 240px);
+  }
 
   /* TEAM */
   .team {
