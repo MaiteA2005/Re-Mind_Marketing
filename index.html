@@ -3,28 +3,32 @@
 
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WLXLBZ7C');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WLXLBZ7C');</script>
   <!-- End Google Tag Manager -->
 
   <!-- Start VWO Async SmartCode -->
   <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
   <script type='text/javascript' id='vwoCode'>
-  window._vwo_code ||
-  (function () {
-  var w=window,
-  d=document;
-  var account_id=1213658,
-  version=2.2,
-  settings_tolerance=2000,
-  hide_element='body',
-  hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
-  /* DO NOT EDIT BELOW THIS LINE */
-  var f=0, v;
-  if(f=!1,v=d.querySelector('#vwoCode'),cc={},-1<d.URL.indexOf('__vwo_disable__')||w._vwo_code)return;try{var e=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=e&&'object'==typeof e?e:{}}catch(e){}function r(t){try{return decodeURIComponent(t)}catch(e){return t}}var s=function(){var e={combination:[],combinationChoose:[],split:[],exclude:[],uuid:null,consent:null,optOut:null},t=d.cookie||'';if(!t)return e;for(var n,i,o=/(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g;null!==(n=o.exec(t));)try{n[1]?e.combination.push({id:n[2],value:r(n[3])}):n[4]?e.combinationChoose.push({id:n[5],value:r(n[6])}):n[7]?e.split.push({id:n[8],value:r(n[9])}):n[10]?e.exclude.push({id:n[11]}):n[12]?e.optOut=r(n[13]):n[14]?e.optOut=!0:n[15]?e.uuid=r(n[16]):n[17]&&(i=r(n[18]),e.consent=i&&3<=i.length?i.substring(0,3):null)}catch(e){}return e}();function i(){var e=function(){if(w.VWO&&Array.isArray(w.VWO))for(var e=0;e<w.VWO.length;e++){var t=w.VWO[e];if(Array.isArray(t)&&('setVisitorId'===t[0]||'setSessionId'===t[0]))return!0}return!1}(),t='a='+account_id+'&u='+encodeURIComponent(w._vis_opt_url||d.URL)+'&vn='+version+'&ph=1'+('undefined'!=typeof platform?'&p='+platform:'')+'&st='+w.performance.now();e||((n=function(){var e,t=[],n={},i=w.VWO&&w.VWO.appliedCampaigns||{};for(e in i){var o=i[e]&&i[e].v;o&&(t.push(e+'-'+o+'-1'),n[e]=!0)}if(s&&s.combination)for(var r=0;r<s.combination.length;r++){var a=s.combination[r];n[a.id]||t.push(a.id+'-'+a.value)}return t.join('|')}())&&(t+='&c='+n),(n=function(){var e=[],t={};if(s&&s.combinationChoose)for(var n=0;n<s.combinationChoose.length;n++){var i=s.combinationChoose[n];e.push(i.id+'-'+i.value),t[i.id]=!0}if(s&&s.split)for(var o=0;o<s.split.length;o++)t[(i=s.split[o]).id]||e.push(i.id+'-'+i.value);return e.join('|')}())&&(t+='&cc='+n),(n=function(){var e={},t=[];if(w.VWO&&Array.isArray(w.VWO))for(var n=0;n<w.VWO.length;n++){var i=w.VWO[n];if(Array.isArray(i)&&'setVariation'===i[0]&&i[1]&&Array.isArray(i[1]))for(var o=0;o<i[1].length;o++){var r,a=i[1][o];a&&'object'==typeof a&&(r=a.e,a=a.v,r&&a&&(e[r]=a))}}for(r in e)t.push(r+'-'+e[r]);return t.join('|')}())&&(t+='&sv='+n)),s&&s.optOut&&(t+='&o='+s.optOut);var n=function(){var e=[],t={};if(s&&s.exclude)for(var n=0;n<s.exclude.length;n++){var i=s.exclude[n];t[i.id]||(e.push(i.id),t[i.id]=!0)}return e.join('|')}();return n&&(t+='&e='+n),s&&s.uuid&&(t+='&id='+s.uuid),s&&s.consent&&(t+='&consent='+s.consent),w.name&&-1<w.name.indexOf('_vis_preview')&&(t+='&pM=true'),w.VWO&&w.VWO.ed&&(t+='&ed='+w.VWO.ed),t}code={nonce:v&&v.nonce,library_tolerance:function(){return'undefined'!=typeof library_tolerance?library_tolerance:void 0},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return performance.getEntriesByName('first-contentful-paint')[0]?'':'string'==typeof cc.hE?cc.hE:hide_element},getVersion:function(){return version},finish:function(e){var t;f||(f=!0,(t=d.getElementById('_vis_opt_path_hides'))&&t.parentNode.removeChild(t),e&&((new Image).src='https://dev.visualwebsiteoptimizer.com/ee.gif?a='+account_id+e))},finished:function(){return f},addScript:function(e){var t=d.createElement('script');t.type='text/javascript',e.src?t.src=e.src:t.text=e.text,v&&t.setAttribute('nonce',v.nonce),d.getElementsByTagName('head')[0].appendChild(t)},load:function(e,t){t=t||{};var n=new XMLHttpRequest;n.open('GET',e,!0),n.withCredentials=!t.dSC,n.responseType=t.responseType||'text',n.onload=function(){if(t.onloadCb)return t.onloadCb(n,e);200===n.status?_vwo_code.addScript({text:n.responseText}):_vwo_code.finish('&e=loading_failure:'+e)},n.onerror=function(){if(t.onerrorCb)return t.onerrorCb(e);_vwo_code.finish('&e=loading_failure:'+e)},n.send()},init:function(){var e,t=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish()},t),'body'!==this.hide_element()?(n=d.createElement('style'),e=(t=this.hide_element())?t+this.hide_element_style():'',t=d.getElementsByTagName('head')[0],n.setAttribute('id','_vis_opt_path_hides'),v&&n.setAttribute('nonce',v.nonce),n.setAttribute('type','text/css'),n.styleSheet?n.styleSheet.cssText=e:n.appendChild(d.createTextNode(e)),t.appendChild(n)):(n=d.getElementsByTagName('head')[0],(e=d.createElement('div')).style.cssText='z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;',e.setAttribute('id','_vis_opt_path_hides'),e.classList.add('_vis_hide_layer'),n.parentNode.insertBefore(e,n.nextSibling));var n='https://dev.visualwebsiteoptimizer.com/j.php?'+i();-1!==w.location.search.indexOf('_vwo_xhr')?this.addScript({src:n}):this.load(n+'&x=true',{l:1})}};w._vwo_code=code;code.init();})();
+    window._vwo_code ||
+      (function () {
+        var w = window,
+          d = document;
+        var account_id = 1213658,
+          version = 2.2,
+          settings_tolerance = 2000,
+          hide_element = 'body',
+          hide_element_style = 'opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important';
+        /* DO NOT EDIT BELOW THIS LINE */
+        var f = 0, v;
+        if (f = !1, v = d.querySelector('#vwoCode'), cc = {}, -1 < d.URL.indexOf('__vwo_disable__') || w._vwo_code) return; try { var e = JSON.parse(localStorage.getItem('_vwo_' + account_id + '_config')); cc = e && 'object' == typeof e ? e : {} } catch (e) { } function r(t) { try { return decodeURIComponent(t) } catch (e) { return t } } var s = function () { var e = { combination: [], combinationChoose: [], split: [], exclude: [], uuid: null, consent: null, optOut: null }, t = d.cookie || ''; if (!t) return e; for (var n, i, o = /(?:^|;\s*)(?:(_vis_opt_exp_(\d+)_combi=([^;]*))|(_vis_opt_exp_(\d+)_combi_choose=([^;]*))|(_vis_opt_exp_(\d+)_split=([^:;]*))|(_vis_opt_exp_(\d+)_exclude=[^;]*)|(_vis_opt_out=([^;]*))|(_vwo_global_opt_out=[^;]*)|(_vwo_uuid=([^;]*))|(_vwo_consent=([^;]*)))/g; null !== (n = o.exec(t));)try { n[1] ? e.combination.push({ id: n[2], value: r(n[3]) }) : n[4] ? e.combinationChoose.push({ id: n[5], value: r(n[6]) }) : n[7] ? e.split.push({ id: n[8], value: r(n[9]) }) : n[10] ? e.exclude.push({ id: n[11] }) : n[12] ? e.optOut = r(n[13]) : n[14] ? e.optOut = !0 : n[15] ? e.uuid = r(n[16]) : n[17] && (i = r(n[18]), e.consent = i && 3 <= i.length ? i.substring(0, 3) : null) } catch (e) { } return e }(); function i() { var e = function () { if (w.VWO && Array.isArray(w.VWO)) for (var e = 0; e < w.VWO.length; e++) { var t = w.VWO[e]; if (Array.isArray(t) && ('setVisitorId' === t[0] || 'setSessionId' === t[0])) return !0 } return !1 }(), t = 'a=' + account_id + '&u=' + encodeURIComponent(w._vis_opt_url || d.URL) + '&vn=' + version + '&ph=1' + ('undefined' != typeof platform ? '&p=' + platform : '') + '&st=' + w.performance.now(); e || ((n = function () { var e, t = [], n = {}, i = w.VWO && w.VWO.appliedCampaigns || {}; for (e in i) { var o = i[e] && i[e].v; o && (t.push(e + '-' + o + '-1'), n[e] = !0) } if (s && s.combination) for (var r = 0; r < s.combination.length; r++) { var a = s.combination[r]; n[a.id] || t.push(a.id + '-' + a.value) } return t.join('|') }()) && (t += '&c=' + n), (n = function () { var e = [], t = {}; if (s && s.combinationChoose) for (var n = 0; n < s.combinationChoose.length; n++) { var i = s.combinationChoose[n]; e.push(i.id + '-' + i.value), t[i.id] = !0 } if (s && s.split) for (var o = 0; o < s.split.length; o++)t[(i = s.split[o]).id] || e.push(i.id + '-' + i.value); return e.join('|') }()) && (t += '&cc=' + n), (n = function () { var e = {}, t = []; if (w.VWO && Array.isArray(w.VWO)) for (var n = 0; n < w.VWO.length; n++) { var i = w.VWO[n]; if (Array.isArray(i) && 'setVariation' === i[0] && i[1] && Array.isArray(i[1])) for (var o = 0; o < i[1].length; o++) { var r, a = i[1][o]; a && 'object' == typeof a && (r = a.e, a = a.v, r && a && (e[r] = a)) } } for (r in e) t.push(r + '-' + e[r]); return t.join('|') }()) && (t += '&sv=' + n)), s && s.optOut && (t += '&o=' + s.optOut); var n = function () { var e = [], t = {}; if (s && s.exclude) for (var n = 0; n < s.exclude.length; n++) { var i = s.exclude[n]; t[i.id] || (e.push(i.id), t[i.id] = !0) } return e.join('|') }(); return n && (t += '&e=' + n), s && s.uuid && (t += '&id=' + s.uuid), s && s.consent && (t += '&consent=' + s.consent), w.name && -1 < w.name.indexOf('_vis_preview') && (t += '&pM=true'), w.VWO && w.VWO.ed && (t += '&ed=' + w.VWO.ed), t } code = { nonce: v && v.nonce, library_tolerance: function () { return 'undefined' != typeof library_tolerance ? library_tolerance : void 0 }, settings_tolerance: function () { return cc.sT || settings_tolerance }, hide_element_style: function () { return '{' + (cc.hES || hide_element_style) + '}' }, hide_element: function () { return performance.getEntriesByName('first-contentful-paint')[0] ? '' : 'string' == typeof cc.hE ? cc.hE : hide_element }, getVersion: function () { return version }, finish: function (e) { var t; f || (f = !0, (t = d.getElementById('_vis_opt_path_hides')) && t.parentNode.removeChild(t), e && ((new Image).src = 'https://dev.visualwebsiteoptimizer.com/ee.gif?a=' + account_id + e)) }, finished: function () { return f }, addScript: function (e) { var t = d.createElement('script'); t.type = 'text/javascript', e.src ? t.src = e.src : t.text = e.text, v && t.setAttribute('nonce', v.nonce), d.getElementsByTagName('head')[0].appendChild(t) }, load: function (e, t) { t = t || {}; var n = new XMLHttpRequest; n.open('GET', e, !0), n.withCredentials = !t.dSC, n.responseType = t.responseType || 'text', n.onload = function () { if (t.onloadCb) return t.onloadCb(n, e); 200 === n.status ? _vwo_code.addScript({ text: n.responseText }) : _vwo_code.finish('&e=loading_failure:' + e) }, n.onerror = function () { if (t.onerrorCb) return t.onerrorCb(e); _vwo_code.finish('&e=loading_failure:' + e) }, n.send() }, init: function () { var e, t = this.settings_tolerance(); w._vwo_settings_timer = setTimeout(function () { _vwo_code.finish() }, t), 'body' !== this.hide_element() ? (n = d.createElement('style'), e = (t = this.hide_element()) ? t + this.hide_element_style() : '', t = d.getElementsByTagName('head')[0], n.setAttribute('id', '_vis_opt_path_hides'), v && n.setAttribute('nonce', v.nonce), n.setAttribute('type', 'text/css'), n.styleSheet ? n.styleSheet.cssText = e : n.appendChild(d.createTextNode(e)), t.appendChild(n)) : (n = d.getElementsByTagName('head')[0], (e = d.createElement('div')).style.cssText = 'z-index: 2147483647 !important;position: fixed !important;left: 0 !important;top: 0 !important;width: 100% !important;height: 100% !important;background: white !important;', e.setAttribute('id', '_vis_opt_path_hides'), e.classList.add('_vis_hide_layer'), n.parentNode.insertBefore(e, n.nextSibling)); var n = 'https://dev.visualwebsiteoptimizer.com/j.php?' + i(); -1 !== w.location.search.indexOf('_vwo_xhr') ? this.addScript({ src: n }) : this.load(n + '&x=true', { l: 1 }) } }; w._vwo_code = code; code.init();
+      })();
   </script>
   <!-- End VWO Async SmartCode -->
 
@@ -38,30 +42,32 @@
   <!-- Primary Meta Tags -->
   <title>Re:Mind - Digitale balanscoach voor jonge professionals</title>
   <meta name="title" content="Re:Mind - Digitale balanscoach voor jonge professionals" />
-  <meta name="description" content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
+  <meta name="description"
+    content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.remind-app.be/" />
   <meta property="og:title" content="Re:Mind - Digitale balanscoach voor jonge professionals" />
-  <meta property="og:description" content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
+  <meta property="og:description"
+    content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
   <meta property="og:image" content="https://www.remind-app.be/images/metatags_img.png" />
 
   <!-- X (Twitter) -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.remind-app.be/" />
   <meta property="twitter:title" content="Re:Mind - Digitale balanscoach voor jonge professionals" />
-  <meta property="twitter:description" content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
+  <meta property="twitter:description"
+    content="Re:Mind helpt jonge professionals bewuster omgaan met stress en energie via slimme pauzesuggesties en check-ins tijdens de werkdag." />
   <meta property="twitter:image" content="https://www.remind-app.be/images/metatags_img.png" />
 
-  <!-- Meta Tags Generated with https://metatags.io -->
   <script src="https://t.contentsquare.net/uxa/7524f931f31cf.js"></script>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXLBZ7C"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXLBZ7C" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div id="loading-screen" class="loading-screen">
     <div class="loading-container">
@@ -78,13 +84,8 @@
       <div class="nav-inner">
         <img class="navLogo" src="./images/logo_primaryColor.png" alt="Re:Mind logo">
 
-        <button
-          class="menu-button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="main-nav-links"
-          type="button"
-        >
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links"
+          type="button">
           <span></span>
           <span></span>
           <span></span>
@@ -95,11 +96,7 @@
         <div class="nav-overlay__header">
           <img class="navLogo navLogo--overlay" src="./images/logo_primaryColor.png" alt="Re:Mind logo">
 
-          <button
-            class="nav-sluitknop"
-            aria-label="Sluit menu"
-            type="button"
-          >
+          <button class="nav-sluitknop" aria-label="Sluit menu" type="button">
             <span></span>
             <span></span>
           </button>
@@ -113,57 +110,137 @@
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-
         <img class="nav-decoratie" src="./images/swirl.svg" alt="" aria-hidden="true">
+
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-div">
+      <div class="hero-content">
         <div class="hero-text">
-          <img src="./images/logo_dark.svg" alt="Logo Re:Mind" class="hero-logo" />
-          <h1>Slim pauzeren,<br />sterk presteren!</h1>
-          <a href="#prijzen" class="cta-button">Probeer nu</a>
+          <h1>
+            Slim pauzeren,<br>
+            <span>sterk presteren</span>
+          </h1>
+
+          <p>
+            Re:Mind helpt je tijdens je werkdag met korte, effectieve pauzes.
+          </p>
+
+          <a href="#" class="hero-button">Start je balans</a>
         </div>
 
-        <img src="./images/Post it.svg" alt="Post it" class="note-image" />
+        <div class="hero-image">
+          <img src="images/Bol.svg" alt="Re:Mind icoon">
+        </div>
       </div>
     </section>
 
-    <section class="section about" id='over'>
-      <h2>Over Re:Mind</h2>
+    <section class="herkenbaar-sectie">
+      <div class="slider">
+        <button class="slider-pijl slider-pijl--links" aria-label="Vorige">
+          <img src="./icons/pijl_links.svg" alt="Pijl links">
+        </button>
 
-      <p>
-        Re:Mind is een digitale balanscoach voor jonge starters op de arbeidsmarkt.
-        De eerste jaren in je carrière zijn vaak spannend en ambitieus, maar brengen ook prestatiedruk, deadlines en
-        stress met zich mee.
-        Veel jonge werknemers werken uren door zonder echte pauze of ervaren schuldgevoelens wanneer ze even afstand
-        nemen van hun taken.
-        Re:Mind helpt om dat patroon te doorbreken door mentale ondersteuning te integreren in de werkdag.
-      </p>
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <article class="kaart" data-index="0">
+              <div class="kaart__icoon">
+                <img src="./icons/koffie.svg" alt="" />
+              </div>
+              <h3>"Je slaat pauzes over zonder het te merken"</h3>
+              <p>Je schuldig voelen als je rust</p>
+            </article>
 
-      <p>
-        Onze webapp ondersteunt jonge werknemers bij het bewust omgaan met stress en energie.
-        Via korte, gerichte pauzesuggesties en subtiele check-ins tijdens de werkdag
-        stimuleert Re:Mind rustmomenten die echt herstellend werken.
-        Op die manier ontstaat er meer concentratie en focus op lange termijn.
-      </p>
+            <article class="kaart" data-index="1">
+              <div class="kaart__icoon">
+                <img src="./icons/klok.svg" alt="" />
+              </div>
+              <h3>“Nog één taak…”</h3>
+              <p>Uren werken zonder pauzes</p>
+            </article>
 
-      <h3>Onze visie</h3>
-      <p>
-        Re:Mind vertrekt vanuit de overtuiging dat duurzaam werken begint bij luisteren naar je lichaam en geest.
-        Onze visie is een wereld waarin jonge werknemers geen schrik hebben om pauze te nemen wanneer dat nodig is.
-        Re:Mind helpt jonge starters om duurzame werkgewoonten op te bouwen,
-        met kleine signalen die een grote impact kunnen maken.
-      </p>
+            <article class="kaart" data-index="2">
+              <div class="kaart__icoon">
+                <img src="./icons/sad_smile.svg" alt="" />
+              </div>
+              <h3>"Je voelt je moe, maar je zet door"</h3>
+              <p>Je focus en energie verliezen</p>
+            </article>
+          </div>
+        </div>
 
-      <p>
-        Authenticiteit, helderheid en toegankelijkheid vormen de kern van ons merk.
-        We geloven in openheid rond mentale gezondheid en in een eenvoudige
-        oplossing die écht past binnen een drukke werkdag.
-      </p>
+        <button class="slider-pijl slider-pijl--rechts" aria-label="Volgende">
+          <img src="./icons/pijl_rechts.svg" alt="Pijl rechts">
+        </button>
+      </div>
+
+      <div class="slider-indicatoren">
+        <span class="indicator" data-index="0"></span>
+        <span class="indicator indicator--actief" data-index="1"></span>
+        <span class="indicator" data-index="2"></span>
+      </div>
+
+      <div class="herkenbaar-inhoud">
+        <h2>Herkenbaar?</h2>
+        <p>
+          Je bent niet alleen. Veel jonge professionals worstelen met hetzelfde patroon.
+        </p>
+      </div>
+    </section>
+
+    <section class="section over-remind" id="over">
+      <div class="over-remind__intro">
+        <h2>Over Re:Mind</h2>
+
+        <p>
+          <strong>Re:Mind</strong> is een <strong>digitale balanscoach</strong>
+          voor jonge starters op de arbeidsmarkt. De eerste jaren in je carrière
+          brengen vaak <strong>stress, prestatiedruk en lange werkdagen</strong>
+          met zich mee.
+        </p>
+
+        <p>
+          Even pauzeren is moeilijk of voelt fout aan, maar
+          <strong>geen pauzes nemen kan schadelijk zijn.</strong>
+        </p>
+
+        <p class="over-remind__highlight">
+          <strong>Dat is precies waar Re:Mind mee helpt.</strong>
+          Door korte check-ins en gerichte pauzesuggesties tijdens je werkdag,
+          herstel je sneller, blijf je gefocust en bouw je aan een gezondere werkbalans.
+        </p>
+      </div>
+
+      <div class="missie-visie">
+        <article class="missie-kaart">
+          <div class="missie-kaart__decoratie" aria-hidden="true">
+            <img src="./images/swirl.svg" alt="" />
+          </div>
+
+          <h3>Onze missie</h3>
+
+          <p>
+            Wij willen jonge starters ondersteunen in het nemen van bewuste,
+            herstellende pauzes tijdens hun werkdag.
+          </p>
+
+          <p>
+            Met korte, gerichte interventies helpen we hen om stress te verminderen,
+            focus te behouden en een gezondere balans te ontwikkelen tussen inspanning en herstel.
+          </p>
+        </article>
+
+        <div class="visie-blok">
+          <h3>Onze visie</h3>
+          <p>
+            Een wereld waarin jonge werknemers zich niet schuldig voelen om pauze te nemen
+            als dat nodig is voor hen.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="section features" id="functionaliteiten">
@@ -256,16 +333,109 @@
       </div>
     </section>
 
+    <section class="werkwijze-sectie" id="hoe-werkt-het">
+      <div class="werkwijze-kop">
+        <h2>Hoe werkt het</h2>
+        <p>4 simpele stappen naar een meer gebalanceerde werkdag</p>
+      </div>
+
+      <div class="stappen-lijst">
+        <article class="stap-kaart">
+          <h3>
+            <span class="stap-nummer">1.</span>
+            <span class="stap-titel">Start je werkdag</span>
+          </h3>
+          <p>Open Re:Mind en start je werk-sessie.</p>
+        </article>
+
+        <article class="stap-kaart">
+          <h3>
+            <span class="stap-nummer">2.</span>
+            <span class="stap-titel">Krijg subtiele check-ins</span>
+          </h3>
+          <p>Ontvang gedurende de dag korte vragen over hoe je je voelt.</p>
+        </article>
+
+        <article class="stap-kaart">
+          <h3>
+            <span class="stap-nummer">3.</span>
+            <span class="stap-titel">Neem korte en gerichte pauzes</span>
+          </h3>
+          <p>Korte pauzes die ontworpen zijn om je brein terug op te laden.</p>
+        </article>
+
+        <article class="stap-kaart">
+          <h3>
+            <span class="stap-nummer">4.</span>
+            <span class="stap-titel">Verbeter je gewoonten</span>
+          </h3>
+          <p>Evalueer je gewoontes en ontwikkel gaandeweg gezondere werkritmes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="voordelen-sectie" id="voordelen">
+      <div class="voordelen-kop">
+        <h2>Voordelen die je zult merken</h2>
+      </div>
+
+      <div class="voordelen-lijst">
+        <article class="voordeel-kaart">
+          <div class="voordeel-kaart__kop">
+            <div class="voordeel-kaart__icoon">
+              <img src="./icons/focus.svg" alt="" />
+            </div>
+            <h3>Meer focus</h3>
+          </div>
+          <p>Blijf de hele werkdag scherp en gefocust.</p>
+        </article>
+
+        <article class="voordeel-kaart">
+          <div class="voordeel-kaart__kop">
+            <div class="voordeel-kaart__icoon">
+              <img src="./icons/energie.svg" alt="" />
+            </div>
+            <h3>Betere energie</h3>
+          </div>
+          <p>
+            Zorg ervoor dat je energieniveau stabiel blijft in plaats van ineens in te storten.
+          </p>
+        </article>
+
+        <article class="voordeel-kaart">
+          <div class="voordeel-kaart__kop">
+            <div class="voordeel-kaart__icoon">
+              <img src="./icons/stress.svg" alt="" />
+            </div>
+            <h3>Minder stress</h3>
+          </div>
+          <p>
+            Verminder overweldigende gevoelens door regelmatig je hoofd leeg te maken.
+          </p>
+        </article>
+
+        <article class="voordeel-kaart">
+          <div class="voordeel-kaart__kop">
+            <div class="voordeel-kaart__icoon">
+              <img src="./icons/gezond.svg" alt="" />
+            </div>
+            <h3>Gezondere werkgewoonten</h3>
+          </div>
+          <p>Creëer duurzame gewoontes die je welzijn bevorderen.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section pricing" id="prijzen">
       <h2>Prijzen</h2>
 
       <div class="billing-toggle" role="tablist" aria-label="Kies facturatieperiode">
         <button type="button" class="billing-pill active" data-billing="monthly" aria-pressed="true">
-            Maandelijks
+          Maandelijks
         </button>
 
         <button type="button" class="billing-pill" data-billing="yearly" aria-pressed="false">
-            Jaarlijks
+          Jaarlijks
         </button>
       </div>
 
@@ -277,7 +447,7 @@
           <ul>
             <li>✓ Pauzesuggesties</li>
             <li>✓ Check-ins</li>
-            <li>✓ Dagelijks/Wekelijks rapport</li>
+            <li>✓ Dagelijks rapport</li>
             <li>✓ Afsluitroutine</li>
           </ul>
 
@@ -292,20 +462,21 @@
             <li>✓ Alle basis functies</li>
             <li>✓ Personalisatie opties</li>
             <li>✓ Diepere inzichten</li>
-            <li>✓ Vergelijk uw rapporten</li>
+            <li>✓ Wekelijks rapport</li>
           </ul>
 
           <a href="#" class="card-button">Kies dit plan</a>
         </article>
 
         <article class="pricing-card">
-          <div class="pricing-label company-price">€2,20/maand<br />per werknemer</div>          
+          <div class="pricing-label company-price">€2,20/maand<br />per werknemer</div>
           <h3>Bedrijfslicentie</h3>
 
           <ul>
             <li>✓ Alle basis functies</li>
             <li>✓ Premium functies</li>
             <li>✓ Bedrijfspersonalisatie</li>
+            <li>✓ Werknemersbeheer</li>
           </ul>
 
           <a href="#" class="card-button">Kies dit plan</a>
