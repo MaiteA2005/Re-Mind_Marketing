@@ -426,14 +426,14 @@ input {
   appearance: none;
   border: 1px solid var(--primary-200);
   border-bottom: none;
-  /* background: var(--primary-50); */
-  background-color: red;
+  background: var(--primary-50);
+  /* background-color: red; */
   color: var(--text-primary);
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxxs);
   font-weight: var(--font-weight-semibold);
   line-height: 1;
-  padding: var(--space-3) var(--space-2);
+  padding: var(--space-3) var(--space-3);
   white-space: nowrap;
   border-top-left-radius: var(--radius-sm);
   border-top-right-radius: var(--radius-sm);
