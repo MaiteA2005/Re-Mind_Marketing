@@ -104,8 +104,14 @@ tabs.forEach((tab) => {
         const activePanel = document.getElementById(`panel-${target}`);
         activePanel.classList.add("is-active");
         activePanel.hidden = false;
+
+        // 🔥 animation trigger (heel belangrijk)
+        requestAnimationFrame(() => {
+          activePanel.classList.add("is-animating");
+        });
     });
 });
+
 
 //Billing toggle
 const billingButtons = document.querySelectorAll(".billing-pill");
@@ -404,3 +410,11 @@ if (revealElements.length) {
     revealObserver.observe(element);
   });
 }
+
+// Trigger animatie eerste feature panel bij paginalaadtijd
+window.addEventListener("load", () => {
+  const firstPanel = document.querySelector(".feature-panel.is-active");
+  if (firstPanel) {
+    firstPanel.classList.add("is-animating");
+  }
+});
