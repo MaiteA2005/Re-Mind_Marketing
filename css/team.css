@@ -49,8 +49,8 @@ body {
 
 .team-list {
   display: grid;
-  gap: var(--space-5);
-  margin: var(--space-3);
+  gap: var(--space-6);
+  margin: var(--space-0);
   justify-items: center;
 }
 
@@ -65,13 +65,12 @@ body {
     "action";
   gap: var(--space-4);
   align-items: start;
-  justify-items: center;
+  justify-items: stretch;
   padding: var(--space-4);
   border-radius: var(--tm-radius-lg);
-  background: var(--tm-card);
   color: var(--tm-card-foreground);
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .team-member:focus-within {
@@ -81,6 +80,7 @@ body {
 
 .team-image-wrap {
   grid-area: image;
+  justify-self: center;
 }
 
 .team-member img {
@@ -101,6 +101,7 @@ body {
   font-weight: var(--font-weight-bold);
   color: var(--text-primary);
   margin: 0;
+  text-align: center;
 }
 
 .team-content p {
@@ -115,10 +116,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--space-4);
-  margin-top: 16px;
+  margin-top: var(--space-4);
 }
 
 .team-links a {
@@ -155,32 +156,33 @@ body {
 
 .more-button {
   grid-area: action;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--tm-radius-lg);
+  border-radius: var(--button-radius);
   font-size: var(--font-size-xxs);
-  font-family: var(--font-family-heading);
-  border: var(--border-width-sm) solid var(--tm-border);
-  background: var(--tm-primary);
-  color: var(--tm-primary-foreground);
+  font-family: var(--text-button-label-font-family);
+  border: var(--button-border-width) var(--button-border-style) var(--button-primary-default-border);
+  background: var(--button-primary-default-bg);
+  color: var(--button-primary-default-text);
   font-weight: var(--font-weight-semibold);
   margin-top: var(--space-2);
 }
 
 .more-button:hover {
-  background: var(--tm-accent);
-  color: var(--tm-accent-foreground);
+  background: var(--button-primary-active-bg);
+  color: var(--button-primary-active-text);
   box-shadow: var(--shadow-button-hover);
-  border-color: var(--tm-accent);
+  border-color: var(--button-primary-active-border);
   transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .more-button:active {
-  background: var(--tm-muted);
-  border-color: var(--tm-border);
-  color: var(--tm-card-foreground);
+  background: var(--button-primary-hover-bg);
+  border-color: var(--button-primary-hover-border);
+  color: var(--button-primary-default-text);
 }
 
 @media (min-width: 834px) {
@@ -243,7 +245,7 @@ body {
   }
 
   .team-list {
-    margin: var(--space-8);
+    margin: var(--space-0);
   }
 
   .team-member {
@@ -276,7 +278,7 @@ body {
 
   .team-list {
     gap: var(--space-7);
-    margin: 0 var(--space-11);
+    margin: var(--space-0);
   }
 
   .team-content h3 {
