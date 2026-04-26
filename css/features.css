@@ -111,6 +111,7 @@ p {
     margin: var(--space-3) auto;
 }
 
+/* FEATURES */
 /* .features {
 
 } */
@@ -219,7 +220,7 @@ p {
 .werkwijze-kop h2 {
     font-family: var(--font-family-heading);
     font-size: var(--font-size-md);
-    line-height: var(--line-height-sm);
+    line-height: var(--line-height-md);
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
     margin-bottom: var(--space-5);
@@ -237,35 +238,30 @@ p {
     border-radius: 24px;
     padding: var(--space-5);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    width: 100%
-}
-
-.stap-kaart h3 {
-    margin: 0 0 var(--space-4);
+    width: 100%;
     display: flex;
-    align-items: baseline;
-    gap: 0.75rem;
-    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 
 .stap-nummer {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-sm);
-    line-height: 1;
+    font-size: var(--font-size-md);
     font-weight: var(--font-weight-bold);
     color: var(--brand-primary);
+    padding-right: var(--space-6);
 }
 
 .stap-titel {
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-sm);
+    font-size: var(--text-body-regular-font-size);
     font-weight: var(--font-weight-bold);
     color: var(--text-primary);
 }
 
 .stap-kaart p {
-    margin: 0;
     color: var(--text-secondary);
+    line-height: var(--line-height-sm);
 }
 
 /* VOORDELEN */
@@ -338,8 +334,7 @@ p {
 @media (min-width: 834px) {
 
     .intro {
-        margin-top: var(--space-8);
-        padding: var(--space-10) var(--space-11);
+        padding: var(--space-10) var(--space-11) var(--space-0);
     }
 
     .intro h1 {
@@ -419,10 +414,13 @@ p {
     .stap-kaart {
         width: clamp(280px, 70vw, 80vw);
         max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .stap-nummer {
-        font-size: var(--font-size-md);
+        font-size: var(--font-size-lg);
     }
 
     /* VOORDELEN */
@@ -445,7 +443,7 @@ p {
         margin-top: var(--space-9);
     }
 
-    p{
+    p {
         font-size: var(--text-body-regular-font-size);
     }
 
@@ -485,12 +483,16 @@ p {
         width: clamp(320px, 60vw, 80vw);
     }
 
-    .stap-kaart h3 {
-        font-size: var(--font-size-md);
+    .stap-nummer {
+        font-size: var(--font-size-xl);
     }
 
-    .stap-nummer {
-        font-size: var(--font-size-lg);
+    .stap-titel {
+        font-size: var(--font-size-sm);
+    }
+
+    .stap-kaart p {
+        line-height: var(--line-height-md);
     }
 
     /* VOORDELEN */
