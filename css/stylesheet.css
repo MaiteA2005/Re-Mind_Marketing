@@ -321,7 +321,7 @@ input {
   margin-top: var(--space-6);
 }
 
-.over-remind a{
+.over-remind a {
   color: var(--primary-600);
   font-weight: var(--font-weight-semibold);
   text-decoration: underline;
@@ -861,14 +861,8 @@ input {
 }*/
 
 /* CONTACT */
-.contact {
-  padding: var(--space-8) var(--space-4) var(--space-10);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
 .contact h2 {
+  padding-left: var(--space-4);
   margin: 0;
   font-family: var(--font-family-heading);
   font-size: var(--font-size-md);
@@ -877,47 +871,64 @@ input {
   color: var(--text-primary);
 }
 
-.contact-socials {
+.contact h3{
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.contact_content {
+  padding: var(--space-5) var(--space-4) var(--space-10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.socials {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  align-items: flex-start;
 }
 
-.contact-socials a {
+.socials a {
   display: flex;
   align-items: center;
   gap: var(--space-4);
   width: fit-content;
 }
 
-.contact-socials a img {
+.socials a img {
   width: 32px;
   height: 32px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.contact-socials a span {
+.socials a span {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-sm);
   color: var(--text-primary);
+  border-radius: var(--radius-xs);
+  padding: 0 var(--space-1);
   text-decoration: underline;
   text-underline-offset: 0.12em;
   transition: background-color 0.3s ease;
 }
 
-.contact-socials a:hover span {
+.socials a:hover span {
   background-color: var(--brand-highlight);
 }
 
 .contact-form-wrap {
   width: 100%;
-}
-
-.contact-form-wrap h3 {
-  display: none;
 }
 
 .contact-form {
@@ -957,6 +968,7 @@ input {
   margin: 0;
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
   color: var(--text-primary);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
 }
@@ -1232,12 +1244,11 @@ input {
   }
 
   /* CONTACT */
-   .contact {
+  .contact_content {
     padding: var(--space-9) var(--space-8) var(--space-10);
-    display: grid;
-    grid-template-columns: minmax(240px, 1fr) minmax(320px, 560px);
-    column-gap: var(--space-8);
-    row-gap: var(--space-6);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
     align-items: start;
   }
 
@@ -1245,23 +1256,23 @@ input {
     grid-column: 1 / -1;
   }
 
-  .contact-socials {
+  .contact h3 {
+    text-align: left;
+  }
+
+  .socials {
     grid-column: 1;
     grid-row: 2;
     padding-top: var(--space-2);
   }
 
-  .contact-socials a {
+  .socials a {
     gap: var(--space-4);
   }
 
-  .contact-socials a img {
+  .socials a img {
     width: 36px;
     height: 36px;
-  }
-
-  .contact-socials a span {
-    font-size: var(--font-size-sm);
   }
 
   .contact-form-wrap {
@@ -1275,18 +1286,8 @@ input {
     border-radius: 20px;
   }
 
-  .contact-form label {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact-form input {
-    height: 52px;
-    font-size: var(--font-size-sm);
-  }
-
   .submit-button {
     min-height: 52px;
-    font-size: var(--font-size-md);
   }
 }
 
@@ -1510,10 +1511,10 @@ input {
   }
 
   /* CONTACT */
-  .contact {
-    padding: var(--space-9) var(--space-9) var(--space-10);
-    grid-template-columns: minmax(280px, 1fr) minmax(420px, 620px);
-    column-gap: var(--space-10);
+  .contact_content {
+    padding: var(--space-9) var(--space-9) var(--space-0);
+    max-width: 80vw;
+    margin: 0 auto;
   }
 
   .contact h2 {
@@ -1521,16 +1522,20 @@ input {
     margin: 0;
   }
 
-  .contact-socials {
+  .contact-socials{
+    width: 60%;
+  }
+
+  .socials {
     gap: var(--space-5);
   }
 
-  .contact-socials a img {
+  .socials a img {
     width: 40px;
     height: 40px;
   }
 
-  .contact-socials a span {
+  .socials a span {
     font-size: var(--text-body-regular-font-size);
   }
 
@@ -1550,8 +1555,7 @@ input {
 
   .submit-button {
     min-height: 56px;
-    font-size: var(--font-size-md);
-    border-radius: 14px;
+    border-radius: var(--radius-md);
   }
 }
 
@@ -1651,10 +1655,10 @@ input {
   /* CONTACT */
   .contact {
     padding: var(--space-10) var(--space-11) var(--space-11);
-    column-gap: var(--space-10);
+    /* column-gap: var(--space-4); */
   }
 
-  .contact-person h3 {
+  .contact h3 {
     font-size: var(--font-size-md);
     margin-bottom: var(--space-3);
   }
@@ -1664,7 +1668,7 @@ input {
   }
 
   .contact-form-wrap h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
 
   .contact-form input {
