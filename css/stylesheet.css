@@ -889,28 +889,28 @@ input {
   gap: var(--space-8);
 }
 
-.socials {
+.socials-links {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   align-items: flex-start;
 }
 
-.socials a {
+.socials-links a {
   display: flex;
   align-items: center;
   gap: var(--space-4);
   width: fit-content;
 }
 
-.socials a img {
+.socials-links a img {
   width: 32px;
   height: 32px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.socials a span {
+.socials-links a span {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
@@ -923,7 +923,7 @@ input {
   transition: background-color 0.3s ease;
 }
 
-.socials a:hover span {
+.socials-links a:hover span {
   background-color: var(--brand-highlight);
 }
 
@@ -1260,17 +1260,17 @@ input {
     text-align: left;
   }
 
-  .socials {
+  .socials-links {
     grid-column: 1;
     grid-row: 2;
     padding-top: var(--space-2);
   }
 
-  .socials a {
+  .socials-links a {
     gap: var(--space-4);
   }
 
-  .socials a img {
+  .socials-links a img {
     width: 36px;
     height: 36px;
   }
@@ -1526,16 +1526,16 @@ input {
     width: 60%;
   }
 
-  .socials {
+  .socials-links {
     gap: var(--space-5);
   }
 
-  .socials a img {
+  .socials-links a img {
     width: 40px;
     height: 40px;
   }
 
-  .socials a span {
+  .socials-links a span {
     font-size: var(--text-body-regular-font-size);
   }
 
