@@ -229,6 +229,7 @@ body.nav-open {
     align-items: center;
     justify-content: space-between;
     gap: var(--space-8);
+    padding: var(--space-4) var(--space-8);
   }
 
   .nav-inner {
@@ -316,6 +317,7 @@ body.nav-open {
 
 @media (min-width: 834px) {
   .site-nav {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
