@@ -112,13 +112,11 @@ p {
 }
 
 /* FEATURES */
-/* .features {
-
-} */
 
 .features h2 {
     margin: var(--space-3);
     padding-left: var(--space-2);
+    font-family: var(--font-family-heading);
 }
 
 .features p {
@@ -338,7 +336,7 @@ p {
 @media (min-width: 834px) {
 
     .intro {
-        padding: var(--space-10) var(--space-11) var(--space-0);
+        padding: var(--space-12) var(--space-11) var(--space-0);
     }
 
     .intro h1 {
@@ -349,9 +347,9 @@ p {
     }
 
     .features h2 {
-        /* padding-top: var(--space-9); */
         margin: 0;
         margin-bottom: var(--space-5);
+        padding-top: var(--space-9);
         padding-left: var(--space-8);
         padding-right: var(--space-8);
     }
@@ -444,7 +442,7 @@ p {
 
 @media (min-width: 1194px) {
     main {
-        margin-top: var(--space-9);
+        margin-top: var(--space-8);
     }
 
     p {

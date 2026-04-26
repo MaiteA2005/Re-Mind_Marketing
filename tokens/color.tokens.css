@@ -209,12 +209,12 @@
 
         /* Voordelen sectie gradient - zachte groene fade */
         --gradient-benefits-section: linear-gradient(180deg,
-                        var(--highlight-200) 0%,
-                        var(--highlight-100) 20%,
-                        var(--primary-100) 40%,
-                        var(--primary-50) 60%,
-                        var(--primary-50) 80%,
-                        var(--primary-50) 100%);
+                        var(--primary-50) 0%,
+                        var(--primary-50) 20%,
+                        var(--primary-50) 40%,
+                        var(--primary-100) 60%,
+                        var(--highlight-100) 80%,
+                        var(--highlight-200) 100%);
 
         /* Pricing card gradient - zacht groen → warm beige */
         --gradient-pricing-card: linear-gradient(150deg,
