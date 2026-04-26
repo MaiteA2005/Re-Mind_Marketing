@@ -1,4 +1,4 @@
-//Loader
+// Loader
 document.body.classList.add("loading");
 
 window.addEventListener("load", () => {
@@ -22,7 +22,9 @@ window.addEventListener("load", () => {
 });
 
 // Navigation
-if (window.location.pathname === "/index.html" || window.location.hash === "#") {
+// Zet /index.html alleen om naar / als er GEEN anchor/hash is.
+// Zo blijven links zoals /index.html#contact correct werken.
+if (window.location.pathname === "/index.html" && !window.location.hash) {
   window.history.replaceState(null, null, "/");
 }
 
@@ -52,8 +54,7 @@ function closeMenu() {
 
 if (navLogo) {
   navLogo.addEventListener("click", () => {
-    scrollTo({ top: 0, behavior: "smooth" });
-    closeMenu();
+    window.location.href = "./index.html";
   });
 }
 
@@ -85,95 +86,97 @@ window.addEventListener("resize", () => {
   }
 });
 
-//Feature tabs
+// Feature tabs
 const tabs = document.querySelectorAll(".feature-tab");
 const panels = document.querySelectorAll(".feature-panel");
 
 tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-        const target = tab.dataset.tab;
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.tab;
 
-        tabs.forEach((item) => {
-            item.classList.remove("is-active");
-            item.setAttribute("aria-selected", "false");
-        });
-
-        panels.forEach((panel) => {
-            panel.classList.remove("is-active");
-            panel.hidden = true;
-        });
-
-        tab.classList.add("is-active");
-        tab.setAttribute("aria-selected", "true");
-
-        const activePanel = document.getElementById(`panel-${target}`);
-        activePanel.classList.add("is-active");
-        activePanel.hidden = false;
-
-        // 🔥 animation trigger (heel belangrijk)
-        requestAnimationFrame(() => {
-          activePanel.classList.add("is-animating");
-        });
+    tabs.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-selected", "false");
     });
+
+    panels.forEach((panel) => {
+      panel.classList.remove("is-active", "is-animating");
+      panel.hidden = true;
+    });
+
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
+
+    const activePanel = document.getElementById(`panel-${target}`);
+
+    if (!activePanel) return;
+
+    activePanel.classList.add("is-active");
+    activePanel.hidden = false;
+
+    requestAnimationFrame(() => {
+      activePanel.classList.add("is-animating");
+    });
+  });
 });
 
-
-//Billing toggle
+// Billing toggle
 const billingButtons = document.querySelectorAll(".billing-pill");
 const premiumPrice = document.querySelector(".premium-price");
 const companyPrice = document.querySelector(".company-price");
 
 billingButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        billingButtons.forEach((item) => {
-            item.classList.remove("active");
-            item.setAttribute("aria-pressed", "false");
-        });
-
-        button.classList.add("active");
-        button.setAttribute("aria-pressed", "true");
-
-        if (button.dataset.billing === "monthly") {
-            premiumPrice.innerHTML = "€2,99/maand";
-            companyPrice.innerHTML = "€2,20/maand<br />per werknemer";
-        } else {
-            premiumPrice.innerHTML = "€33/jaar";
-            companyPrice.innerHTML = "€20/jaar<br />per werknemer";
-        }
+  button.addEventListener("click", () => {
+    billingButtons.forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-pressed", "false");
     });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+
+    if (!premiumPrice || !companyPrice) return;
+
+    if (button.dataset.billing === "monthly") {
+      premiumPrice.innerHTML = "€2,99/maand";
+      companyPrice.innerHTML = "€2,20/maand<br />per werknemer";
+    } else {
+      premiumPrice.innerHTML = "€33/jaar";
+      companyPrice.innerHTML = "€20/jaar<br />per werknemer";
+    }
+  });
 });
 
-//Contact form
+// Contact form
 const form = document.getElementById("contact-form");
 
 if (form) {
-    form.addEventListener("submit", async function (event) {
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const formData = new FormData(form);
 
     try {
-        const response = await fetch(form.action, {
+      const response = await fetch(form.action, {
         method: form.method,
         body: formData,
         headers: {
-            Accept: "application/json",
+          Accept: "application/json",
         },
-        });
+      });
 
-        if (response.ok) {
+      if (response.ok) {
         window.location.href = "succes.html";
-        } else {
+      } else {
         alert("Er liep iets mis bij het verzenden. Probeer het opnieuw.");
-        }
+      }
     } catch (error) {
-        alert("Er kon geen verbinding worden gemaakt. Probeer later opnieuw.");
+      alert("Er kon geen verbinding worden gemaakt. Probeer later opnieuw.");
     }
-    });
+  });
 }
 
-//Carousel
-
+// Carousel
 const viewport = document.querySelector(".slider-viewport");
 const track = document.querySelector(".slider-track");
 const vorige = document.querySelector(".slider-pijl--links");
@@ -194,7 +197,8 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
 
   function updateIndicatoren() {
     const echteIndex =
-      ((huidigeIndex - 1) % aantalOrigineel + aantalOrigineel) % aantalOrigineel;
+      ((huidigeIndex - 1) % aantalOrigineel + aantalOrigineel) %
+      aantalOrigineel;
 
     Array.from(indicatoren).forEach((dot, index) => {
       dot.classList.toggle("indicator--actief", index === echteIndex);
@@ -221,9 +225,12 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     const kaartLinks = actieveKaart.offsetLeft;
     const kaartBreedte = actieveKaart.offsetWidth;
 
-    const verschuiving = kaartLinks - (viewportBreedte / 2) + (kaartBreedte / 2);
+    const verschuiving =
+      kaartLinks - viewportBreedte / 2 + kaartBreedte / 2;
 
-    track.style.transition = zonderAnimatie ? "none" : "transform 0.45s ease";
+    track.style.transition = zonderAnimatie
+      ? "none"
+      : "transform 0.45s ease";
     track.style.transform = `translateX(${-verschuiving}px)`;
 
     updateActieveKaart();
@@ -231,6 +238,7 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
 
   function gaNaarIndex(index) {
     if (isTransitioning || !sliderActief) return;
+
     isTransitioning = true;
     huidigeIndex = index;
     centreerActieveKaart(false);
@@ -294,8 +302,14 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
   function resetSliderWeergave() {
     track.style.transition = "";
     track.style.transform = "";
-    kaarten.forEach((kaart) => kaart.classList.remove("kaart--actief", "kaart--clone"));
-    indicatoren.forEach((dot) => dot.classList.remove("indicator--actief"));
+
+    kaarten.forEach((kaart) => {
+      kaart.classList.remove("kaart--actief", "kaart--clone");
+    });
+
+    indicatoren.forEach((dot) => {
+      dot.classList.remove("indicator--actief");
+    });
 
     if (indicatoren[0]) {
       indicatoren[0].classList.add("indicator--actief");
@@ -305,7 +319,10 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
   function initialiseSlider() {
     if (sliderActief || sliderBreakpoint.matches) return;
 
-    origineleKaarten = Array.from(track.querySelectorAll(".kaart:not(.kaart--clone)"));
+    origineleKaarten = Array.from(
+      track.querySelectorAll(".kaart:not(.kaart--clone)")
+    );
+
     aantalOrigineel = origineleKaarten.length;
 
     if (aantalOrigineel < 3) return;
@@ -357,9 +374,11 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     track.removeEventListener("transitionend", eindeTransitie);
 
     verwijderSliderClones();
+
     kaarten = Array.from(track.querySelectorAll(".kaart"));
     sliderActief = false;
     isTransitioning = false;
+
     resetSliderWeergave();
   }
 
@@ -419,6 +438,7 @@ if (revealElements.length) {
 // Trigger animatie eerste feature panel bij paginalaadtijd
 window.addEventListener("load", () => {
   const firstPanel = document.querySelector(".feature-panel.is-active");
+
   if (firstPanel) {
     firstPanel.classList.add("is-animating");
   }
