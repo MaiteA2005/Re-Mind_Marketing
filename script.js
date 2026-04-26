@@ -2,18 +2,23 @@
 document.body.classList.add("loading");
 
 window.addEventListener("load", () => {
-    const loadingScreen = document.getElementById("loading-screen");
+  const loadingScreen = document.getElementById("loading-screen");
+
+  if (!loadingScreen) {
+    document.body.classList.remove("loading");
+    return;
+  }
+
+  setTimeout(() => {
+    loadingScreen.style.opacity = "0";
+    loadingScreen.style.transition = "opacity 0.5s ease";
+
+    document.body.classList.remove("loading");
 
     setTimeout(() => {
-        loadingScreen.style.opacity = "0";
-        loadingScreen.style.transition = "opacity 0.5s ease";
-
-        document.body.classList.remove("loading");
-
-        setTimeout(() => {
-            loadingScreen.style.display = "none";
-        }, 500);
-    }, 400);
+      loadingScreen.style.display = "none";
+    }, 500);
+  }, 400);
 });
 
 // Navigation
