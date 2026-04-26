@@ -141,15 +141,14 @@
   font-size: var(--font-size-sm);
   line-height: var(--text-button-label-line-height);
   text-decoration: none;
-  box-shadow: var(--shadow-button-hover);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
 .contact-button:hover {
   transform: translateY(-1px);
-  background: var(--button-primary-active-bg);
-  border-color: var(--button-primary-active-border);
-  color: var(--button-primary-active-text);
+  background: var(--primary-50);
+  box-shadow: var(--shadow-button-hover);
+  border: 1px solid var(--button-primary-active-border);
 }
 
 .copyright {
@@ -168,6 +167,7 @@
 }
 
 @media (min-width: 834px) {
+
   .site-footer,
   .footer {
     padding: var(--space-8) var(--space-9) var(--space-10);
@@ -189,6 +189,7 @@
 }
 
 @media (min-width: 1194px) {
+
   .site-footer,
   .footer {
     padding: var(--space-8) var(--space-11) var(--space-10);
@@ -208,7 +209,7 @@
     display: block;
   }
 
-  .footer-columns > div + div {
+  .footer-columns>div+div {
     margin-top: var(--space-8);
   }
 
