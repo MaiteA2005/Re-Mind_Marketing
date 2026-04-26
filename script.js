@@ -1,11 +1,41 @@
+// Anchor tijdelijk bewaren, zodat de browser niet al scrolt tijdens de loader
+const initialHash = window.location.hash;
+
+if (initialHash && initialHash !== "#") {
+  history.replaceState(
+    null,
+    "",
+    window.location.pathname + window.location.search
+  );
+}
+
 // Loader
 document.body.classList.add("loading");
+
+function scrollToHashTarget() {
+  if (!initialHash || initialHash === "#") return;
+
+  const target = document.querySelector(initialHash);
+  if (!target) return;
+
+  target.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+
+  history.replaceState(
+    null,
+    "",
+    window.location.pathname + window.location.search + initialHash
+  );
+}
 
 window.addEventListener("load", () => {
   const loadingScreen = document.getElementById("loading-screen");
 
   if (!loadingScreen) {
     document.body.classList.remove("loading");
+    scrollToHashTarget();
     return;
   }
 
@@ -17,14 +47,13 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
       loadingScreen.style.display = "none";
+      scrollToHashTarget();
     }, 500);
   }, 400);
 });
 
 // Navigation
-// Zet /index.html alleen om naar / als er GEEN anchor/hash is.
-// Zo blijven links zoals /index.html#contact correct werken.
-if (window.location.pathname === "/index.html" && !window.location.hash) {
+if (window.location.pathname === "/index.html" && !initialHash) {
   window.history.replaceState(null, null, "/");
 }
 
@@ -61,12 +90,7 @@ if (navLogo) {
 if (menuButton && navOverlay) {
   menuButton.addEventListener("click", () => {
     const isOpen = navOverlay.classList.contains("is-open");
-
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    isOpen ? closeMenu() : openMenu();
   });
 }
 
@@ -108,7 +132,6 @@ tabs.forEach((tab) => {
     tab.setAttribute("aria-selected", "true");
 
     const activePanel = document.getElementById(`panel-${target}`);
-
     if (!activePanel) return;
 
     activePanel.classList.add("is-active");
@@ -228,9 +251,7 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     const verschuiving =
       kaartLinks - viewportBreedte / 2 + kaartBreedte / 2;
 
-    track.style.transition = zonderAnimatie
-      ? "none"
-      : "transform 0.45s ease";
+    track.style.transition = zonderAnimatie ? "none" : "transform 0.45s ease";
     track.style.transform = `translateX(${-verschuiving}px)`;
 
     updateActieveKaart();
