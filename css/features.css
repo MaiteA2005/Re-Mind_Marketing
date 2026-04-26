@@ -330,6 +330,10 @@ p {
     color: var(--text-secondary);
 }
 
+.site-footer {
+    margin-top: var(--space-0);
+}
+
 /* BREAKPOINTS */
 @media (min-width: 834px) {
 
