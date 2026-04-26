@@ -6,79 +6,6 @@
 @import "../tokens/shadow.tokens.css";
 @import "../tokens/component.tokens.css";
 
-@keyframes fadeUpSoft {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeLeftSoft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeRightSoft {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes featureImageIn {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes featureContentIn {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes breathe {
-  0% {
-    transform: scale(1);
-  }
-
-  40% {
-    transform: scale(1.1);
-  }
-
-  60% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 * {
   box-sizing: border-box;
 }
@@ -365,7 +292,6 @@ input {
   color: var(--text-primary);
 }
 
-
 /* Over Re:Mind */
 .over-remind {
   padding: var(--space-8) var(--space-4) var(--space-10);
@@ -449,7 +375,7 @@ input {
   color: var(--text-primary);
 }
 
-/* FEATURES */
+/* FEATURES
 .features {
   padding: 22px 0;
 }
@@ -488,7 +414,7 @@ input {
   border: 1px solid var(--primary-200);
   border-bottom: none;
   background: var(--primary-50);
-  /* background-color: red; */
+  background-color: red; 
   color: var(--text-primary);
   font-family: var(--font-family-body);
   font-size: var(--font-size-xxxs);
@@ -558,9 +484,9 @@ input {
   font-size: var(--font-size-xxs);
   line-height: var(--line-height-xs);
   color: var(--text-primary);
-}
+}*/
 
-/* HOE WERKT HET */
+/* HOE WERKT HET 
 .werkwijze-sectie {
   padding: var(--space-8) var(--space-4) var(--space-10);
 }
@@ -627,9 +553,9 @@ input {
   font-family: var(--font-family-body);
   font-size: var(--font-size-xs);
   color: var(--text-secondary);
-}
+}*/
 
-/* VOORDELEN */
+/* VOORDELEN 
 .voordelen-sectie {
   padding: var(--space-8) var(--space-4) var(--space-10);
   background: var(--gradient-benefits-section);
@@ -696,7 +622,7 @@ input {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-sm);
   color: var(--text-secondary);
-}
+}*/
 
 /* PRICING */
 .pricing {
@@ -823,7 +749,7 @@ input {
   color: var(--text-on-dark);
 }
 
-/* TEAM */
+/* TEAM 
 .team-intro {
   margin: var(--space-3);
   text-align: left;
@@ -932,7 +858,7 @@ input {
   background: var(--button-accent-active-bg);
   border-color: var(--button-accent-active-border);
   color: var(--text-on-dark);
-}
+}*/
 
 /* CONTACT */
 .contact {
@@ -1071,45 +997,6 @@ input {
   background: var(--button-accent-active-bg);
   border-color: var(--button-accent-active-border);
   color: var(--text-on-dark);
-}
-
-/* Animaties */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* FEATURE PANEL ANIMATIES */
-.feature-panel-image,
-.feature-panel-content {
-  opacity: 0;
-  transform: translateX(0);
-}
-
-/* beginposities */
-.feature-panel-image {
-  transform: translateX(-40px);
-}
-
-.feature-panel-content {
-  transform: translateX(40px);
-}
-
-/* actieve animatie */
-.feature-panel.is-animating .feature-panel-image {
-  animation: featureImageIn 0.6s ease forwards;
-}
-
-.feature-panel.is-animating .feature-panel-content {
-  animation: featureContentIn 0.6s ease forwards;
-  animation-delay: 0.1s; /* kleine stagger */
 }
 
 /* BREAKPOINTS */

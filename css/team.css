@@ -170,6 +170,7 @@ p {
   color: var(--text-on-dark);
 }
 
+/* BREAKPOINTS */
 @media (min-width: 834px) {
   .team {
     /* padding: var(--layout-section) var(--layout-container-padding) 0; */
