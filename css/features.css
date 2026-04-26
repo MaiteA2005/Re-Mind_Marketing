@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+@import "../tokens/color.tokens.css";
+@import "../tokens/spacing.tokens.css";
+@import "../tokens/radius.tokens.css";
+@import "../tokens/typography.tokens.css";
+@import "../tokens/shadow.tokens.css";
+@import "../tokens/component.tokens.css";
+
+@keyframes fadeUpSoft {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeftSoft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRightSoft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes featureImageIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes featureContentIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-family-body);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: var(--text-primary);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-sm);
+}
+
+.intro {
+    padding: var(--space-13) var(--space-4) var(--space-10);
+}
+
+.intro h1 {
+    font-family: var(--text-heading-1-font-family);
+    font-size: var(--font-size-lg);
+    font-weight: var(--text-heading-1-font-weight);
+    line-height: var(--text-heading-1-line-height);
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.intro p {
+    width: 80vw;
+    margin: var(--space-3) auto;
+}
+
+/* .features {
+
+} */
+
+.features h2 {
+    margin: var(--space-3);
+    padding-left: var(--space-2);
+}
+
+.features p {
+    margin: var(--space-5);
+}
+
+.feature-tabs-component {
+    display: grid;
+    gap: 0;
+}
+
+.feature-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: visible;
+    position: relative;
+}
+
+.feature-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.feature-tab {
+    appearance: none;
+    border: 1px solid var(--primary-200);
+    border-bottom: none;
+    background: var(--primary-50);
+    /* background-color: red; */
+    color: var(--text-primary);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-xxxs);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+    padding: var(--space-3) var(--space-3);
+    white-space: nowrap;
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm);
+    cursor: pointer;
+    position: relative;
+    flex: 0 0 auto;
+    z-index: -1;
+}
+
+.feature-tab.is-active {
+    background: var(--primary-200);
+    border-color: var(--border-color-green);
+    color: var(--text-primary);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: -1px;
+    z-index: 2;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
+}
+
+.feature-tab:not(.is-active) {
+    z-index: 0;
+    margin-top: var(--space-1);
+}
+
+.feature-panels {
+    position: relative;
+    border-radius: 0;
+}
+
+.feature-panel {
+    background: var(--primary-200);
+    border: 1px solid var(--border-color-green);
+    border-left: none;
+    border-right: none;
+    padding: var(--space-6);
+    z-index: 1;
+}
+
+.feature-panel[hidden] {
+    display: none;
+}
+
+.feature-panel-image {
+    width: 80%;
+    display: block;
+    margin: var(--space-0) auto var(--space-4);
+}
+
+.feature-panel h3 {
+    margin: 0 0 var(--space-3);
+    text-align: center;
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+/* HOE WERKT HET */
+.werkwijze-sectie {
+    padding: var(--space-8) var(--space-4) var(--space-10);
+}
+
+.werkwijze-kop h2 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-5);
+    text-align: center;
+}
+
+.stappen-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.stap-kaart {
+    background: var(--background-50);
+    border-radius: 24px;
+    padding: var(--space-5);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    width: 100%
+}
+
+.stap-kaart h3 {
+    margin: 0 0 var(--space-4);
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.stap-nummer {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    line-height: 1;
+    font-weight: var(--font-weight-bold);
+    color: var(--brand-primary);
+}
+
+.stap-titel {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.stap-kaart p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* VOORDELEN */
+.voordelen-sectie {
+    padding: var(--space-8) var(--space-4) var(--space-10);
+    background: var(--gradient-benefits-section);
+}
+
+.voordelen-kop h2 {
+    margin-bottom: var(--space-5);
+    text-align: center;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.voordelen-lijst {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.voordeel-kaart {
+    background: var(--background-50);
+    border-radius: 2rem;
+    padding: var(--space-5);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.voordeel-kaart__kop {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.voordeel-kaart__icoon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.voordeel-kaart__icoon img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.voordeel-kaart h3 {
+    margin: 0;
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-sm);
+    line-height: 1.1;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+}
+
+.voordeel-kaart p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* BREAKPOINTS */
+@media (min-width: 834px) {
+
+    .intro {
+        margin-top: var(--space-8);
+        padding: var(--space-10) var(--space-11);
+    }
+
+    .intro h1 {
+        font-size: var(--font-size-lg);
+        line-height: var(--text-heading-1-line-height);
+        color: var(--text-primary);
+        text-align: center;
+    }
+
+    .features h2 {
+        /* padding-top: var(--space-9); */
+        margin: 0;
+        margin-bottom: var(--space-5);
+        padding-left: var(--space-8);
+        padding-right: var(--space-8);
+    }
+
+    .features p {
+        margin: 0;
+    }
+
+    .feature-tabs {
+        scrollbar-width: none;
+        padding-left: var(--space-8);
+    }
+
+    .feature-tab {
+        padding: var(--space-4) var(--space-6);
+        font-size: var(--font-size-xs);
+    }
+
+    .feature-tab.is-active {
+        font-weight: var(--font-weight-extrabold);
+    }
+
+    .feature-tab:not(.is-active) {
+        margin-top: var(--space-2);
+    }
+
+    .feature-panel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--space-8);
+        align-items: center;
+        padding: var(--space-9) var(--space-9);
+    }
+
+    .feature-panel-image {
+        grid-row: 1 / span 2;
+        width: 100%;
+        margin: 0;
+    }
+
+    .feature-panel-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        grid-row: 1 / span 2;
+    }
+
+    .feature-panel-content h3 {
+        margin-bottom: var(--space-4);
+        text-align: left;
+        font-size: var(--font-size-sm);
+    }
+
+    /* HOE WERKT HET */
+    .werkwijze-sectie {
+        padding: var(--space-9) var(--space-8) var(--space-10);
+    }
+
+    .stappen-lijst {
+        align-items: center;
+    }
+
+    .stap-kaart {
+        width: clamp(280px, 70vw, 80vw);
+        max-width: 100%;
+    }
+
+    .stap-nummer {
+        font-size: var(--font-size-md);
+    }
+
+    /* VOORDELEN */
+    .voordelen-sectie {
+        padding: var(--space-9) var(--space-8) var(--space-10);
+    }
+
+    .voordelen-lijst {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1194px) {
+    main {
+        margin-top: var(--space-9);
+    }
+
+    p{
+        font-size: var(--text-body-regular-font-size);
+    }
+
+    .features h2 {
+        padding-left: var(--space-9);
+        font-size: var(--font-size-lg);
+    }
+
+    .feature-tabs {
+        margin-left: var(--space-0);
+        padding-left: var(--space-9);
+    }
+
+    .feature-tab {
+        padding: var(--space-4) var(--space-7);
+        font-size: var(--text-body-regular-font-size);
+    }
+
+    .feature-panel {
+        grid-template-columns: 1fr 1.3fr;
+    }
+
+    .feature-panel-content h3 {
+        font-size: var(--font-size-md);
+    }
+
+    /* HOE HET WERKT */
+    .werkwijze-sectie {
+        padding: var(--space-9) var(--space-9) var(--space-10);
+    }
+
+    .werkwijze-kop h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    .stap-kaart {
+        width: clamp(320px, 60vw, 80vw);
+    }
+
+    .stap-kaart h3 {
+        font-size: var(--font-size-md);
+    }
+
+    .stap-nummer {
+        font-size: var(--font-size-lg);
+    }
+
+    /* VOORDELEN */
+    .voordelen-sectie {
+        padding: var(--space-9) var(--space-9) var(--space-10);
+    }
+
+    .voordelen-kop h2 {
+        font-size: var(--font-size-lg);
+    }
+
+    .voordelen-lijst {
+        gap: var(--space-8);
+    }
+
+    .voordeel-kaart {
+        width: 420px;
+        max-width: 460px;
+    }
+
+    .voordeel-kaart h3 {
+        font-size: var(--font-size-md);
+    }
+
+    .voordeel-kaart__kop {
+        gap: var(--space-5);
+    }
+
+    .voordeel-kaart__icoon img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        margin-top: var(--space-10);
+    }
+
+    .features h2 {
+        padding-top: clamp(64px, 4.44vw, 128px);
+        padding-left: clamp(80px, 5.56vw, 240px);
+        padding-right: clamp(80px, 5.56vw, 240px);
+    }
+
+    .feature-tabs {
+        padding-left: clamp(80px, 5.56vw, 240px);
+    }
+
+    .feature-panel {
+        column-gap: var(--space-10);
+        padding: var(--space-10) clamp(80px, 5.56vw, 240px);
+    }
+
+    /* HOE WERKT HET */
+    .werkwijze-sectie {
+        padding-top: clamp(64px, 4.44vw, 128px);
+        padding-left: clamp(80px, 5.56vw, 240px);
+        padding-right: clamp(80px, 5.56vw, 240px);
+    }
+}
