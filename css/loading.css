@@ -21,8 +21,7 @@ body.loading {
 /* Loading Screen Styles */
 .loading-screen {
   position: fixed;
-  top: var(--space-0);
-  left: var(--space-0);
+  inset: 0;
   z-index: 9999;
   background-color: var(--background-300);
   width: 100%;
@@ -30,7 +29,16 @@ body.loading {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  pointer-events: auto;
+}
+
+.loading-screen.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .loading-container {

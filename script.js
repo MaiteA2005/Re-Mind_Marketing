@@ -30,27 +30,34 @@ function scrollToHashTarget() {
   );
 }
 
-window.addEventListener("load", () => {
+function hideLoadingScreen() {
   const loadingScreen = document.getElementById("loading-screen");
 
+  document.body.classList.remove("loading");
+
   if (!loadingScreen) {
-    document.body.classList.remove("loading");
     scrollToHashTarget();
     return;
   }
 
-  setTimeout(() => {
-    loadingScreen.style.opacity = "0";
-    loadingScreen.style.transition = "opacity 0.5s ease";
+  loadingScreen.classList.add("is-hidden");
+  loadingScreen.addEventListener(
+    "transitionend",
+    (event) => {
+      if (event.propertyName !== "opacity") return;
 
-    document.body.classList.remove("loading");
-
-    setTimeout(() => {
-      loadingScreen.style.display = "none";
+      loadingScreen.remove();
       scrollToHashTarget();
-    }, 500);
-  }, 400);
-});
+    },
+    { once: true }
+  );
+}
+
+if (document.readyState === "complete") {
+  hideLoadingScreen();
+} else {
+  window.addEventListener("load", hideLoadingScreen, { once: true });
+}
 
 // Navigation
 if (window.location.pathname === "/index.html" && !initialHash) {
