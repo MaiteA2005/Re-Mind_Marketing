@@ -339,13 +339,6 @@ p {
         padding: var(--space-12) var(--space-11) var(--space-0);
     }
 
-    .intro h1 {
-        font-size: var(--font-size-lg);
-        line-height: var(--text-heading-1-line-height);
-        color: var(--text-primary);
-        text-align: center;
-    }
-
     .features h2 {
         margin: 0;
         margin-bottom: var(--space-5);
