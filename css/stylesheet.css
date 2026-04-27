@@ -871,7 +871,7 @@ input {
   color: var(--text-primary);
 }
 
-.contact h3{
+.contact h3 {
   font-family: var(--font-family-heading);
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
@@ -1071,8 +1071,7 @@ input {
   }
 
   /* FEATURES */
-  .features h2 {
-    /* padding-top: var(--space-9); */
+  /* .features h2 {
     margin: 0;
     margin-bottom: var(--space-5);
     padding-left: var(--space-8);
@@ -1133,10 +1132,10 @@ input {
   .feature-panel-content p {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-sm);
-  }
+  } */
 
   /* HOE WERKT HET */
-  .werkwijze-sectie {
+  /* .werkwijze-sectie {
     padding: var(--space-9) var(--space-8) var(--space-10);
   }
 
@@ -1151,10 +1150,10 @@ input {
 
   .stap-nummer {
     font-size: var(--font-size-md);
-  }
+  } */
 
   /* VOORDELEN */
-  .voordelen-sectie {
+  /* .voordelen-sectie {
     padding: var(--space-9) var(--space-8) var(--space-10);
   }
 
@@ -1165,7 +1164,7 @@ input {
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   /* PRICING */
   .pricing {
@@ -1201,8 +1200,7 @@ input {
   }
 
   /* TEAM */
-  .team {
-    /* padding: var(--layout-section) var(--layout-container-padding) 0; */
+  /* .team {
     padding: var(--space-9) var(--space-8) var(--space-10);
   }
 
@@ -1241,7 +1239,7 @@ input {
 
   .more-button {
     font-size: var(--font-size-xs);
-  }
+  } */
 
   /* CONTACT */
   .contact_content {
@@ -1368,7 +1366,7 @@ input {
   }
 
   /* FEATURES */
-  .features h2 {
+  /* .features h2 {
     padding-left: var(--space-9);
     font-size: var(--font-size-lg);
   }
@@ -1394,10 +1392,10 @@ input {
   .feature-panel-content p {
     font-size: var(--text-body-regular-font-size);
     line-height: var(--line-height-md);
-  }
+  } */
 
   /* HOE HET WERKT */
-  .werkwijze-sectie {
+  /* .werkwijze-sectie {
     padding: var(--space-9) var(--space-9) var(--space-10);
   }
 
@@ -1407,7 +1405,6 @@ input {
 
   .werkwijze-kop p {
     font-size: var(--text-body-regular-font-size);
-    /* line-height: var(--line-height-md); */
   }
 
   .stap-kaart {
@@ -1424,10 +1421,10 @@ input {
 
   .stap-nummer {
     font-size: var(--font-size-lg);
-  }
+  } */
 
   /* VOORDELEN */
-  .voordelen-sectie {
+  /* .voordelen-sectie {
     padding: var(--space-9) var(--space-9) var(--space-10);
   }
 
@@ -1459,7 +1456,7 @@ input {
   .voordeel-kaart__icoon img {
     width: 50px;
     height: 50px;
-  }
+  } */
 
   /* PRICING */
   .pricing {
@@ -1480,7 +1477,7 @@ input {
   }
 
   /* TEAM */
-  .team {
+  /* .team {
     padding: var(--space-9) var(--space-9) var(--space-10);
   }
 
@@ -1508,7 +1505,7 @@ input {
 
   .more-button {
     font-size: var(--font-size-sm);
-  }
+  } */
 
   /* CONTACT */
   .contact_content {
@@ -1522,7 +1519,7 @@ input {
     margin: 0;
   }
 
-  .contact-socials{
+  .contact-socials {
     width: 60%;
   }
 
@@ -1562,6 +1559,9 @@ input {
 @media (min-width: 1440px) {
   .hero {
     margin-top: var(--space-10);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero h1 {
@@ -1588,7 +1588,7 @@ input {
   }
 
   /* FEATURES */
-  .features h2 {
+  /* .features h2 {
     padding-top: clamp(64px, 4.44vw, 128px);
     padding-left: clamp(80px, 5.56vw, 240px);
     padding-right: clamp(80px, 5.56vw, 240px);
@@ -1605,14 +1605,14 @@ input {
 
   .feature-panel-content p {
     font-size: var(--text-body-regular-font-size);
-  }
+  } */
 
   /* HOE WERKT HET */
-  .werkwijze-sectie {
+  /* .werkwijze-sectie {
     padding-top: clamp(64px, 4.44vw, 128px);
     padding-left: clamp(80px, 5.56vw, 240px);
     padding-right: clamp(80px, 5.56vw, 240px);
-  }
+  } */
 
   /* PRICING */
   .pricing {
@@ -1624,7 +1624,7 @@ input {
   }
 
   /* TEAM */
-  .team {
+  /* .team {
     padding: var(--space-10) var(--space-11) var(--space-11);
   }
 
@@ -1650,7 +1650,7 @@ input {
 
   .team-content p {
     font-size: var(--text-body-regular-font-size);
-  }
+  } */
 
   /* CONTACT */
   .contact {
