@@ -21,6 +21,10 @@ body {
   font-family: var(--font-family-body);
 }
 
+.hidden {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -71,6 +75,11 @@ input {
   color: var(--text-primary);
 }
 
+.hero-cta {
+  display: flex;
+  gap: var(--space-4);
+}
+
 .hero-button {
   display: inline-flex;
   align-items: center;
@@ -101,6 +110,39 @@ input {
   background: var(--button-primary-hover-bg);
   border-color: var(--button-primary-hover-border);
   color: var(--button-primary-hover-text);
+}
+
+
+.hero-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 40px;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--button-radius);
+  border: var(--button-border-width) var(--button-border-style) var(--button-accent-default-border);
+  background: var(--button-primary-hover-bg);
+  color: var(--button-primary-hover-text);
+  font-family: var(--text-button-label-font-family);
+  font-size: var(--text-button-label-font-size);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hero-button-secondary:hover {
+  background: var(--button-primary-active-bg);
+  color: var(--text-on-dark);
+  border-color: var(--border-color-green);
+  box-shadow: var(--shadow-button-hover);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-button-secondary:active {
+  background: var(--button-primary-active-bg);
+  border-color: var(--button-primary-hover-border);
+  color: var(--text-on-dark);
 }
 
 .hero-image {
@@ -1302,9 +1344,9 @@ input {
     font-size: 48px;
   }
 
-  .hero-button {
+  /* .hero-button {
     padding: var(--space-6) var(--space-7);
-  }
+  } */
 
   .hero-image img {
     width: min(40vw, 340px);
