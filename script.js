@@ -224,6 +224,9 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
   let eersteClone = null;
   let laatsteClone = null;
   let sliderActief = false;
+  let kaartBreedte = 0;
+  let kaartStap = 0;
+  let viewportBreedte = 0;
 
   function updateIndicatoren() {
     const echteIndex =
@@ -245,18 +248,30 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     updateIndicatoren();
   }
 
+  function meetSliderMaten() {
+    if (!sliderActief || !viewport || !track || !kaarten[1]) return;
+
+    const trackStijl = window.getComputedStyle(track);
+    const kaartGap =
+      parseFloat(trackStijl.columnGap || trackStijl.gap || "0") || 0;
+
+    kaartBreedte = kaarten[1].getBoundingClientRect().width;
+    viewportBreedte = viewport.getBoundingClientRect().width;
+    kaartStap = kaartBreedte + kaartGap;
+  }
+
   function centreerActieveKaart(zonderAnimatie = false) {
     if (!sliderActief) return;
 
     const actieveKaart = kaarten[huidigeIndex];
     if (!actieveKaart) return;
 
-    const viewportBreedte = viewport.offsetWidth;
-    const kaartLinks = actieveKaart.offsetLeft;
-    const kaartBreedte = actieveKaart.offsetWidth;
+    if (!kaartStap || !kaartBreedte || !viewportBreedte) {
+      meetSliderMaten();
+    }
 
     const verschuiving =
-      kaartLinks - viewportBreedte / 2 + kaartBreedte / 2;
+      huidigeIndex * kaartStap - (viewportBreedte / 2 - kaartBreedte / 2);
 
     track.style.transition = zonderAnimatie ? "none" : "transform 0.45s ease";
     track.style.transform = `translateX(${-verschuiving}px)`;
@@ -381,6 +396,7 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     track.addEventListener("transitionend", eindeTransitie);
 
     sliderActief = true;
+    meetSliderMaten();
     centreerActieveKaart(true);
   }
 
@@ -428,12 +444,14 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
 
   window.addEventListener("load", () => {
     if (!sliderBreakpoint.matches) {
+      meetSliderMaten();
       centreerActieveKaart(true);
     }
   });
 
   window.addEventListener("resize", () => {
     if (!sliderBreakpoint.matches) {
+      meetSliderMaten();
       centreerActieveKaart(true);
     }
   });
