@@ -92,8 +92,7 @@ input {
   border-radius: var(--button-radius);
   border: var(--button-border-width) var(--button-border-style) var(--border-color-green);
   background: var(--button-primary-active-bg);
-  /* color: var(--text-on-dark); */
-  color: white;
+  color: var(--text-on-dark);
   font-family: var(--text-button-label-font-family);
   font-size: var(--text-button-label-font-size);
   font-weight: var(--font-weight-semibold);
