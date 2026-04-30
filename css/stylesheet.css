@@ -152,7 +152,8 @@ input {
 }
 
 .hero-image img {
-  width: min(78vw, 320px);
+  /* width: 60vw; */
+  width: 280px;
   height: auto;
   display: block;
   animation: breathe 6s ease-in-out infinite;
@@ -1077,10 +1078,7 @@ input {
 
   .hero p {
     margin: 0 0 var(--space-8);
-  }
-
-  .hero-image img {
-    width: min(40vw, 340px);
+    width: 80%;
   }
 
   .hero-image {
@@ -1346,10 +1344,6 @@ input {
   /* .hero-button {
     padding: var(--space-6) var(--space-7);
   } */
-
-  .hero-image img {
-    width: min(40vw, 340px);
-  }
 
   /* HERKENBAAR SECTIE */
   .kaart {
