@@ -112,7 +112,6 @@ input {
   color: var(--button-primary-hover-text);
 }
 
-
 .hero-button-secondary {
   display: inline-flex;
   align-items: center;
@@ -165,6 +164,7 @@ input {
 .herkenbaar-sectie {
   padding: var(--space-0) var(--space-0) var(--space-10);
   background: var(--gradient-section);
+  margin-top: -130px;
   overflow: hidden;
 }
 
@@ -418,255 +418,6 @@ input {
   color: var(--text-primary);
 }
 
-/* FEATURES
-.features {
-  padding: 22px 0;
-}
-
-.features h2 {
-  margin: var(--space-3);
-  padding-left: var(--space-2);
-}
-
-.features p {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-sm);
-  color: var(--text-primary);
-  margin: var(--space-5);
-}
-
-.feature-tabs-component {
-  display: grid;
-  gap: 0;
-}
-
-.feature-tabs {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: visible;
-  position: relative;
-}
-
-.feature-tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.feature-tab {
-  appearance: none;
-  border: 1px solid var(--primary-200);
-  border-bottom: none;
-  background: var(--primary-50);
-  background-color: red; 
-  color: var(--text-primary);
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xxxs);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1;
-  padding: var(--space-3) var(--space-3);
-  white-space: nowrap;
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-sm);
-  cursor: pointer;
-  position: relative;
-  flex: 0 0 auto;
-  z-index: -1;
-}
-
-.feature-tab.is-active {
-  background: var(--primary-200);
-  border-color: var(--border-color-green);
-  color: var(--text-primary);
-  font-weight: var(--font-weight-bold);
-  margin-bottom: -1px;
-  z-index: 2;
-  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, font-weight 0.3s ease;
-}
-
-.feature-tab:not(.is-active) {
-  z-index: 0;
-  margin-top: var(--space-1);
-}
-
-.feature-panels {
-  position: relative;
-  border-radius: 0;
-}
-
-.feature-panel {
-  background: var(--primary-200);
-  border: 1px solid var(--border-color-green);
-  border-left: none;
-  border-right: none;
-  padding: var(--space-6);
-  z-index: 1;
-}
-
-.feature-panel[hidden] {
-  display: none;
-}
-
-.feature-panel-image {
-  width: 80%;
-  display: block;
-  margin: var(--space-0) auto var(--space-4);
-}
-
-.feature-panel h3 {
-  margin: 0 0 var(--space-3);
-  text-align: center;
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-regular);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
-
-.feature-panel p {
-  font-size: var(--font-size-xxs);
-  line-height: var(--line-height-xs);
-  color: var(--text-primary);
-}*/
-
-/* HOE WERKT HET 
-.werkwijze-sectie {
-  padding: var(--space-8) var(--space-4) var(--space-10);
-}
-
-.werkwijze-kop h2 {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin: var(--space-3);
-  text-align: center;
-}
-
-.werkwijze-kop p {
-  margin: var(--space-3);
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-sm);
-  color: var(--text-secondary);
-  text-align: center;
-  font-weight: var(--font-weight-semibold);
-}
-
-.stappen-lijst {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.stap-kaart {
-  background: var(--background-50);
-  border-radius: 24px;
-  padding: var(--space-5);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  width: 100%
-}
-
-.stap-kaart h3 {
-  margin: 0 0 var(--space-4);
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.stap-nummer {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  line-height: 1;
-  font-weight: var(--font-weight-bold);
-  color: var(--brand-primary);
-}
-
-.stap-titel {
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
-
-.stap-kaart p {
-  margin: 0;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  color: var(--text-secondary);
-}*/
-
-/* VOORDELEN 
-.voordelen-sectie {
-  padding: var(--space-8) var(--space-4) var(--space-10);
-  background: var(--gradient-benefits-section);
-}
-
-.voordelen-kop h2 {
-  margin-bottom: var(--space-5);
-  text-align: center;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-md);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
-
-.voordelen-lijst {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.voordeel-kaart {
-  background: var(--background-50);
-  border-radius: 2rem;
-  padding: var(--space-5);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.voordeel-kaart__kop {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  margin-bottom: var(--space-4);
-}
-
-.voordeel-kaart__icoon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.voordeel-kaart__icoon img {
-  width: 40px;
-  height: 40px;
-  display: block;
-}
-
-.voordeel-kaart h3 {
-  margin: 0;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  line-height: 1.1;
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-}
-
-.voordeel-kaart p {
-  margin: 0;
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  line-height: var(--line-height-sm);
-  color: var(--text-secondary);
-}*/
-
 /* PRICING */
 .pricing {
   padding: var(--space-8) var(--space-4) var(--space-10);
@@ -791,117 +542,6 @@ input {
   background: var(--primary-300);
   color: var(--text-on-dark);
 }
-
-/* TEAM 
-.team-intro {
-  margin: var(--space-3);
-  text-align: left;
-}
-
-.subtitle {
-  text-align: center;
-  font-family: var(--font-family-heading);
-  font-size: var(--font-size-sm);
-  line-height: var(--line-height-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin: var(--space-4) 0;
-}
-
-.team-list {
-  display: grid;
-  gap: var(--space-5);
-  margin: var(--space-3);
-}
-
-.team-member {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  gap: var(--space-3);
-  align-items: start;
-}
-
-.team-member img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-xs);
-}
-
-.team-content h3 {
-  font-size: var(--font-size-xs);
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-bold);
-  color: var(--text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.team-content p {
-  font-size: var(--font-size-xxs);
-}
-
-.team-links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.team-links a {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  width: fit-content;
-}
-
-.team-links a img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.team-links a span {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-sm);
-  color: var(--text-primary);
-  text-decoration: underline;
-  text-underline-offset: 0.12em;
-  transition: background-color 0.3s ease;
-}
-
-.team-links a:hover span {
-  background-color: var(--brand-highlight);
-}
-
-.more-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-2) var(--space-3);
-  border-radius: var(--button-radius);
-  font-size: var(--font-size-xxs);
-  font-family: var(--font-family-heading);
-  border: var(--button-border-width) var(--button-border-style) var(--button-accent-default-border);
-  background: var(--button-accent-default-bg);
-  color: var(--button-accent-default-text);
-  font-weight: var(--font-weight-semibold);
-  margin-top: var(--space-2);
-}
-
-.more-button:hover {
-  background: var(--button-accent-hover-bg);
-  box-shadow: var(--shadow-button-hover);
-  border-color: var(--button-accent-hover-border);
-  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.more-button:active {
-  background: var(--button-accent-active-bg);
-  border-color: var(--button-accent-active-border);
-  color: var(--text-on-dark);
-}*/
 
 /* CONTACT */
 .contact h2 {
@@ -1110,102 +750,6 @@ input {
     margin-bottom: 0;
   }
 
-  /* FEATURES */
-  /* .features h2 {
-    margin: 0;
-    margin-bottom: var(--space-5);
-    padding-left: var(--space-8);
-    padding-right: var(--space-8);
-  }
-
-  .features p {
-    margin: 0;
-  }
-
-  .feature-tabs {
-    scrollbar-width: none;
-    padding-left: var(--space-8);
-    margin-left: var(--space-3);
-  }
-
-  .feature-tab {
-    padding: var(--space-4) var(--space-6);
-    font-size: var(--font-size-xs);
-  }
-
-  .feature-tab.is-active {
-    font-weight: var(--font-weight-extrabold);
-  }
-
-  .feature-tab:not(.is-active) {
-    margin-top: var(--space-2);
-  }
-
-  .feature-panel {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: var(--space-8);
-    align-items: center;
-    padding: var(--space-9) var(--space-9);
-  }
-
-  .feature-panel-image {
-    grid-row: 1 / span 2;
-    width: 100%;
-    margin: 0;
-  }
-
-  .feature-panel-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    grid-row: 1 / span 2;
-  }
-
-  .feature-panel-content h3 {
-    margin-bottom: var(--space-4);
-    text-align: left;
-    font-size: var(--font-size-sm);
-  }
-
-  .feature-panel-content p {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-sm);
-  } */
-
-  /* HOE WERKT HET */
-  /* .werkwijze-sectie {
-    padding: var(--space-9) var(--space-8) var(--space-10);
-  }
-
-  .stappen-lijst {
-    align-items: center;
-  }
-
-  .stap-kaart {
-    width: clamp(280px, 70vw, 80vw);
-    max-width: 100%;
-  }
-
-  .stap-nummer {
-    font-size: var(--font-size-md);
-  } */
-
-  /* VOORDELEN */
-  /* .voordelen-sectie {
-    padding: var(--space-9) var(--space-8) var(--space-10);
-  }
-
-  .voordelen-lijst {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5);
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-  } */
-
   /* PRICING */
   .pricing {
     padding: var(--space-9) var(--space-8) var(--space-10);
@@ -1238,48 +782,6 @@ input {
     padding-left: var(--space-3);
     padding-right: var(--space-3);
   }
-
-  /* TEAM */
-  /* .team {
-    padding: var(--space-9) var(--space-8) var(--space-10);
-  }
-
-  .team-intro {
-    font-size: var(--font-size-xs);
-    line-height: var(--text-body-regular-line-height);
-  }
-
-  .subtitle {
-    font-size: var(--font-size-sm);
-    margin: var(--space-7) 0 var(--space-3);
-  }
-
-  .team-list {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
-  }
-
-  .team-member {
-    grid-template-columns: 1fr;
-  }
-
-  .team-member img {
-    width: 75%;
-    aspect-ratio: 1;
-  }
-
-  .team-content h3 {
-    font-size: var(--font-size-sm);
-  }
-
-  .team-content p {
-    font-size: var(--font-size-xs);
-    line-height: var(--line-height-xs);
-  }
-
-  .more-button {
-    font-size: var(--font-size-xs);
-  } */
 
   /* CONTACT */
   .contact_content {
@@ -1342,10 +844,6 @@ input {
     font-size: 48px;
   }
 
-  /* .hero-button {
-    padding: var(--space-6) var(--space-7);
-  } */
-
   /* HERKENBAAR SECTIE */
   .kaart {
     --kaart-breedte: clamp(280px, 30vw, 400px);
@@ -1401,99 +899,6 @@ input {
     gap: var(--space-8);
   }
 
-  /* FEATURES */
-  /* .features h2 {
-    padding-left: var(--space-9);
-    font-size: var(--font-size-lg);
-  }
-
-  .feature-tabs {
-    margin-left: var(--space-0);
-    padding-left: var(--space-9);
-  }
-
-  .feature-tab {
-    padding: var(--space-4) var(--space-7);
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  .feature-panel {
-    grid-template-columns: 1fr 1.3fr;
-  }
-
-  .feature-panel-content h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .feature-panel-content p {
-    font-size: var(--text-body-regular-font-size);
-    line-height: var(--line-height-md);
-  } */
-
-  /* HOE HET WERKT */
-  /* .werkwijze-sectie {
-    padding: var(--space-9) var(--space-9) var(--space-10);
-  }
-
-  .werkwijze-kop h2 {
-    font-size: var(--font-size-lg);
-  }
-
-  .werkwijze-kop p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  .stap-kaart {
-    width: clamp(320px, 60vw, 80vw);
-  }
-
-  .stap-kaart h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .stap-kaart p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  .stap-nummer {
-    font-size: var(--font-size-lg);
-  } */
-
-  /* VOORDELEN */
-  /* .voordelen-sectie {
-    padding: var(--space-9) var(--space-9) var(--space-10);
-  }
-
-  .voordelen-kop h2 {
-    font-size: var(--font-size-lg);
-  }
-
-  .voordelen-lijst {
-    gap: var(--space-8);
-  }
-
-  .voordeel-kaart {
-    width: 420px;
-    max-width: 460px;
-  }
-
-  .voordeel-kaart h3 {
-    font-size: var(--font-size-md);
-  }
-
-  .voordeel-kaart p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  .voordeel-kaart__kop {
-    gap: var(--space-5);
-  }
-
-  .voordeel-kaart__icoon img {
-    width: 50px;
-    height: 50px;
-  } */
-
   /* PRICING */
   .pricing {
     padding: var(--space-9) var(--space-9) var(--space-10);
@@ -1511,37 +916,6 @@ input {
   .pricing h3 {
     font-size: var(--font-size-md);
   }
-
-  /* TEAM */
-  /* .team {
-    padding: var(--space-9) var(--space-9) var(--space-10);
-  }
-
-  .team h2 {
-    font-size: var(--font-size-lg);
-    margin: var(--space-3) 0;
-  }
-
-  .team-intro {
-    font-size: var(--text-body-regular-font-size);
-    margin: var(--space-0)
-  }
-
-  .team-list {
-    margin: var(--space-8);
-  }
-
-  .team-member {
-    gap: var(--space-6);
-  }
-
-  .team-content p {
-    font-size: var(--text-body-regular-font-size);
-  }
-
-  .more-button {
-    font-size: var(--font-size-sm);
-  } */
 
   /* CONTACT */
   .contact_content {
@@ -1623,33 +997,6 @@ input {
     padding: clamp(64px, 4.44vw, 128px) clamp(80px, 5.56vw, 240px) clamp(80px, 5.56vw, 160px);
   }
 
-  /* FEATURES */
-  /* .features h2 {
-    padding-top: clamp(64px, 4.44vw, 128px);
-    padding-left: clamp(80px, 5.56vw, 240px);
-    padding-right: clamp(80px, 5.56vw, 240px);
-  }
-
-  .feature-tabs {
-    padding-left: clamp(80px, 5.56vw, 240px);
-  }
-
-  .feature-panel {
-    column-gap: var(--space-10);
-    padding: var(--space-10) clamp(80px, 5.56vw, 240px);
-  }
-
-  .feature-panel-content p {
-    font-size: var(--text-body-regular-font-size);
-  } */
-
-  /* HOE WERKT HET */
-  /* .werkwijze-sectie {
-    padding-top: clamp(64px, 4.44vw, 128px);
-    padding-left: clamp(80px, 5.56vw, 240px);
-    padding-right: clamp(80px, 5.56vw, 240px);
-  } */
-
   /* PRICING */
   .pricing {
     padding: clamp(64px, 4.44vw, 128px) clamp(80px, 5.56vw, 240px);
@@ -1658,35 +1005,6 @@ input {
   .pricing-card {
     max-width: 350px;
   }
-
-  /* TEAM */
-  /* .team {
-    padding: var(--space-10) var(--space-11) var(--space-11);
-  }
-
-  .team-intro {
-    font-size: var(--text-body-regular-font-size);
-    width: 70%;
-  }
-
-  .subtitle {
-    font-size: var(--font-size-md);
-    margin: var(--space-7) 0 var(--space-5);
-  }
-
-  .team-list {
-    gap: var(--space-7);
-    margin: 0 var(--space-11);
-  }
-
-  .team-content h3 {
-    font-size: var(--font-size-md);
-    margin-bottom: var(--space-3);
-  }
-
-  .team-content p {
-    font-size: var(--text-body-regular-font-size);
-  } */
 
   /* CONTACT */
   .contact {
