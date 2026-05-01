@@ -164,7 +164,7 @@ input {
 .herkenbaar-sectie {
   padding: var(--space-0) var(--space-0) var(--space-10);
   background: var(--gradient-section);
-  margin-top: -25%;
+  margin-top: -15%;
   overflow: hidden;
 }
 
