@@ -164,7 +164,6 @@ input {
 .herkenbaar-sectie {
   padding: var(--space-0) var(--space-0) var(--space-10);
   background: var(--gradient-section);
-  margin-top: -15%;
   overflow: hidden;
 }
 
@@ -727,10 +726,6 @@ input {
   }
 
   /* HERKENBAAR SECTIE */
-  .herkenbaar-sectie {
-    margin-top: -10%;
-  }
-
   .kaart {
     --kaart-breedte: clamp(280px, 80vw, 420px);
   }
@@ -849,10 +844,6 @@ input {
   }
 
   /* HERKENBAAR SECTIE */
-  .herkenbaar-sectie {
-    margin-top: -15%;
-  }
-
   .kaart {
     --kaart-breedte: clamp(280px, 30vw, 400px);
     opacity: 1;
@@ -992,10 +983,6 @@ input {
   }
 
   /* HERKENBAAR SECTIE */
-  .herkenbaar-sectie {
-    margin-top: -10%;
-  }
-
   .slider {
     margin-bottom: var(--space-8);
   }
