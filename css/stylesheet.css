@@ -21,13 +21,8 @@ body {
   font-family: var(--font-family-body);
 }
 
-/* .visible {
+.startBalans {
   display: none
-} */
-
-.abtest {
-  opacity: 0;
-  display: none;
 }
 
 a {
@@ -82,7 +77,9 @@ input {
 
 .hero-cta {
   display: flex;
-  gap: var(--space-4);
+  flex-direction: column;
+  width: fit-content;
+  gap: var(--space-3);
 }
 
 .hero-button {
@@ -91,8 +88,6 @@ input {
   justify-content: center;
   min-width: 150px;
   height: 40px;
-  margin-top: var(--space-5);
-  margin-bottom: var(--space-3);
   padding: var(--space-3) var(--space-6);
   border-radius: var(--button-radius);
   border: var(--button-border-width) var(--button-border-style) var(--border-color-green);
@@ -123,8 +118,6 @@ input {
   justify-content: center;
   min-width: 150px;
   height: 40px;
-  margin-top: var(--space-5);
-  margin-bottom: var(--space-3);
   padding: var(--space-3) var(--space-6);
   border-radius: var(--button-radius);
   border: var(--button-border-width) var(--button-border-style) var(--button-accent-default-border);
@@ -729,6 +722,13 @@ input {
   .hero-image {
     justify-content: flex-end;
   }
+
+  .hero-cta {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-4);
+}
+
 
   /* HERKENBAAR SECTIE */
   .kaart {
