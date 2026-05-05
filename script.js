@@ -9,19 +9,8 @@ if (initialHash && initialHash !== "#") {
   );
 }
 
-// Loader: alleen tonen vanaf tablet/desktop
-const showLoader = window.innerWidth >= 834;
-const MIN_LOADER_TIME = 300;
-const MAX_LOADER_TIME = 1200;
-const loaderStart = performance.now();
-
-if (showLoader) {
-  document.body.classList.add("loading");
-} else {
-  const loadingScreen = document.getElementById("loading-screen");
-  if (loadingScreen) loadingScreen.remove();
-  document.body.classList.remove("loading");
-}
+// Loader
+document.body.classList.add("loading");
 
 function scrollToHashTarget() {
   if (!initialHash || initialHash === "#") return;
@@ -40,6 +29,10 @@ function scrollToHashTarget() {
     window.location.pathname + window.location.search + initialHash
   );
 }
+
+const MIN_LOADER_TIME = 300;
+const MAX_LOADER_TIME = 1200;
+const loaderStart = performance.now();
 
 function hideLoadingScreen() {
   const loadingScreen = document.getElementById("loading-screen");
@@ -61,6 +54,7 @@ function hideLoadingScreen() {
       "transitionend",
       (event) => {
         if (event.propertyName !== "opacity") return;
+
         loadingScreen.remove();
         scrollToHashTarget();
       },
@@ -77,14 +71,10 @@ function hideLoadingScreen() {
   }, MAX_LOADER_TIME);
 }
 
-if (showLoader) {
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", hideLoadingScreen, { once: true });
-  } else {
-    hideLoadingScreen();
-  }
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", hideLoadingScreen, { once: true });
 } else {
-  scrollToHashTarget();
+  hideLoadingScreen();
 }
 
 // Navigation
