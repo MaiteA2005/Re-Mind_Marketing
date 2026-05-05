@@ -79,6 +79,7 @@ input {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  justify-self: center;
   gap: var(--space-3);
 }
 
@@ -724,11 +725,8 @@ input {
   }
 
   .hero-cta {
-  display: flex;
-  flex-direction: row;
-  gap: var(--space-4);
-}
-
+    justify-self: start;
+  }
 
   /* HERKENBAAR SECTIE */
   .kaart {
@@ -846,6 +844,12 @@ input {
 
   .hero h1 {
     font-size: 48px;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
   }
 
   /* HERKENBAAR SECTIE */
