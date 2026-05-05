@@ -9,8 +9,11 @@ if (initialHash && initialHash !== "#") {
   );
 }
 
-// Loader
-document.body.classList.add("loading");
+/* =========================
+   LOADER TIJDELIJK UIT VOOR LIGHTHOUSE TEST
+   ========================= */
+
+// document.body.classList.add("loading");
 
 function scrollToHashTarget() {
   if (!initialHash || initialHash === "#") return;
@@ -71,11 +74,28 @@ function hideLoadingScreen() {
   }, MAX_LOADER_TIME);
 }
 
+/*
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", hideLoadingScreen, { once: true });
 } else {
   hideLoadingScreen();
 }
+*/
+
+// Loader direct verwijderen voor test
+const loadingScreen = document.getElementById("loading-screen");
+
+if (loadingScreen) {
+  loadingScreen.remove();
+}
+
+document.body.classList.remove("loading");
+scrollToHashTarget();
+
+/* =========================
+   EINDE LOADER TEST
+   ========================= */
+
 
 // Navigation
 if (window.location.pathname === "/index.html" && !initialHash) {
