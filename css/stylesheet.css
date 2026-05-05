@@ -26,6 +26,7 @@ body {
 } */
 
 .abtest {
+  opacity: 0;
   display: none;
 }
 
