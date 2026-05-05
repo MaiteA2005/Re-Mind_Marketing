@@ -25,6 +25,7 @@ body.loading {
   background-color: var(--background-300);
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,368 +54,71 @@ body.loading {
   height: 100%;
   background-color: var(--background-section-300);
   border-radius: var(--radius-xs);
+  transform: scaleY(0.55);
   transform-origin: bottom;
-  animation: wave 2.4s ease-in-out infinite;
+  animation: loaderPulse 0.9s ease-in-out infinite;
+  will-change: transform, background-color;
 }
 
-/* Staggered animation delays for wave effect */
 .loading-bar-1 {
-  animation-name: wave-bar-1;
+  animation-delay: 0s;
 }
 
 .loading-bar-2 {
-  animation-name: wave-bar-2;
+  animation-delay: 0.1s;
 }
 
 .loading-bar-3 {
-  animation-name: wave-bar-3;
+  animation-delay: 0.2s;
 }
 
 .loading-bar-4 {
-  animation-name: wave-bar-4;
+  animation-delay: 0.3s;
 }
 
 .loading-bar-5 {
-  animation-name: wave-bar-5;
+  animation-delay: 0.4s;
 }
 
 .loading-bar-6 {
-  animation-name: wave-bar-6;
+  animation-delay: 0.5s;
 }
 
-/* Bar 1 Animation */
-@keyframes wave-bar-1 {
+@keyframes loaderPulse {
   0% {
+    transform: scaleY(0.55);
     background-color: var(--background-section-300);
-    transform: scaleY(0.6);
   }
-  8.33% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  16.66% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
+
   25% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  33.33% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  41.66% {
-    background-color: var(--highlight-300);
     transform: scaleY(0.75);
+    background-color: var(--highlight-300);
   }
+
   50% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
+    transform: scaleY(1);
+    background-color: var(--primary-300);
   }
-  58.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  66.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
+
   75% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
+    transform: scaleY(0.75);
+    background-color: var(--border-300);
   }
-  83.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
+
   100% {
+    transform: scaleY(0.55);
     background-color: var(--background-section-300);
-    transform: scaleY(0.6);
   }
 }
 
-/* Bar 2 Animation */
-@keyframes wave-bar-2 {
-  0% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen {
+    transition: none;
   }
-  8.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  16.66% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  25% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  33.33% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  41.66% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  50% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  58.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  66.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  75% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  83.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  100% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-}
 
-/* Bar 3 Animation */
-@keyframes wave-bar-3 {
-  0% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  8.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  16.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  25% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  33.33% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  41.66% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  50% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  58.33% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  66.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  75% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  83.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  100% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-}
-
-/* Bar 4 Animation */
-@keyframes wave-bar-4 {
-  0% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  8.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  16.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  25% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  33.33% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  41.66% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  50% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  58.33% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  66.66% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  75% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  83.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  100% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-}
-
-/* Bar 5 Animation */
-@keyframes wave-bar-5 {
-  0% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  8.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  16.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  25% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  33.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  41.66% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  50% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  58.33% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  66.66% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  75% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  83.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  100% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-}
-
-/* Bar 6 Animation */
-@keyframes wave-bar-6 {
-  0% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  8.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  16.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  25% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  33.33% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  41.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  50% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  58.33% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  66.66% {
-    background-color: var(--primary-300);
-    transform: scaleY(1);
-  }
-  75% {
-    background-color: var(--border-300);
-    transform: scaleY(0.85);
-  }
-  83.33% {
-    background-color: var(--highlight-300);
-    transform: scaleY(0.75);
-  }
-  91.66% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
-  }
-  100% {
-    background-color: var(--background-section-300);
-    transform: scaleY(0.6);
+  .loading-bar {
+    animation: none;
+    transform: scaleY(0.8);
   }
 }
 

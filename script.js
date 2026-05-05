@@ -30,33 +30,51 @@ function scrollToHashTarget() {
   );
 }
 
+const MIN_LOADER_TIME = 700;
+const MAX_LOADER_TIME = 2000;
+const loaderStart = performance.now();
+
 function hideLoadingScreen() {
   const loadingScreen = document.getElementById("loading-screen");
 
-  document.body.classList.remove("loading");
+  const elapsed = performance.now() - loaderStart;
+  const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
 
-  if (!loadingScreen) {
-    scrollToHashTarget();
-    return;
-  }
+  setTimeout(() => {
+    document.body.classList.remove("loading");
 
-  loadingScreen.classList.add("is-hidden");
-  loadingScreen.addEventListener(
-    "transitionend",
-    (event) => {
-      if (event.propertyName !== "opacity") return;
-
-      loadingScreen.remove();
+    if (!loadingScreen) {
       scrollToHashTarget();
-    },
-    { once: true }
-  );
+      return;
+    }
+
+    loadingScreen.classList.add("is-hidden");
+
+    loadingScreen.addEventListener(
+      "transitionend",
+      (event) => {
+        if (event.propertyName !== "opacity") return;
+
+        loadingScreen.remove();
+        scrollToHashTarget();
+      },
+      { once: true }
+    );
+  }, remaining);
+
+  setTimeout(() => {
+    if (loadingScreen && loadingScreen.parentNode) {
+      loadingScreen.remove();
+      document.body.classList.remove("loading");
+      scrollToHashTarget();
+    }
+  }, MAX_LOADER_TIME);
 }
 
-if (document.readyState === "complete") {
-  hideLoadingScreen();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", hideLoadingScreen, { once: true });
 } else {
-  window.addEventListener("load", hideLoadingScreen, { once: true });
+  hideLoadingScreen();
 }
 
 // Navigation
@@ -106,9 +124,7 @@ if (navSluitknop) {
 }
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    closeMenu();
-  });
+  link.addEventListener("click", closeMenu);
 });
 
 window.addEventListener("resize", () => {
@@ -391,8 +407,8 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
       dot.addEventListener("click", klikIndicator);
     });
 
-    viewport.addEventListener("touchstart", startSwipe);
-    viewport.addEventListener("touchend", eindSwipe);
+    viewport.addEventListener("touchstart", startSwipe, { passive: true });
+    viewport.addEventListener("touchend", eindSwipe, { passive: true });
     track.addEventListener("transitionend", eindeTransitie);
 
     sliderActief = true;
@@ -442,7 +458,7 @@ if (viewport && track && vorige && volgende && indicatoren.length) {
     sliderBreakpoint.addListener(updateSliderOpBreakpoint);
   }
 
-  window.addEventListener("load", () => {
+  requestAnimationFrame(() => {
     if (!sliderBreakpoint.matches) {
       meetSliderMaten();
       centreerActieveKaart(true);
@@ -481,8 +497,8 @@ if (revealElements.length) {
   });
 }
 
-// Trigger animatie eerste feature panel bij paginalaadtijd
-window.addEventListener("load", () => {
+// Trigger animatie eerste feature panel
+requestAnimationFrame(() => {
   const firstPanel = document.querySelector(".feature-panel.is-active");
 
   if (firstPanel) {
