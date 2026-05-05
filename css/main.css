@@ -379,7 +379,7 @@ body.nav-open {
 
   .footer-content {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-9s);
+    gap: var(--space-9);
   }
 
   .footer-logo-section {
