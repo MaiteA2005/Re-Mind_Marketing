@@ -22,15 +22,11 @@ body {
 }
 
 .visible {
-  opacity: 1;
   visibility: visible;
-  position: static;
 }
 
-.hidden {
-  opacity: 0;
+.abtest {
   visibility: hidden;
-  position: absolute;
 }
 
 a {
