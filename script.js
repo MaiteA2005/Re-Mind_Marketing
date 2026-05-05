@@ -30,8 +30,8 @@ function scrollToHashTarget() {
   );
 }
 
-const MIN_LOADER_TIME = 700;
-const MAX_LOADER_TIME = 2000;
+const MIN_LOADER_TIME = 300;
+const MAX_LOADER_TIME = 1200;
 const loaderStart = performance.now();
 
 function hideLoadingScreen() {
