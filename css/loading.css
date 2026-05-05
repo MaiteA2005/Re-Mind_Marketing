@@ -1,11 +1,3 @@
-/* CSS Variables */
-@import "../tokens/color.tokens.css";
-@import "../tokens/spacing.tokens.css";
-@import "../tokens/radius.tokens.css";
-@import "../tokens/typography.tokens.css";
-@import "../tokens/shadow.tokens.css";
-@import "../tokens/component.tokens.css";
-
 /* Reset */
 * {
   margin: var(--space-0);
