@@ -21,8 +21,6 @@
     <link rel="icon" type="image/svg+xml" href="./images/faviconLogo.svg" />
     <title>Re:Mind - Coming soon!</title>
 
-    <script src="https://t.contentsquare.net/uxa/7524f931f31cf.js"></script>
-
 </head>
 
 <body>
@@ -81,14 +79,22 @@
 
         </section>
     </main>
+
+    <script>
+        if (window.location.pathname === '/comingSoon.html') {
+            window.history.replaceState(null, null, '/ComingSoon!');
+        }
+    </script>
+    <script defer src="script.js"></script>
+    <script>
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+        const cs = document.createElement("script");
+        cs.src = "https://t.contentsquare.net/uxa/7524f931f31cf.js";
+        cs.async = true;
+        document.body.appendChild(cs);
+        }, 1500);
+    });
+    </script>
 </body>
-
-<script>
-    if (window.location.pathname === '/comingSoon.html') {
-        window.history.replaceState(null, null, '/ComingSoon!');
-    }
-</script>
-
-<script defer src="script.js"></script>
-
 </html>

@@ -43,8 +43,6 @@
     content="Re:Mind helpt jonge professionals om beter om te gaan met stress en energie tijdens de werkdag via slimme check-ins, inzichten en gerichte pauzesuggesties." />
   <meta property="twitter:image" content="https://www.remind-app.be/images/metatags_img.png" />
 
-  <script src="https://t.contentsquare.net/uxa/7524f931f31cf.js"></script>
-
 </head>
 
 <body>
@@ -384,6 +382,15 @@
 </body>
 
 <script defer src="script.js"></script>
-<script defer src="/_vercel/insights/script.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const cs = document.createElement("script");
+      cs.src = "https://t.contentsquare.net/uxa/7524f931f31cf.js";
+      cs.async = true;
+      document.body.appendChild(cs);
+    }, 1500);
+  });
+</script>
 
 </html>
