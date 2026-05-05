@@ -21,12 +21,12 @@ body {
   font-family: var(--font-family-body);
 }
 
-.visible {
-  visibility: visible;
-}
+/* .visible {
+  display: none
+} */
 
 .abtest {
-  visibility: hidden;
+  display: none;
 }
 
 a {
