@@ -965,7 +965,7 @@ input {
 }
 
 .billing-pill.active {
-  background: var(--button-primary-active-bg);
+  background: var(--button-primary-active-bg);  
   color: var(--text-on-dark);
 }
 
