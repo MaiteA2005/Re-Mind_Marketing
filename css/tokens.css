@@ -254,7 +254,7 @@
         --button-primary-hover-bg: var(--primary-200);
         --button-primary-hover-border: var(--primary-400);
 
-        --button-primary-active-bg: var(--primary-400);
+        --button-primary-active-bg: var(--primary-600);
         --button-primary-active-border: var(--primary-700);
         --button-primary-active-text: var(--text-on-dark);
 
