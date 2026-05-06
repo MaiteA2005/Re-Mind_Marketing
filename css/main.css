@@ -923,7 +923,7 @@ input {
   font-size: var(--font-size-xs);
   font-family: var(--font-family-heading);
   border: var(--button-border-width) var(--button-border-style) var(--primary-700);
-  background: var(--primary-300);
+  background: var(--button-primary-active-bg);
   color: var(--text-on-dark);
   font-weight: var(--font-weight-semibold);
 }
@@ -965,7 +965,7 @@ input {
 }
 
 .billing-pill.active {
-  background: var(--primary-300);
+  background: var(--button-primary-active-bg);
   color: var(--text-on-dark);
 }
 
