@@ -104,6 +104,9 @@ p {
 }
 
 /* FEATURES */
+.section.features {
+    padding: var(--space-0);
+}
 
 .features h2 {
     margin: var(--space-3);
@@ -335,7 +338,7 @@ p {
         margin: 0;
         margin-bottom: var(--space-5);
         padding-top: var(--space-9);
-        padding-left: var(--space-8);
+        padding-left: var(--space-11);
         padding-right: var(--space-8);
     }
 
@@ -345,7 +348,7 @@ p {
 
     .feature-tabs {
         scrollbar-width: none;
-        padding-left: var(--space-8);
+        padding-left: var(--space-11);
     }
 
     .feature-tab {
@@ -435,13 +438,13 @@ p {
     }
 
     .features h2 {
-        padding-left: var(--space-9);
+        padding-left: var(--space-13);
         font-size: var(--font-size-lg);
     }
 
     .feature-tabs {
         margin-left: var(--space-0);
-        padding-left: var(--space-9);
+        padding-left: var(--space-13);
     }
 
     .feature-tab {
@@ -521,12 +524,12 @@ p {
 
     .features h2 {
         padding-top: clamp(64px, 4.44vw, 128px);
-        padding-left: clamp(80px, 5.56vw, 240px);
+        padding-left: clamp(80px, 9.56vw, 240px);
         padding-right: clamp(80px, 5.56vw, 240px);
     }
 
     .feature-tabs {
-        padding-left: clamp(80px, 5.56vw, 240px);
+        padding-left: clamp(80px, 9.56vw, 240px);
     }
 
     .feature-panel {
