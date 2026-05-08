@@ -515,3 +515,81 @@ requestAnimationFrame(() => {
     firstPanel.classList.add("is-animating");
   }
 });
+
+
+// Mood check-in demo
+const moodDemo = document.querySelector(".mood-demo");
+
+if (moodDemo) {
+  const questionScreen = moodDemo.querySelector(".mood-demo__question");
+  const resultScreen = moodDemo.querySelector(".mood-demo__result");
+  const moodButtons = moodDemo.querySelectorAll(".mood-demo__option");
+  const resetButton = moodDemo.querySelector(".mood-demo__secondary");
+  const resultIcon = moodDemo.querySelector(".mood-demo__icon");
+  const resultTitle = moodDemo.querySelector(".mood-demo__title");
+  const resultText = moodDemo.querySelector(".mood-demo__text");
+  const resultPrimary = moodDemo.querySelector(".mood-demo__primary");
+
+  const moodContent = {
+    slecht: {
+      icon: "./images/Demo-Slecht.svg",
+      title: "Even te veel vandaag?",
+      text: "Ook op moeilijke dagen sta je er niet alleen voor. Onze app helpt je om even stil te staan bij wat je voelt en geeft kleine, haalbare stappen om opnieuw rust te vinden.",
+      cta: "Download de app en vind rust",
+      href: "./comingSoon.html",
+    },
+    "niet-helemaal": {
+      icon: "./images/Demo-Slecht.svg",
+      title: "Niet helemaal jezelf?",
+      text: "Niet slecht, maar ook niet helemaal oké? Met onze app leer je je gevoel beter begrijpen en ontdek je welke gewoontes, momenten of gedachten invloed hebben op je dag.",
+      cta: "Leer jezelf beter begrijpen",
+      href: "./features.html",
+    },
+    meh: {
+      icon: "./images/Demo-Meh.svg",
+      title: "Gewoon een gewone dag?",
+      text: "Gewoon “ça va” is ook waardevolle informatie. Door regelmatig in te checken, bouw je inzicht op in je welzijn en herken je sneller patronen in hoe je je voelt.",
+      cta: "Check dagelijks bij jezelf in",
+      href: "./features.html",
+    },
+    goed: {
+      icon: "./images/Demo-Goed.svg",
+      title: "Je voelt je best oké",
+      text: "Fijn dat het goed gaat. De app helpt je om positieve momenten bewust vast te leggen, zodat je beter begrijpt wat jou energie, rust of motivatie geeft.",
+      cta: "Ontdek wat jou energie geeft",
+      href: "./features.html",
+    },
+    "heel-goed": {
+      icon: "./images/Demo-HeelGoed.svg",
+      title: "Je zit lekker in je vel",
+      text: "Topdag? Onthoud wat vandaag goed voelt. Bewaar je positieve momenten en ontdek wat echt werkt voor jou.",
+      cta: "Hou vast wat goed voelt",
+      href: "./features.html",
+    },
+  };
+
+  moodButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const mood = button.dataset.mood;
+      const content = moodContent[mood];
+
+      if (!content) return;
+
+      resultIcon.src = content.icon;
+      resultTitle.textContent = content.title;
+      resultText.textContent = content.text;
+      resultPrimary.textContent = content.cta;
+      resultPrimary.href = content.href;
+
+      questionScreen.classList.remove("is-active");
+      resultScreen.classList.add("is-active");
+    });
+  });
+
+  if (resetButton) {
+    resetButton.addEventListener("click", () => {
+      resultScreen.classList.remove("is-active");
+      questionScreen.classList.add("is-active");
+    });
+  }
+}
