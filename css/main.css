@@ -412,7 +412,7 @@ body.nav-open {
   }
 
   .footer-content {
-    grid-template-columns: minmax(320px, 1fr) auto auto;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: var(--space-12);
     align-items: start;
   }
