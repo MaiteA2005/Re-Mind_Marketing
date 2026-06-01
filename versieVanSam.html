@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="canonical" href="https://www.remind-app.be/" />
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/loading.css">
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/versieVanSam.css" />
+  <link rel="icon" type="image/svg+xml" href="./images/faviconLogo.svg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WLXLBZ7C" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-container">
+      <div class="loading-bar loading-bar-1"></div>
+      <div class="loading-bar loading-bar-2"></div>
+      <div class="loading-bar loading-bar-3"></div>
+      <div class="loading-bar loading-bar-4"></div>
+      <div class="loading-bar loading-bar-5"></div>
+      <div class="loading-bar loading-bar-6"></div>
+    </div>
+  </div>
+
+  <header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="nav-inner">
+                <img class="navLogo" src="./images/logo_primaryColor.svg" alt="Re:Mind logo"  width="160" height="32">
+
+                <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav-links"
+                    type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="nav-overlay" id="main-nav-links">
+                <div class="nav-overlay__header">
+                    <img class="navLogo navLogo--overlay" src="./images/logo_primaryColor.svg" alt="Re:Mind logo"  width="160" height="32">
+
+                    <button class="nav-sluitknop" aria-label="Sluit menu" type="button">
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#over">Over Re:Mind</a></li>
+                    <li><a href="./features.html">Werking</a></li>
+                    <li><a href="./index.html#prijzen">Prijzen</a></li>
+                    <li><a href="./team.html">Team</a></li>
+                    <li><a href="./index.html#contact">Contact</a></li>
+                </ul>
+
+                <img class="nav-decoratie" src="./images/swirl.svg" alt="" aria-hidden="true">
+            </div>
+        </nav>
+  </header>
+
+  <main>
+    <section class="Hero">
+        <div class="HeroContent">
+        <p class="HeroLabel">Download Re:Mind</p>
+
+        <h1>Installeer Re:Mind op je desktop</h1>
+
+        <p class="HeroText">
+            Gebruik Re:Mind rechtstreeks op je Windows-computer en krijg automatisch updates
+            wanneer er een nieuwe versie beschikbaar is.
+        </p>
+
+        <a
+            class="HeroButton"
+            href="https://github.com/MaiteA2005/Re-Mind/releases/latest/download/Re-Mind-Setup.exe"
+            download
+            >
+            Download voor Windows
+        </a>
+
+        <a
+            class="HeroButtonSecondary"
+            href="https://re-mind-one.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            Open online demo
+        </a>
+
+        <p class="HeroPlatformNote">
+            De desktopversie is momenteel beschikbaar voor Windows. Gebruik je Mac? Dan kan je Re:Mind bekijken via de online demo.
+        </p>
+
+        <p class="HeroNote">
+            <strong>Windows kan een melding tonen van een onbekende uitgever. </strong>
+            <br>
+            Dit komt omdat Re:Mind momenteel nog niet digitaal ondertekend is.
+        </p>
+        </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <div class="footer-brand">
+          <img src="./images/logo_light.svg" alt="Re:Mind logo" />
+        </div>
+        <p class="tagline">Jouw dagelijkse reminder om even stil te staan, op adem te komen en goed voor jezelf te
+          zorgen.</p>
+
+        <div class="socials">
+          <a class="social-icon" href="https://www.instagram.com/remindapp2026/?hl=nl" target="_blank"
+            aria-label="Instagram">
+            <img src="./icons/Insta.svg" alt="Instagram" />
+          </a>
+          <a class="social-icon" href="https://www.facebook.com/people/ReMind-App/61580788917049/" target="_blank"
+            aria-label="Facebook">
+            <img src="./icons/Facebook.svg" alt="Facebook" />
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/company/re-mind-app/" target="_blank"
+            aria-label="LinkedIn">
+            <img src="./images/linkedIn.png" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Snelle links</h3>
+        <ul>
+          <li><a href="#">Terug naar top</a></li>
+          <li><a href="./index.html#over">Over Re:Mind</a></li>
+          <li><a href="./features.html">Werking</a></li>
+          <li><a href="./index.html#prijzen">Prijzen</a></li>
+          <li><a href="./team.html">Team</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Heb je een vraag?</h3>
+        <a href="./index.html#contact" class="contact-button">Contacteer ons</a>
+      </div>
+    </div>
+
+    <p class="copyright">© 2026. Alle rechten voorbehouden.</p>
+  </footer>
+</body>
+
+<script defer src="script.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const cs = document.createElement("script");
+      cs.src = "https://t.contentsquare.net/uxa/7524f931f31cf.js";
+      cs.async = true;
+      document.body.appendChild(cs);
+    }, 1500);
+  });
+</script>
+
+</html>
